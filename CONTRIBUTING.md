@@ -1,5 +1,7 @@
 # Contribuindo para o Projeto Search Engine
 
+[![English Version](https://img.shields.io/badge/English-Version-blue?style=for-the-badge)](#english-version)
+
 Obrigado por considerar contribuir para o projeto **Search Engine**! Ao seguir estas diretrizes, você estará nos ajudando a manter a qualidade do projeto e a garantir que suas contribuições sejam facilmente integradas.
 
 ## Como Contribuir
@@ -100,7 +102,7 @@ Agradecemos por dedicar seu tempo e esforço para melhorar o **Search Engine**. 
 
 ---
 
-# Contributing to the Search Engine Project
+# English Version
 
 Thank you for considering contributing to the **Search Engine** project! By following these guidelines, you will help maintain the project's quality and ensure that your contributions can be easily integrated.
 
