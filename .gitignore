@@ -3,3 +3,4 @@
 /.vscode
 *.so
 compile_commands.json
+/lib/src/_*.cpp
