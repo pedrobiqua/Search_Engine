@@ -6,28 +6,25 @@
         "depends": [
             "lib/include/hello.h"
         ],
-        "extra_compile_args": [
-            "-std=c++11"
-        ],
         "include_dirs": [
             "lib/include"
         ],
         "language": "c++",
         "libraries": [
-            "hello"
+            "search_engine"
         ],
         "library_dirs": [
-            "/home/pedro/projects/project/build/lib"
+            "/home/pedro/projects/search_engine/build/lib"
         ],
-        "name": "hello",
+        "name": "_hello",
         "runtime_library_dirs": [
-            "/home/pedro/projects/project/build/lib"
+            "/home/pedro/projects/search_engine/build/lib"
         ],
         "sources": [
             "lib/src/_hello.pyx"
         ]
     },
-    "module_name": "hello"
+    "module_name": "_hello"
 }
 END: Cython Metadata */
 
@@ -1259,8 +1256,8 @@ static CYTHON_INLINE float __PYX_NAN() {
     #define __PYX_EXTERN_C extern "C++"
 #endif
 
-#define __PYX_HAVE__hello
-#define __PYX_HAVE_API__hello
+#define __PYX_HAVE___hello
+#define __PYX_HAVE_API___hello
 /* Early includes */
 #include <string.h>
 #include <string>
@@ -1531,16 +1528,16 @@ static const char *__pyx_f[] = {
 /* #### Code section: type_declarations ### */
 
 /*--- Type declarations ---*/
-struct __pyx_obj_5hello_PyHello;
+struct __pyx_obj_6_hello_PyHello;
 
-/* "hello.pyx":10
+/* "_hello.pyx":10
  * 
  * # Expor a classe Hello para o Python
  * cdef class PyHello:             # <<<<<<<<<<<<<<
  *     cdef Hello* c_hello
  * 
  */
-struct __pyx_obj_5hello_PyHello {
+struct __pyx_obj_6_hello_PyHello {
   PyObject_HEAD
   Hello *c_hello;
 };
@@ -2173,7 +2170,7 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from "libcpp.string" */
 
-/* Module declarations from "hello" */
+/* Module declarations from "_hello" */
 static std::string __pyx_convert_string_from_py_6libcpp_6string_std__in_string(PyObject *); /*proto*/
 static CYTHON_INLINE PyObject *__pyx_convert_PyObject_string_to_py_6libcpp_6string_std__in_string(std::string const &); /*proto*/
 static CYTHON_INLINE PyObject *__pyx_convert_PyUnicode_string_to_py_6libcpp_6string_std__in_string(std::string const &); /*proto*/
@@ -2182,11 +2179,11 @@ static CYTHON_INLINE PyObject *__pyx_convert_PyBytes_string_to_py_6libcpp_6strin
 static CYTHON_INLINE PyObject *__pyx_convert_PyByteArray_string_to_py_6libcpp_6string_std__in_string(std::string const &); /*proto*/
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "hello"
-extern int __pyx_module_is_main_hello;
-int __pyx_module_is_main_hello = 0;
+#define __Pyx_MODULE_NAME "_hello"
+extern int __pyx_module_is_main__hello;
+int __pyx_module_is_main__hello = 0;
 
-/* Implementation of "hello" */
+/* Implementation of "_hello" */
 /* #### Code section: global_var ### */
 static PyObject *__pyx_builtin_TypeError;
 /* #### Code section: string_decls ### */
@@ -2197,7 +2194,7 @@ static const char __pyx_k_name[] = "name";
 static const char __pyx_k_self[] = "self";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_greet[] = "greet";
-static const char __pyx_k_hello[] = "hello";
+static const char __pyx_k_hello[] = "_hello";
 static const char __pyx_k_utf_8[] = "utf-8";
 static const char __pyx_k_enable[] = "enable";
 static const char __pyx_k_encode[] = "encode";
@@ -2223,12 +2220,12 @@ static const char __pyx_k_PyHello___reduce_cython[] = "PyHello.__reduce_cython__
 static const char __pyx_k_PyHello___setstate_cython[] = "PyHello.__setstate_cython__";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 /* #### Code section: decls ### */
-static int __pyx_pf_5hello_7PyHello___cinit__(struct __pyx_obj_5hello_PyHello *__pyx_v_self); /* proto */
-static void __pyx_pf_5hello_7PyHello_2__dealloc__(struct __pyx_obj_5hello_PyHello *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_5hello_7PyHello_4greet(struct __pyx_obj_5hello_PyHello *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
-static PyObject *__pyx_pf_5hello_7PyHello_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_5hello_PyHello *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_5hello_7PyHello_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_5hello_PyHello *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
-static PyObject *__pyx_tp_new_5hello_PyHello(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
+static int __pyx_pf_6_hello_7PyHello___cinit__(struct __pyx_obj_6_hello_PyHello *__pyx_v_self); /* proto */
+static void __pyx_pf_6_hello_7PyHello_2__dealloc__(struct __pyx_obj_6_hello_PyHello *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6_hello_7PyHello_4greet(struct __pyx_obj_6_hello_PyHello *__pyx_v_self, PyObject *__pyx_v_name); /* proto */
+static PyObject *__pyx_pf_6_hello_7PyHello_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6_hello_PyHello *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_6_hello_7PyHello_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6_hello_PyHello *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_tp_new_6_hello_PyHello(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -2261,9 +2258,9 @@ typedef struct {
   #if CYTHON_USE_MODULE_STATE
   #endif
   #if CYTHON_USE_MODULE_STATE
-  PyObject *__pyx_type_5hello_PyHello;
+  PyObject *__pyx_type_6_hello_PyHello;
   #endif
-  PyTypeObject *__pyx_ptype_5hello_PyHello;
+  PyTypeObject *__pyx_ptype_6_hello_PyHello;
   PyObject *__pyx_n_s_PyHello;
   PyObject *__pyx_n_s_PyHello___reduce_cython;
   PyObject *__pyx_n_s_PyHello___setstate_cython;
@@ -2344,8 +2341,8 @@ static int __pyx_m_clear(PyObject *m) {
   #ifdef __Pyx_FusedFunction_USED
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_CLEAR(clear_module_state->__pyx_ptype_5hello_PyHello);
-  Py_CLEAR(clear_module_state->__pyx_type_5hello_PyHello);
+  Py_CLEAR(clear_module_state->__pyx_ptype_6_hello_PyHello);
+  Py_CLEAR(clear_module_state->__pyx_type_6_hello_PyHello);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyHello);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyHello___reduce_cython);
   Py_CLEAR(clear_module_state->__pyx_n_s_PyHello___setstate_cython);
@@ -2404,8 +2401,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #ifdef __Pyx_FusedFunction_USED
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_VISIT(traverse_module_state->__pyx_ptype_5hello_PyHello);
-  Py_VISIT(traverse_module_state->__pyx_type_5hello_PyHello);
+  Py_VISIT(traverse_module_state->__pyx_ptype_6_hello_PyHello);
+  Py_VISIT(traverse_module_state->__pyx_type_6_hello_PyHello);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyHello);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyHello___reduce_cython);
   Py_VISIT(traverse_module_state->__pyx_n_s_PyHello___setstate_cython);
@@ -2477,9 +2474,9 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #if CYTHON_USE_MODULE_STATE
 #endif
 #if CYTHON_USE_MODULE_STATE
-#define __pyx_type_5hello_PyHello __pyx_mstate_global->__pyx_type_5hello_PyHello
+#define __pyx_type_6_hello_PyHello __pyx_mstate_global->__pyx_type_6_hello_PyHello
 #endif
-#define __pyx_ptype_5hello_PyHello __pyx_mstate_global->__pyx_ptype_5hello_PyHello
+#define __pyx_ptype_6_hello_PyHello __pyx_mstate_global->__pyx_ptype_6_hello_PyHello
 #define __pyx_n_s_PyHello __pyx_mstate_global->__pyx_n_s_PyHello
 #define __pyx_n_s_PyHello___reduce_cython __pyx_mstate_global->__pyx_n_s_PyHello___reduce_cython
 #define __pyx_n_s_PyHello___setstate_cython __pyx_mstate_global->__pyx_n_s_PyHello___setstate_cython
@@ -2838,7 +2835,7 @@ static CYTHON_INLINE PyObject *__pyx_convert_PyByteArray_string_to_py_6libcpp_6s
   return __pyx_r;
 }
 
-/* "hello.pyx":13
+/* "_hello.pyx":13
  *     cdef Hello* c_hello
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -2847,8 +2844,8 @@ static CYTHON_INLINE PyObject *__pyx_convert_PyByteArray_string_to_py_6libcpp_6s
  */
 
 /* Python wrapper */
-static int __pyx_pw_5hello_7PyHello_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_pw_5hello_7PyHello_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static int __pyx_pw_6_hello_7PyHello_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_pw_6_hello_7PyHello_1__cinit__(PyObject *__pyx_v_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   CYTHON_UNUSED Py_ssize_t __pyx_nargs;
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   int __pyx_r;
@@ -2863,17 +2860,17 @@ static int __pyx_pw_5hello_7PyHello_1__cinit__(PyObject *__pyx_v_self, PyObject 
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__cinit__", 1, 0, 0, __pyx_nargs); return -1;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_VARARGS(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__cinit__", 0))) return -1;
-  __pyx_r = __pyx_pf_5hello_7PyHello___cinit__(((struct __pyx_obj_5hello_PyHello *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6_hello_7PyHello___cinit__(((struct __pyx_obj_6_hello_PyHello *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static int __pyx_pf_5hello_7PyHello___cinit__(struct __pyx_obj_5hello_PyHello *__pyx_v_self) {
+static int __pyx_pf_6_hello_7PyHello___cinit__(struct __pyx_obj_6_hello_PyHello *__pyx_v_self) {
   int __pyx_r;
 
-  /* "hello.pyx":14
+  /* "_hello.pyx":14
  * 
  *     def __cinit__(self):
  *         self.c_hello = new Hello()             # <<<<<<<<<<<<<<
@@ -2882,7 +2879,7 @@ static int __pyx_pf_5hello_7PyHello___cinit__(struct __pyx_obj_5hello_PyHello *_
  */
   __pyx_v_self->c_hello = new Hello();
 
-  /* "hello.pyx":13
+  /* "_hello.pyx":13
  *     cdef Hello* c_hello
  * 
  *     def __cinit__(self):             # <<<<<<<<<<<<<<
@@ -2895,7 +2892,7 @@ static int __pyx_pf_5hello_7PyHello___cinit__(struct __pyx_obj_5hello_PyHello *_
   return __pyx_r;
 }
 
-/* "hello.pyx":16
+/* "_hello.pyx":16
  *         self.c_hello = new Hello()
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -2904,21 +2901,21 @@ static int __pyx_pf_5hello_7PyHello___cinit__(struct __pyx_obj_5hello_PyHello *_
  */
 
 /* Python wrapper */
-static void __pyx_pw_5hello_7PyHello_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
-static void __pyx_pw_5hello_7PyHello_3__dealloc__(PyObject *__pyx_v_self) {
+static void __pyx_pw_6_hello_7PyHello_3__dealloc__(PyObject *__pyx_v_self); /*proto*/
+static void __pyx_pw_6_hello_7PyHello_3__dealloc__(PyObject *__pyx_v_self) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__dealloc__ (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_pf_5hello_7PyHello_2__dealloc__(((struct __pyx_obj_5hello_PyHello *)__pyx_v_self));
+  __pyx_pf_6_hello_7PyHello_2__dealloc__(((struct __pyx_obj_6_hello_PyHello *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
 }
 
-static void __pyx_pf_5hello_7PyHello_2__dealloc__(struct __pyx_obj_5hello_PyHello *__pyx_v_self) {
+static void __pyx_pf_6_hello_7PyHello_2__dealloc__(struct __pyx_obj_6_hello_PyHello *__pyx_v_self) {
 
-  /* "hello.pyx":17
+  /* "_hello.pyx":17
  * 
  *     def __dealloc__(self):
  *         del self.c_hello             # <<<<<<<<<<<<<<
@@ -2927,7 +2924,7 @@ static void __pyx_pf_5hello_7PyHello_2__dealloc__(struct __pyx_obj_5hello_PyHell
  */
   delete __pyx_v_self->c_hello;
 
-  /* "hello.pyx":16
+  /* "_hello.pyx":16
  *         self.c_hello = new Hello()
  * 
  *     def __dealloc__(self):             # <<<<<<<<<<<<<<
@@ -2938,7 +2935,7 @@ static void __pyx_pf_5hello_7PyHello_2__dealloc__(struct __pyx_obj_5hello_PyHell
   /* function exit code */
 }
 
-/* "hello.pyx":19
+/* "_hello.pyx":19
  *         del self.c_hello
  * 
  *     def greet(self, name):             # <<<<<<<<<<<<<<
@@ -2946,15 +2943,15 @@ static void __pyx_pf_5hello_7PyHello_2__dealloc__(struct __pyx_obj_5hello_PyHell
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5hello_7PyHello_5greet(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_6_hello_7PyHello_5greet(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_5hello_7PyHello_5greet = {"greet", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_5hello_7PyHello_5greet, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5hello_7PyHello_5greet(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_6_hello_7PyHello_5greet = {"greet", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6_hello_7PyHello_5greet, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6_hello_7PyHello_5greet(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3024,11 +3021,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("hello.PyHello.greet", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_hello.PyHello.greet", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5hello_7PyHello_4greet(((struct __pyx_obj_5hello_PyHello *)__pyx_v_self), __pyx_v_name);
+  __pyx_r = __pyx_pf_6_hello_7PyHello_4greet(((struct __pyx_obj_6_hello_PyHello *)__pyx_v_self), __pyx_v_name);
 
   /* function exit code */
   {
@@ -3041,7 +3038,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5hello_7PyHello_4greet(struct __pyx_obj_5hello_PyHello *__pyx_v_self, PyObject *__pyx_v_name) {
+static PyObject *__pyx_pf_6_hello_7PyHello_4greet(struct __pyx_obj_6_hello_PyHello *__pyx_v_self, PyObject *__pyx_v_name) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -3054,7 +3051,7 @@ static PyObject *__pyx_pf_5hello_7PyHello_4greet(struct __pyx_obj_5hello_PyHello
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("greet", 1);
 
-  /* "hello.pyx":20
+  /* "_hello.pyx":20
  * 
  *     def greet(self, name):
  *         return self.c_hello.greet(name.encode('utf-8'))             # <<<<<<<<<<<<<<
@@ -3092,7 +3089,7 @@ static PyObject *__pyx_pf_5hello_7PyHello_4greet(struct __pyx_obj_5hello_PyHello
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "hello.pyx":19
+  /* "_hello.pyx":19
  *         del self.c_hello
  * 
  *     def greet(self, name):             # <<<<<<<<<<<<<<
@@ -3104,7 +3101,7 @@ static PyObject *__pyx_pf_5hello_7PyHello_4greet(struct __pyx_obj_5hello_PyHello
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("hello.PyHello.greet", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_hello.PyHello.greet", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3119,15 +3116,15 @@ static PyObject *__pyx_pf_5hello_7PyHello_4greet(struct __pyx_obj_5hello_PyHello
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5hello_7PyHello_7__reduce_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_6_hello_7PyHello_7__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_5hello_7PyHello_7__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_5hello_7PyHello_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5hello_7PyHello_7__reduce_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_6_hello_7PyHello_7__reduce_cython__ = {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6_hello_7PyHello_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6_hello_7PyHello_7__reduce_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3152,14 +3149,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   if (unlikely(__pyx_nargs > 0)) {
     __Pyx_RaiseArgtupleInvalid("__reduce_cython__", 1, 0, 0, __pyx_nargs); return NULL;}
   if (unlikely(__pyx_kwds) && __Pyx_NumKwargs_FASTCALL(__pyx_kwds) && unlikely(!__Pyx_CheckKeywordStrings(__pyx_kwds, "__reduce_cython__", 0))) return NULL;
-  __pyx_r = __pyx_pf_5hello_7PyHello_6__reduce_cython__(((struct __pyx_obj_5hello_PyHello *)__pyx_v_self));
+  __pyx_r = __pyx_pf_6_hello_7PyHello_6__reduce_cython__(((struct __pyx_obj_6_hello_PyHello *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5hello_7PyHello_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_5hello_PyHello *__pyx_v_self) {
+static PyObject *__pyx_pf_6_hello_7PyHello_6__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_6_hello_PyHello *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -3184,7 +3181,7 @@ static PyObject *__pyx_pf_5hello_7PyHello_6__reduce_cython__(CYTHON_UNUSED struc
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("hello.PyHello.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_hello.PyHello.__reduce_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
@@ -3199,15 +3196,15 @@ static PyObject *__pyx_pf_5hello_7PyHello_6__reduce_cython__(CYTHON_UNUSED struc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_5hello_7PyHello_9__setstate_cython__(PyObject *__pyx_v_self, 
+static PyObject *__pyx_pw_6_hello_7PyHello_9__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
 PyObject *__pyx_args, PyObject *__pyx_kwds
 #endif
 ); /*proto*/
-static PyMethodDef __pyx_mdef_5hello_7PyHello_9__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_5hello_7PyHello_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_5hello_7PyHello_9__setstate_cython__(PyObject *__pyx_v_self, 
+static PyMethodDef __pyx_mdef_6_hello_7PyHello_9__setstate_cython__ = {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6_hello_7PyHello_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_6_hello_7PyHello_9__setstate_cython__(PyObject *__pyx_v_self, 
 #if CYTHON_METH_FASTCALL
 PyObject *const *__pyx_args, Py_ssize_t __pyx_nargs, PyObject *__pyx_kwds
 #else
@@ -3277,11 +3274,11 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       __Pyx_Arg_XDECREF_FASTCALL(values[__pyx_temp]);
     }
   }
-  __Pyx_AddTraceback("hello.PyHello.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_hello.PyHello.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_5hello_7PyHello_8__setstate_cython__(((struct __pyx_obj_5hello_PyHello *)__pyx_v_self), __pyx_v___pyx_state);
+  __pyx_r = __pyx_pf_6_hello_7PyHello_8__setstate_cython__(((struct __pyx_obj_6_hello_PyHello *)__pyx_v_self), __pyx_v___pyx_state);
 
   /* function exit code */
   {
@@ -3294,7 +3291,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_5hello_7PyHello_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_5hello_PyHello *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_6_hello_7PyHello_8__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_6_hello_PyHello *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_lineno = 0;
@@ -3319,14 +3316,14 @@ static PyObject *__pyx_pf_5hello_7PyHello_8__setstate_cython__(CYTHON_UNUSED str
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_AddTraceback("hello.PyHello.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("_hello.PyHello.__setstate_cython__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_tp_new_5hello_PyHello(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
+static PyObject *__pyx_tp_new_6_hello_PyHello(PyTypeObject *t, CYTHON_UNUSED PyObject *a, CYTHON_UNUSED PyObject *k) {
   PyObject *o;
   #if CYTHON_COMPILING_IN_LIMITED_API
   allocfunc alloc_func = (allocfunc)PyType_GetSlot(t, Py_tp_alloc);
@@ -3339,17 +3336,17 @@ static PyObject *__pyx_tp_new_5hello_PyHello(PyTypeObject *t, CYTHON_UNUSED PyOb
   }
   if (unlikely(!o)) return 0;
   #endif
-  if (unlikely(__pyx_pw_5hello_7PyHello_1__cinit__(o, __pyx_empty_tuple, NULL) < 0)) goto bad;
+  if (unlikely(__pyx_pw_6_hello_7PyHello_1__cinit__(o, __pyx_empty_tuple, NULL) < 0)) goto bad;
   return o;
   bad:
   Py_DECREF(o); o = 0;
   return NULL;
 }
 
-static void __pyx_tp_dealloc_5hello_PyHello(PyObject *o) {
+static void __pyx_tp_dealloc_6_hello_PyHello(PyObject *o) {
   #if CYTHON_USE_TP_FINALIZE
   if (unlikely((PY_VERSION_HEX >= 0x03080000 || __Pyx_PyType_HasFeature(Py_TYPE(o), Py_TPFLAGS_HAVE_FINALIZE)) && __Pyx_PyObject_GetSlot(o, tp_finalize, destructor)) && (!PyType_IS_GC(Py_TYPE(o)) || !__Pyx_PyObject_GC_IsFinalized(o))) {
-    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_5hello_PyHello) {
+    if (__Pyx_PyObject_GetSlot(o, tp_dealloc, destructor) == __pyx_tp_dealloc_6_hello_PyHello) {
       if (PyObject_CallFinalizerFromDealloc(o)) return;
     }
   }
@@ -3358,7 +3355,7 @@ static void __pyx_tp_dealloc_5hello_PyHello(PyObject *o) {
     PyObject *etype, *eval, *etb;
     PyErr_Fetch(&etype, &eval, &etb);
     __Pyx_SET_REFCNT(o, Py_REFCNT(o) + 1);
-    __pyx_pw_5hello_7PyHello_3__dealloc__(o);
+    __pyx_pw_6_hello_7PyHello_3__dealloc__(o);
     __Pyx_SET_REFCNT(o, Py_REFCNT(o) - 1);
     PyErr_Restore(etype, eval, etb);
   }
@@ -3372,34 +3369,34 @@ static void __pyx_tp_dealloc_5hello_PyHello(PyObject *o) {
   #endif
 }
 
-static PyMethodDef __pyx_methods_5hello_PyHello[] = {
-  {"greet", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_5hello_7PyHello_5greet, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_5hello_7PyHello_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
-  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_5hello_7PyHello_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+static PyMethodDef __pyx_methods_6_hello_PyHello[] = {
+  {"greet", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6_hello_7PyHello_5greet, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__reduce_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6_hello_7PyHello_7__reduce_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
+  {"__setstate_cython__", (PyCFunction)(void*)(__Pyx_PyCFunction_FastCallWithKeywords)__pyx_pw_6_hello_7PyHello_9__setstate_cython__, __Pyx_METH_FASTCALL|METH_KEYWORDS, 0},
   {0, 0, 0, 0}
 };
 #if CYTHON_USE_TYPE_SPECS
-static PyType_Slot __pyx_type_5hello_PyHello_slots[] = {
-  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_5hello_PyHello},
-  {Py_tp_methods, (void *)__pyx_methods_5hello_PyHello},
-  {Py_tp_new, (void *)__pyx_tp_new_5hello_PyHello},
+static PyType_Slot __pyx_type_6_hello_PyHello_slots[] = {
+  {Py_tp_dealloc, (void *)__pyx_tp_dealloc_6_hello_PyHello},
+  {Py_tp_methods, (void *)__pyx_methods_6_hello_PyHello},
+  {Py_tp_new, (void *)__pyx_tp_new_6_hello_PyHello},
   {0, 0},
 };
-static PyType_Spec __pyx_type_5hello_PyHello_spec = {
-  "hello.PyHello",
-  sizeof(struct __pyx_obj_5hello_PyHello),
+static PyType_Spec __pyx_type_6_hello_PyHello_spec = {
+  "_hello.PyHello",
+  sizeof(struct __pyx_obj_6_hello_PyHello),
   0,
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE,
-  __pyx_type_5hello_PyHello_slots,
+  __pyx_type_6_hello_PyHello_slots,
 };
 #else
 
-static PyTypeObject __pyx_type_5hello_PyHello = {
+static PyTypeObject __pyx_type_6_hello_PyHello = {
   PyVarObject_HEAD_INIT(0, 0)
-  "hello.""PyHello", /*tp_name*/
-  sizeof(struct __pyx_obj_5hello_PyHello), /*tp_basicsize*/
+  "_hello.""PyHello", /*tp_name*/
+  sizeof(struct __pyx_obj_6_hello_PyHello), /*tp_basicsize*/
   0, /*tp_itemsize*/
-  __pyx_tp_dealloc_5hello_PyHello, /*tp_dealloc*/
+  __pyx_tp_dealloc_6_hello_PyHello, /*tp_dealloc*/
   #if PY_VERSION_HEX < 0x030800b4
   0, /*tp_print*/
   #endif
@@ -3432,7 +3429,7 @@ static PyTypeObject __pyx_type_5hello_PyHello = {
   0, /*tp_weaklistoffset*/
   0, /*tp_iter*/
   0, /*tp_iternext*/
-  __pyx_methods_5hello_PyHello, /*tp_methods*/
+  __pyx_methods_6_hello_PyHello, /*tp_methods*/
   0, /*tp_members*/
   0, /*tp_getset*/
   0, /*tp_base*/
@@ -3444,7 +3441,7 @@ static PyTypeObject __pyx_type_5hello_PyHello = {
   #endif
   0, /*tp_init*/
   0, /*tp_alloc*/
-  __pyx_tp_new_5hello_PyHello, /*tp_new*/
+  __pyx_tp_new_6_hello_PyHello, /*tp_new*/
   0, /*tp_free*/
   0, /*tp_is_gc*/
   0, /*tp_bases*/
@@ -3544,7 +3541,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "hello.pyx":19
+  /* "_hello.pyx":19
  *         del self.c_hello
  * 
  *     def greet(self, name):             # <<<<<<<<<<<<<<
@@ -3636,27 +3633,27 @@ static int __Pyx_modinit_type_init_code(void) {
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
   #if CYTHON_USE_TYPE_SPECS
-  __pyx_ptype_5hello_PyHello = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_5hello_PyHello_spec, NULL); if (unlikely(!__pyx_ptype_5hello_PyHello)) __PYX_ERR(1, 10, __pyx_L1_error)
-  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_5hello_PyHello_spec, __pyx_ptype_5hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
+  __pyx_ptype_6_hello_PyHello = (PyTypeObject *) __Pyx_PyType_FromModuleAndSpec(__pyx_m, &__pyx_type_6_hello_PyHello_spec, NULL); if (unlikely(!__pyx_ptype_6_hello_PyHello)) __PYX_ERR(1, 10, __pyx_L1_error)
+  if (__Pyx_fix_up_extension_type_from_spec(&__pyx_type_6_hello_PyHello_spec, __pyx_ptype_6_hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
   #else
-  __pyx_ptype_5hello_PyHello = &__pyx_type_5hello_PyHello;
+  __pyx_ptype_6_hello_PyHello = &__pyx_type_6_hello_PyHello;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
   #endif
   #if !CYTHON_USE_TYPE_SPECS
-  if (__Pyx_PyType_Ready(__pyx_ptype_5hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
+  if (__Pyx_PyType_Ready(__pyx_ptype_6_hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
   #endif
   #if PY_MAJOR_VERSION < 3
-  __pyx_ptype_5hello_PyHello->tp_print = 0;
+  __pyx_ptype_6_hello_PyHello->tp_print = 0;
   #endif
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_5hello_PyHello->tp_dictoffset && __pyx_ptype_5hello_PyHello->tp_getattro == PyObject_GenericGetAttr)) {
-    __pyx_ptype_5hello_PyHello->tp_getattro = __Pyx_PyObject_GenericGetAttr;
+  if ((CYTHON_USE_TYPE_SLOTS && CYTHON_USE_PYTYPE_LOOKUP) && likely(!__pyx_ptype_6_hello_PyHello->tp_dictoffset && __pyx_ptype_6_hello_PyHello->tp_getattro == PyObject_GenericGetAttr)) {
+    __pyx_ptype_6_hello_PyHello->tp_getattro = __Pyx_PyObject_GenericGetAttr;
   }
   #endif
-  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_PyHello, (PyObject *) __pyx_ptype_5hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
+  if (PyObject_SetAttr(__pyx_m, __pyx_n_s_PyHello, (PyObject *) __pyx_ptype_6_hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
   #if !CYTHON_COMPILING_IN_LIMITED_API
-  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_5hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
+  if (__Pyx_setup_reduce((PyObject *) __pyx_ptype_6_hello_PyHello) < 0) __PYX_ERR(1, 10, __pyx_L1_error)
   #endif
   __Pyx_RefNannyFinishContext();
   return 0;
@@ -3693,10 +3690,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_hello(PyObject* module); /*proto*/
+static int __pyx_pymod_exec__hello(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_hello},
+  {Py_mod_exec, (void*)__pyx_pymod_exec__hello},
   {0, NULL}
 };
 #endif
@@ -3709,7 +3706,7 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "hello",
+      "_hello",
       0, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
@@ -3757,11 +3754,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC inithello(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC inithello(void)
+__Pyx_PyMODINIT_FUNC init_hello(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC init_hello(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_hello(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_hello(void)
+__Pyx_PyMODINIT_FUNC PyInit__hello(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit__hello(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -3842,7 +3839,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_hello(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec__hello(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -3859,7 +3856,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_hello(PyObject *__pyx_pyinit_modul
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'hello' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module '_hello' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -3871,13 +3868,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_hello(PyObject *__pyx_pyinit_modul
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("hello", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("_hello", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(1, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(1, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "hello" pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "_hello" pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(1, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -3901,7 +3898,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_hello(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit__hello(void)", 0);
   if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -3939,14 +3936,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_hello) {
+  if (__pyx_module_is_main__hello) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(1, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "hello")) {
-      if (unlikely((PyDict_SetItemString(modules, "hello", __pyx_m) < 0))) __PYX_ERR(1, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "_hello")) {
+      if (unlikely((PyDict_SetItemString(modules, "_hello", __pyx_m) < 0))) __PYX_ERR(1, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -3967,24 +3964,24 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(1, 1, __pyx_L1_error)
   #endif
 
-  /* "hello.pyx":19
+  /* "_hello.pyx":19
  *         del self.c_hello
  * 
  *     def greet(self, name):             # <<<<<<<<<<<<<<
  *         return self.c_hello.greet(name.encode('utf-8'))
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5hello_7PyHello_5greet, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyHello_greet, NULL, __pyx_n_s_hello, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 19, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6_hello_7PyHello_5greet, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyHello_greet, NULL, __pyx_n_s_hello, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(1, 19, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_5hello_PyHello, __pyx_n_s_greet, __pyx_t_2) < 0) __PYX_ERR(1, 19, __pyx_L1_error)
+  if (__Pyx_SetItemOnTypeDict((PyObject *)__pyx_ptype_6_hello_PyHello, __pyx_n_s_greet, __pyx_t_2) < 0) __PYX_ERR(1, 19, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  PyType_Modified(__pyx_ptype_5hello_PyHello);
+  PyType_Modified(__pyx_ptype_6_hello_PyHello);
 
   /* "(tree fragment)":1
  * def __reduce_cython__(self):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  * def __setstate_cython__(self, __pyx_state):
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5hello_7PyHello_7__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyHello___reduce_cython, NULL, __pyx_n_s_hello, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6_hello_7PyHello_7__reduce_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyHello___reduce_cython, NULL, __pyx_n_s_hello, __pyx_d, ((PyObject *)__pyx_codeobj__4)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_reduce_cython, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -3995,12 +3992,12 @@ if (!__Pyx_RefNanny) {
  * def __setstate_cython__(self, __pyx_state):             # <<<<<<<<<<<<<<
  *     raise TypeError, "no default __reduce__ due to non-trivial __cinit__"
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_5hello_7PyHello_9__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyHello___setstate_cython, NULL, __pyx_n_s_hello, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6_hello_7PyHello_9__setstate_cython__, __Pyx_CYFUNCTION_CCLASS, __pyx_n_s_PyHello___setstate_cython, NULL, __pyx_n_s_hello, __pyx_d, ((PyObject *)__pyx_codeobj__6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_setstate_cython, __pyx_t_2) < 0) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "hello.pyx":1
+  /* "_hello.pyx":1
  * from libcpp.string cimport string             # <<<<<<<<<<<<<<
  * 
  * # Importar a classe do C++
@@ -4017,7 +4014,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init hello", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init _hello", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -4031,7 +4028,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init hello");
+    PyErr_SetString(PyExc_ImportError, "init _hello");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
