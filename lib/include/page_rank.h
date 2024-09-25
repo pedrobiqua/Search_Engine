@@ -1,10 +1,8 @@
 #ifndef PAGE_RANK_H
 #define PAGE_RANK_H
 
-#include <iostream>
 #include <list>
 #include <map>
-#include <ostream>
 
 namespace page_rank {
 using namespace std;
