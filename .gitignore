@@ -1,6 +1,7 @@
 /build
 /.cache
 /.vscode
+/env
 *.so
 compile_commands.json
 /lib/src/_*.cpp
