@@ -1,3 +1,6 @@
-from search_engine.example import montargrafo_print
+from search_engine.crawler import Crawler
 
-montargrafo_print()
+crawler = Crawler("https://pt.wikipedia.org", "/wiki/")
+
+
+print(crawler._get_links("Gato"))
