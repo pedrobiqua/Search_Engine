@@ -1,6 +1,6 @@
 from search_engine.crawler import Crawler
 
-crawler = Crawler("https://pt.wikipedia.org", "/wiki/")
+crawler = Crawler("https://pt.wikipedia.org", "/wiki/", "Gato")
 
 
-print(crawler._get_links("Gato"))
+crawler.run()
