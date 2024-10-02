@@ -1,10 +1,12 @@
 from .exceptions import UrlError
 from _page_rank import PyGraph
+from .helper.converter import StringToIntConverter
 
 # Libs
 import requests
 import re
 from bs4 import BeautifulSoup
+from collections import deque
 
 class Crawler:
     """
@@ -41,7 +43,7 @@ class Crawler:
         re.IGNORECASE
     )
 
-    def __init__(self, url_base: str, page_name: str, remove_pages: list[str] = []):
+    def __init__(self, url_base: str, page_name: str, initial_page: str, remove_pages: list[str] = [], test_mode:bool = False):
         """
         Initialize the Crawler with a base URL, the starting page, and optionally, 
         a list of pages to exclude.
@@ -57,11 +59,14 @@ class Crawler:
         """
         self.url_base = url_base
         self.page_name = page_name
+        self.initial_page = initial_page
         self.remove_pages = remove_pages
+        self.test_mode = test_mode
         self._validate_url(url_base)
 
         # Initialize the graph for PageRank
         self.graph = PyGraph()
+        self.converter = StringToIntConverter()
     
     def _get_links(self, current_page: str) -> list:
         """
@@ -88,7 +93,12 @@ class Crawler:
         response = requests.get(self.url_base + self.page_name + current_page)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            return [a.get('href') for a in soup.find_all('a', href=True) if a.get('href').startswith(self.page_name)]
+            # Find all tags <p>
+            paragraphs = soup.find_all('p')
+            # Find links in tag <p>
+            links = [a.get('href') for p in paragraphs for a in p.find_all('a', href=True) 
+                    if a.get('href').startswith(self.page_name)]
+            return links
         return []
     
     def _get_paragraphs(self, current_page: str) -> list:
@@ -128,17 +138,61 @@ class Crawler:
         if not re.match(self.REGEX, url):
             raise UrlError()
         
-    def run(self):
+    def run(self, limit = 2):
         """
-        Run the crawler to collect links and paragraphs from the starting page.
+        Run the crawler to collect links and paragraphs starting from the base page.
+        It uses a queue to traverse the links in a breadth-first manner.
 
         Returns
         -------
-        links : list of str
-            A list of links found on the starting page.
-        paragraphs : list of str
-            A list of paragraphs found on the starting page.
+        all_links : list of str
+            A list of all links found during the crawling process.
+        all_paragraphs : list of str
+            A list of all paragraphs found during the crawling process.
         """
-        links = self._get_links(self.page_name)
-        paragraphs = self._get_paragraphs(self.page_name)
-        return links, paragraphs
+        # Initialize queue with the starting page
+        queue = deque([self.initial_page])
+        visited = set()  # Track visited pages to avoid processing them multiple times
+        all_links = []  # Store all the links found during crawling
+        all_paragraphs = []  # Store all the paragraphs found during crawling
+        
+        run = True
+        counter = 0
+
+        while queue and run:
+            current_page = queue.popleft()  # Get the next page to crawl
+
+            # Skip if page has already been visited
+            if current_page in visited:
+                continue
+
+            # Mark page as visited
+            visited.add(current_page)
+
+            # Get links and paragraphs from the current page
+            links = self._get_links(current_page)
+            paragraphs = self._get_paragraphs(current_page)
+
+            # Store the results
+            all_links.extend(links)
+            all_paragraphs.extend(paragraphs)
+
+            current_page_int = self.converter.convert(current_page)
+
+            # Add new links to the queue if they haven't been visited
+            for link in links:
+                if link not in visited and link not in queue and link not in self.remove_pages:
+                    # Extrai a ultima página
+                    next_page = link.split('/')[-1]
+                    next_page_int = self.converter.convert(next_page)
+                    # Make graph
+                    self.graph.add_edge(current_page_int, next_page_int)
+                    queue.append(next_page)
+            
+            # Only when test_mode is activated
+            if self.test_mode:
+                counter += 1
+                if counter == limit:
+                    run = False
+
+        return self.graph
