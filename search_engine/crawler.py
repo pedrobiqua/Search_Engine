@@ -173,8 +173,8 @@ class Crawler:
             links = self._get_links(current_page)
             paragraphs = self._get_paragraphs(current_page)
 
-            # Com os paragrafos e com o nome da página eu posso adicionar o indice reverso aqui!
-            
+            # TODO: Com os paragrafos e com o nome da página eu posso adicionar o indice reverso aqui!
+
 
 
             # Store the results
