@@ -1,42 +1,49 @@
 #ifndef INVERTED_INDEX
 #define INVERTED_INDEX
 
-#include <string>
-#include <vector>
 #include <iostream>
+#include <map>
+#include <string>
+#include <list>
+#include <vector>
 #include <algorithm>
-#include <fstream>
-#include <unordered_map>
+#include <set>
 
+namespace inverted_index {
+    typedef std::string str;
+    typedef std::list<str> list_str;
+    #define DELIMITER " "
 
-namespace inverted_index
-{
+    struct docs {
+        str name_doc;
+        int freq;
+        list_str links_docs; // Armazenar os nomes de documentos que aquele documento aponta
 
-    const std::string _CHARS = "abcdefghijklmnopqrstuvwxyz0123456789.:-_/";
-    const size_t MAX_NODES = 41;
+        bool operator==(const docs& other) const {return (name_doc == other.name_doc);}
 
-    class node {
-    public:
-        node() { isWord = false; }
-        ~node() { for(auto& pair : next) delete pair.second; }
-        bool isWord;
-        std::vector<std::string> files;
-        std::unordered_map<char, node*> next;
+        bool operator<(const docs& other) const {return name_doc < other.name_doc;}
+
+        docs& operator +=(int value){freq += value;return *this;}
+
+        friend std::ostream& operator<<(std::ostream& os, const docs& d) {
+            os << "Doc: " << d.name_doc << " | Freq: " << d.freq;
+            return os;
+        }
     };
 
-    class index {
-    public:
-        void add( std::string s, std::string fileName );
-        void findWord( std::string s );
+    typedef std::list<docs> list_docs;
+    typedef std::map<str, list_docs> map_str_docs;
+    typedef std::set<docs> set_docs;
+    typedef std::vector<str> vector_str;
 
-    private:
+    char to_lowercase(unsigned char c) {
+        return std::tolower(c);
+    }
 
-        void pushFileName( node* n, std::string fn );
-        const std::vector<std::string>& find( std::string s );
-        node* addWord(std::string s);
-        node root;
-    };
-    
-} // namespace inverted_index
+    vector_str split(str& s, const str& delimiter);
+    map_str_docs add_doc(map_str_docs& mp, const str& doc_name, str& text);
+    list_docs find_doc(map_str_docs& mp, str& word);
+    list_docs find_answer(map_str_docs& mp, str& input);
+}
 
 #endif // INVERTED_INDEX

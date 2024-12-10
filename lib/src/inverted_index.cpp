@@ -1,70 +1,61 @@
 #include "inverted_index.h"
 
-inverted_index::node::node() {
-    inverted_index::node::isWord = false; 
-}
-
-inverted_index::node::~node() {
-    for(auto& pair : next) delete pair.second; 
-}
-
-
-void inverted_index::index::add( std::string s, std::string fileName ) {
-    std::transform( s.begin(), s.end(), s.begin(), tolower );
-    std::string h;
-    for( std::string::iterator i = s.begin(); i != s.end(); i++ ) {
-        if( *i == 32 ) {
-            pushFileName( addWord( h ), fileName );
-            h.clear();
-            continue;
-        }
-        h.append( 1, *i );
+inverted_index::vector_str inverted_index::split(inverted_index::str& s, const str& delimiter) {
+    std::vector<str> tokens;
+    size_t pos = 0;
+    std::string token;
+    while ((pos = s.find(delimiter)) != std::string::npos) {
+        token = s.substr(0, pos);
+        tokens.push_back(token);
+        s.erase(0, pos + delimiter.length());
     }
-    if( h.length() )
-        pushFileName( addWord( h ), fileName );
+    tokens.push_back(s);
+
+    return tokens;
 }
 
-void inverted_index::index::findWord( std::string s ) {
-    std::vector<std::string> v = find( s );
-    if( !v.size() ) {
-        std::cout << s + " was not found!\n";
-        return;
-    }
-    std::cout << s << " found in:\n";
-    for( std::vector<std::string>::iterator i = v.begin(); i != v.end(); i++ ) {
-        std::cout << *i << "\n";
-    }
-    std::cout << "\n";
-}
+inverted_index::map_str_docs inverted_index::add_doc(inverted_index::map_str_docs& mp, const inverted_index::str& doc_name, inverted_index::str& text){
+    auto words = inverted_index::split(text, DELIMITER);
 
-void inverted_index::index::pushFileName( node* n, std::string fn ) {
-    std::vector<std::string>::iterator i = std::find( n->files.begin(), n->files.end(), fn );
-    if( i == n->files.end() ) n->files.push_back( fn );
-}
-
-const std::vector<std::string>& inverted_index::index::find( std::string s ) {
-    size_t idx;
-    std::transform( s.begin(), s.end(), s.begin(), tolower );
-    node* rt = &root;
-    for( std::string::iterator i = s.begin(); i != s.end(); i++ ) {
-        idx = _CHARS.find( *i );
-        if( idx < MAX_NODES ) {
-            if( !rt->next[idx] ) return std::vector<std::string>();
-            rt = rt->next[idx];
+    for(const auto& word : words) {
+        inverted_index::docs target = {doc_name, 1};
+        // Procura pelo elemento dentro da lista da palavra
+        auto it = std::find(mp[word].begin(), mp[word].end(), target);
+        if(it != mp[word].end()){
+            *it += 1; // Incrementa o valor contido dentro do documento
+        } else {
+            mp[word].push_back(target);
         }
     }
-    if( rt->isWord ) return rt->files;
-    return std::vector<std::string>();
+
+    return mp;
 }
 
-inverted_index::node* inverted_index::index::addWord(std::string s) {
-    node* rt = &root;
-    for (char c : s) {
-        if (rt->next.find(c) == rt->next.end()) {
-            rt->next[c] = new node();
+inverted_index::list_docs inverted_index::find_doc(inverted_index::map_str_docs& mp, str& word){
+    return mp[word];
+}
+
+inverted_index::list_docs inverted_index::find_answer(inverted_index::map_str_docs& mp, inverted_index::str& input) {
+    inverted_index::list_docs result;
+    inverted_index::set_docs unique_docs;
+
+    // Coloca o texto em minúsculas
+    std::transform(input.begin(), input.end(), input.begin(), to_lowercase);
+
+    // Divide o input em palavras com base no delimitador
+    auto words = split(input, DELIMITER);
+
+    for (auto& word : words) {
+        list_docs docs = find_doc(mp, word); // Busca documentos relacionados à palavra
+        for (const auto& d : docs) {
+            unique_docs.insert(d); // Armazena apenas os nomes dos documentos
         }
-        rt = rt->next[c];
     }
-    rt->isWord = true;
-    return rt;
+
+    // Converte os nomes únicos de volta para objetos do tipo `docs`
+    for (const auto& doc : unique_docs) {
+        result.push_back({doc}); // Freq = 0, pois não é usada aqui
+    }
+
+    return result;
 }
