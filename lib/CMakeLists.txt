@@ -1,10 +1,11 @@
 add_library(
-    search_engine 
+    search_engine
         SHARED
             src/sum.cpp
             src/subtraction.cpp
             src/hello.cpp
             src/page_rank.cpp
+            src/inverted_index.cpp
 )
 
 target_include_directories(search_engine PUBLIC include)
