@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -8,5 +9,3 @@ add_subdirectory(lib)
 
 include(FetchContent)
 add_subdirectory(tests/unit-tests)
-
-

@@ -1,4 +1,6 @@
 #include "page_rank.h"
+#include <iostream>
+#include <ostream>
 
 void page_rank::Graph::add_edge(int u, int v) { adjList_[u].push_back(v); }
 

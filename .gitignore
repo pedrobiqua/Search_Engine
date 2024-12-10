@@ -1,4 +1,9 @@
 /build
 /.cache
 /.vscode
+/env
+/dist
+**/__pycache__/
 *.so
+compile_commands.json
+/lib/src/_*.cpp
