@@ -1,7 +1,16 @@
 #include "inverted_index.h"
+#include <locale>
+#include <bits/stdc++.h>
+#include <cwctype>
+#include <unicode/locid.h>
+#include <unicode/unistr.h>
+#include <unicode/ustream.h>
 
-inverted_index::vector_str inverted_index::split(inverted_index::str& s, const str& delimiter) {
-    std::vector<str> tokens;
+
+using namespace inverted_index;
+
+vector_str inverted_index::split(str& s, const str& delimiter) {
+    vector_str tokens;
     size_t pos = 0;
     std::string token;
     while ((pos = s.find(delimiter)) != std::string::npos) {
@@ -14,11 +23,23 @@ inverted_index::vector_str inverted_index::split(inverted_index::str& s, const s
     return tokens;
 }
 
-inverted_index::map_str_docs inverted_index::add_doc(inverted_index::map_str_docs& mp, const inverted_index::str& doc_name, inverted_index::str& text){
+void inverted_index::shrink_string(std::string* input) {
+    if (!input) return; // Verifica se o ponteiro é válido
+
+    icu::UnicodeString ustr(input->c_str(), "UTF-8");
+    ustr.toLower();
+    std::string result;
+    ustr.toUTF8String(result);
+    *input = result;
+}
+
+map_str_docs inverted_index::add_doc(map_str_docs& mp, const str& doc_name, str& text){
+
+    shrink_string(&text);
     auto words = inverted_index::split(text, DELIMITER);
 
     for(const auto& word : words) {
-        inverted_index::docs target = {doc_name, 1};
+        docs target = {doc_name, 1};
         // Procura pelo elemento dentro da lista da palavra
         auto it = std::find(mp[word].begin(), mp[word].end(), target);
         if(it != mp[word].end()){
@@ -31,22 +52,19 @@ inverted_index::map_str_docs inverted_index::add_doc(inverted_index::map_str_doc
     return mp;
 }
 
-inverted_index::list_docs inverted_index::find_doc(inverted_index::map_str_docs& mp, str& word){
+list_docs inverted_index::find_doc(map_str_docs& mp, str& word){
     return mp[word];
 }
 
-inverted_index::list_docs inverted_index::find_answer(inverted_index::map_str_docs& mp, inverted_index::str& input) {
-    inverted_index::list_docs result;
-    inverted_index::set_docs unique_docs;
+list_docs inverted_index::find_answer(map_str_docs& mp, str& input) {
+    list_docs result;
+    set_docs unique_docs;
 
-    // Coloca o texto em minúsculas
-    std::transform(input.begin(), input.end(), input.begin(), to_lowercase);
-
-    // Divide o input em palavras com base no delimitador
-    auto words = split(input, DELIMITER);
+    shrink_string(&input);
+    auto words = inverted_index::split(input, DELIMITER);
 
     for (auto& word : words) {
-        list_docs docs = find_doc(mp, word); // Busca documentos relacionados à palavra
+        list_docs docs = inverted_index::find_doc(mp, word); // Busca documentos relacionados à palavra
         for (const auto& d : docs) {
             unique_docs.insert(d); // Armazena apenas os nomes dos documentos
         }
