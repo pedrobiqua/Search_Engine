@@ -34,4 +34,5 @@ jobs:
       with:
         name: GTest Results
         path: build/gtest-report.xml
+        reporter: jest-junit
         fail-on-error: false
