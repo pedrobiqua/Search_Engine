@@ -56,7 +56,7 @@ jobs:
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
     - name: Run Google Tests
-      working-directory: ${{ steps.strings.outputs.build-output-dir }}
+      working-directory: ${{ steps.strings.outputs.build-output-dir }}/test/unit-tests
       run: |
-        # Localize the test executable (adjust "tests" to match your actual executable name)
-        ./tests
+        # Execute the test binary (adjust if additional steps are needed)
+        ./LibUnitTests
