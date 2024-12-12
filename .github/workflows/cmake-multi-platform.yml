@@ -28,11 +28,10 @@ jobs:
         name: gtest-report
         path: build/gtest-report.xml
 
-    - name: Publish Test Results (Optional)
+    - name: Publish Test Results
       uses: dorny/test-reporter@v1
       if: always()
       with:
         name: GTest Results
         path: build/gtest-report.xml
-        reporter: junit
-        fail_on_error: false
+        fail-on-error: false
