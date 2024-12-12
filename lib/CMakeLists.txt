@@ -10,6 +10,12 @@ add_library(
 
 target_include_directories(search_engine PUBLIC include)
 
+target_link_libraries(search_engine
+    PUBLIC
+    icuio
+    icuuc
+)
+
 install(
     TARGETS search_engine
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

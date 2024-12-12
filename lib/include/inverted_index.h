@@ -44,6 +44,7 @@ namespace inverted_index {
     map_str_docs add_doc(map_str_docs& mp, const str& doc_name, str& text);
     list_docs find_doc(map_str_docs& mp, str& word);
     list_docs find_answer(map_str_docs& mp, str& input);
+    void shrink_string(std::string* input);
 }
 
 #endif // INVERTED_INDEX
