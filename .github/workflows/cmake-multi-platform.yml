@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest  # Focando no Linux, pois você mencionou testes locais no Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -18,6 +18,20 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake -DGTEST_OUTPUT=xml:gtest-report.xml ..
         make
-        ./tests/unit-tests/LibUnitTests
+        ./tests/unit-tests/LibUnitTests --gtest_output=xml:./gtest-report.xml
+
+    - name: Upload Test Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: gtest-report
+        path: build/gtest-report.xml
+
+    - name: Publish Test Results (Optional)
+      uses: dorny/test-reporter@v1
+      if: always()
+      with:
+        name: GTest Results
+        path: build/gtest-report.xml
+        reporter: junit
