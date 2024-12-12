@@ -55,8 +55,10 @@ jobs:
     - name: Build
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
+    - name: List full build directory
+      run: ls -R ${{ steps.strings.outputs.build-output-dir }}
+
     - name: Run Google Tests
-      working-directory: ${{ steps.strings.outputs.build-output-dir }}/test/unit-tests
+      # Use o caminho absoluto para o executável diretamente.
       run: |
-        # Execute the test binary (adjust if additional steps are needed)
-        ./LibUnitTests
+        ${{ steps.strings.outputs.build-output-dir }}/test/unit-tests/LibUnitTests
