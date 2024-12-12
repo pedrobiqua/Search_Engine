@@ -1,4 +1,4 @@
-name: CMake Tests
+name: CMake Build and Test
 
 on:
   push:
@@ -6,33 +6,42 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+  actions: read
+  checks: write
+
 jobs:
-  build-and-test:
+  build-test:
+    name: Build & Test
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Build and Run Tests with JUnit Report
-      run: |
-        mkdir build
-        cd build
-        cmake -DGTEST_OUTPUT=xml:gtest-report.xml ..
-        make
-        ./tests/unit-tests/LibUnitTests --gtest_output=xml:./gtest-report.xml
+      - name: Set up build directory
+        run: |
+          mkdir build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+          make
 
-    - name: Upload Test Report
-      uses: actions/upload-artifact@v3
-      with:
-        name: gtest-report
-        path: build/gtest-report.xml
+      - name: Run tests and generate JUnit report
+        run: |
+          cd build
+          ./tests/unit-tests/LibUnitTests --gtest_output=xml:./test-report.xml
 
-    - name: Publish Test Results
-      uses: dorny/test-reporter@v1
-      if: always()
-      with:
-        name: GTest Results
-        path: build/gtest-report.xml
-        reporter: jest-junit
-        fail-on-error: false
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: gtest-report
+          path: build/test-report.xml
+
+      - name: Publish Test Results
+        uses: dorny/test-reporter@v1
+        if: success() || failure()    # run this step even if previous step failed
+        with:
+          name: Google Test Results     # Custom name for the check
+          path: build/test-report.xml   # Path to the JUnit XML report
+          reporter: jest-junit          # Specify jest-junit to use the JUnit format
+          fail-on-error: false
