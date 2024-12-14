@@ -1,0 +1,102 @@
+/*!
+
+\page Chap_01_Introduction 1 Introduction
+
+\tableofcontents
+
+
+
+Describes the relevant requirements and the driving forces that software architects and development team must consider. These include
+
+<ul>
+  <li> underlying business goals, essential features and functional requirements for the system,
+  <li> quality goals for the architecture,
+  <li> relevant stakeholders and their expectations
+</ul>
+
+\section Chap_01_01_Requirements_Overview 1.1 Requirements Overview
+
+Short description of the functional requirements, driving forces, extract (or abstract) of requirements. Link to (hopefully existing) requirements documents (with version number and information where to find it).
+
+From the point of view of the end users a system is created or modified to improve support of a business activity and/or improve the quality.
+
+\section Chap_01_02_References 1.2 References
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Reference</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>XXX</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>XXX</td>
+  </tr>
+</table>
+
+
+\section Chap_01_03_Quality_goals 1.3 Quality goals
+
+Please consult ISO 25010 for an overview.
+
+<ul>
+  <li> Reliability
+  <li> Availability
+  <li> Maintainability
+  <li> Safety
+  <li> Transferability
+  <li> Performance and Efficiency
+  <li> Operability/Usability
+  <li> Security
+  <li> Testability
+  <li> Modifiability
+  <li> Portability
+</ul>
+
+<table>
+  <tr>
+    <th>#</th>
+    <th>Quality</th>
+    <th>Motivation</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+</table>
+
+\section Chap_01_04_Stakeholders 1.4 Stakeholders
+
+Explicit overview of stakeholders of the system, i.e. all person, roles or organizations that
+
+<ul>
+  <li> should know the architecture
+  <li> have to be convinced of the architecture
+  <li> have to work with the architecture or with code
+  <li> need the documentation of the architecture for their work
+  <li> have to come up with decisions about the system or its development
+</ul>
+
+<table>
+  <tr>
+    <th>Role</th>
+    <th>Name</th>
+    <th>Expectations</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>
+      <ul>
+        <li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+*/
+
