@@ -1,0 +1,26 @@
+/*!
+
+\page Chap_03_System_scope_and_context 3 System Scope and Context 
+
+\tableofcontents
+
+System scope and context - as the name suggests - delimits your system (i.e. your scope) from all its communication partners (neighboring systems and users, i.e. the context of your system). It thereby specifies the external interfaces.
+
+If necessary, differentiate the business context (domain specific inputs and outputs) from the technical context (channels, protocols, hardware).
+
+The domain interfaces and technical interfaces to communication partners are among your system’s most critical aspects. Make sure that you completely understand them.
+
+\section Chap_03_01_Business_context 3.1 Business context
+
+Specification of all communication partners (users, IT-systems, …) with explanations of domain specific inputs and outputs or interfaces. Optionally you can add domain specific formats or communication protocols.
+
+All stakeholders should understand which data are exchanged with the environment of the system.
+
+\section Chap_03_02_Technical_context 3.2 Technical context
+
+Technical interfaces (channels and transmission media) linking your system to its environment. In addition a mapping of domain specific input/output to the channels, i.e. an explanation with I/O uses which channel.
+
+Many stakeholders make architectural decision based on the technical interfaces between the system and its context. Especially infrastructure or hardware designers decide these technical interfaces.
+
+*/
+

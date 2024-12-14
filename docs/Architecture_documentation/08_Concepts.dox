@@ -1,0 +1,24 @@
+/*!
+
+\page Chap_08_Concepts 8 Concepts
+
+\tableofcontents
+
+\section Chap_08_01_Persistency 8.1 Persistency
+
+\section Chap_08_02_User_interface 8.2 User Interface
+
+\section Chap_08_03_Exception_and_error_handling 8.3 Exception/Error Handling
+
+\section Chap_08_04_Logging_tracing 8.4 Logging, tracing
+
+\section Chap_08_05_Configurability 8.5 Configurability
+
+\section Chap_08_06_Internationalization 8.6 Internationalization
+
+\section Chap_08_07_Reusability 8.7 Reusability
+
+\section Chap_08_08_Testability 8.8 Testability
+
+*/
+

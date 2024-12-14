@@ -1,0 +1,63 @@
+/*!
+
+\page Chap_02_Architectural_constraints 2 Architectural Constraints
+
+\tableofcontents
+
+Any requirement that constrains software architects in their freedom of design and implementation decisions or decision about the development process. These constraints sometimes go beyond individual systems and are valid for whole organizations and companies.
+
+Architects should know exactly where they are free in their design decisions and where they must adhere to constraints. Constraints must always be dealt with; they may be negotiable, though.
+
+\section Chap_02_01_Technical_constraints 2.1 Technical constraints
+
+<ul>
+  <li> Hardware
+  <li> Technology
+  <li> Frameworks
+</ul>
+
+<table>
+  <tr>
+    <th>Nr.</th>
+    <th>Constraint</th>
+    <th>Background and/or motivation</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+</table>
+
+\section Chap_02_02_Organisational_constraints 2.2 Organisational constraints
+
+<table>
+  <tr>
+    <th>Nr.</th>
+    <th>Constraint</th>
+    <th>Background and/or motivation</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+</table>
+
+\section Chap_02_03_Conventions 2.3 Conventions
+
+<table>
+  <tr>
+    <th>Nr.</th>
+    <th>Convention</th>
+    <th>Background and/or motivation</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+</table>
+
+*/
+

@@ -1,0 +1,37 @@
+/*!
+
+\page Chap_09_Design_decisions 9 Design decisions
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Context</th>
+    <th>Decision</th>
+    <th>Reasoning</th>
+    <th>Disregarded alternatives</th>
+    <th>Consequences</th>
+  </tr>
+  <tr>
+    <td>Title 1</td>
+    <td>Context 1</td>
+    <td>Decision 1</td>
+    <td>
+      <ul>
+        <li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+*/
+

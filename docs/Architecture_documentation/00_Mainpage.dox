@@ -1,0 +1,27 @@
+/*!
+
+\page Chap_00_Architecture_documentation Architecture documentation
+
+This page and its linked pages shall provide the architecture documentation of the library Search Engine.
+
+\section Table_of_contents Table of contents
+
+\subpage Chap_01_Introduction <br>
+\subpage Chap_02_Architectural_constraints <br>
+\subpage Chap_03_System_scope_and_context <br>
+\subpage Chap_04_Solution_strategy <br>
+\subpage Chap_05_Building_block_view <br>
+\subpage Chap_06_Runtime_View <br>
+\subpage Chap_07_Deployment_view <br>
+\subpage Chap_08_Concepts <br>
+\subpage Chap_09_Design_decisions <br>
+\subpage Chap_10_Quality_scenarios <br>
+\subpage Chap_11_Technical_risks <br>
+\subpage Chap_12_Glossary <br>
+
+\section Template_disclosure Template disclosure
+
+The structure of this page and of its linked pages follows the arc42 template by Peter Hruschka and Gernot Starke (please see https://arc42.org for further technical details).
+
+*/
+
