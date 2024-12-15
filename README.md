@@ -1,93 +1,30 @@
-# Search Engine
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md) 
-[![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)
-
-
-[![English Version](https://img.shields.io/badge/English-Version-blue?style=for-the-badge)](#english-version)
-
-Este projeto é um motor de busca simples que utiliza páginas da Wikipedia. Ele constrói um índice reverso para buscar palavras-chave e utiliza o algoritmo PageRank para ranquear as páginas com base na relevância e nos links entre elas.
-
-## Requisitos
-
-Antes de compilar o projeto, certifique-se de que seu ambiente atenda aos seguintes requisitos:
-
-- CMake 3.10 ou superior
-- Google Test para testes unitários
-- Um compilador compatível com C++11 ou superior
-
-## Estrutura do Projeto
-
-- **src/**: Implementação principal do motor de busca, incluindo o índice reverso e o PageRank.
-- **tests/**: Testes unitários para verificar a funcionalidade do sistema.
-- **CMakeLists.txt**: Arquivo de configuração para construir o projeto com CMake.
-
-## Compilando o Projeto
-
-Para compilar o projeto, siga os seguintes passos:
-
-1. Crie um diretório `build` e entre nele:
-
-    ```bash
-    mkdir build && cd build
-    ```
-
-2. Execute o CMake para gerar os arquivos de compilação:
-
-    ```bash
-    cmake ..
-    ```
-
-3. Compile o projeto utilizando `make`:
-
-    ```bash
-    make
-    ```
-
-## Executando os Testes
-
-Como este projeto é uma biblioteca, você pode rodar os testes unitários para verificar a funcionalidade.
-
-1. Após a compilação, no diretório `build`, execute o comando:
-
-    ```bash
-    ./tests/unit-tests/LibUnitTests
-    ```
-
-Isso executará os testes que cobrem o funcionamento da engine, indexação reversa e PageRank.
-
-## Funcionamento
-
-- **Indexação Reversa**: Mapeia palavras-chave para as páginas da Wikipedia onde aparecem.
-- **PageRank**: Algoritmo que atribui uma pontuação de relevância a cada página baseada nos links e na estrutura da Wikipedia.
-- **Consulta**: Busca páginas relacionadas a uma palavra-chave e ordena os resultados com base no PageRank.
-
-## Licença
-
-Ainda estamos avaliando qual lincença será a lincença que será utilizada.
-
-Here’s the README translated into English:
+# Search Engine  
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)  
+[![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)  
 
 ---
 
-# English Version
+**Search Engine** is a simple, efficient engine that builds a reverse index for keyword searching and ranks results using the **PageRank** algorithm.
 
-This project is a simple search engine that utilizes Wikipedia pages. It builds a reverse index for keyword searching and uses the PageRank algorithm to rank pages based on relevance and interlinking.
+## 📋 Requirements
 
-## Requirements
+Before compiling the project, ensure your environment meets the following requirements:
 
-Before compiling the project, make sure your environment meets the following requirements:
+- **CMake 3.10** or higher
+- **Google Test** for unit testing
+- A **C++11** compatible compiler or higher
 
-- CMake 3.10 or higher
-- Google Test for unit testing
-- A compiler compatible with C++11 or higher
+## 📂 Project Structure
 
-## Project Structure
+The project is organized as follows:
 
-- **src/**: Main implementation of the search engine, including the reverse index and PageRank.
-- **tests/**: Unit tests to verify the functionality of the system.
-- **CMakeLists.txt**: Configuration file for building the project with CMake.
+- **`src/`**: Main implementation of the search engine, including reverse indexing and the PageRank algorithm.
+- **`tests/`**: Unit tests to verify the functionality of the system.
+- **`CMakeLists.txt`**: Configuration file for building the project with CMake.
 
-## Building the Project
+---
+
+## 🔧 Building the Project
 
 To compile the project, follow these steps:
 
@@ -97,36 +34,47 @@ To compile the project, follow these steps:
     mkdir build && cd build
     ```
 
-2. Run CMake to generate the build files:
+2. Run **CMake** to generate the build files:
 
     ```bash
     cmake ..
     ```
 
-3. Compile the project using `make`:
+3. Compile the project using **make**:
 
     ```bash
     make
     ```
 
-## Running Tests
+---
 
-Since this project is a library, you can run the unit tests to verify its functionality.
+## 🧪 Running Tests
 
-1. After building, in the `build` directory, execute:
+Run unit tests to ensure the correctness of the system.
+
+1. After building the project, navigate to the `build` directory and execute:
 
     ```bash
     ./tests/unit-tests/LibUnitTests
     ```
 
-This will run the tests covering the search engine functionality, reverse indexing, and PageRank.
-
-## How It Works
-
-- **Reverse Indexing**: Maps keywords to the Wikipedia pages in which they appear.
-- **PageRank**: An algorithm that assigns a relevance score to each page based on links and the structure of Wikipedia.
-- **Querying**: Searches for pages related to a keyword and ranks the results based on PageRank.
-
-## License
+This will run the tests covering search engine functionality, reverse indexing, and the PageRank algorithm.
 
 ---
+
+## ⚙️ How It Works
+
+- **Reverse Indexing**: Maps keywords to the documents where they appear.
+- **PageRank**: An algorithm that assigns a relevance score to each document based on its links and structure.
+- **Querying**: Searches for documents related to a keyword and ranks them according to their PageRank score.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Keep learning,<br>
+**Pedro;)**
