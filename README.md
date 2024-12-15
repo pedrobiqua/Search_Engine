@@ -1,6 +1,5 @@
 # Search Engine
 [![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)
-[![Docs](https://github.com/pedrobiqua/Search_Engine/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main&event=deployment_status)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/pages/pages-build-deployment)
 
 
 [![English Version](https://img.shields.io/badge/English-Version-blue?style=for-the-badge)](#english-version)
