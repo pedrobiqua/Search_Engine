@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
+  [ "Search Engine", "index.html", [
     [ "Architecture documentation", "Chap_00_Architecture_documentation.html", [
       [ "Table of contents", "Chap_00_Architecture_documentation.html#Table_of_contents", null ],
       [ "Template disclosure", "Chap_00_Architecture_documentation.html#Template_disclosure", null ],

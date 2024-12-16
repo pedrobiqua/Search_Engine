@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: page_rank::Graph Class Reference</title>
+<title>Search Engine: page_rank::Graph Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">Search Engine
    </div>
   </td>
  </tr>
@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('classpage__rank_1_1Graph.html',''); in
 </div><!--header-->
 <div class="contents">
 
-<p>Representa um grafo direcionado usado para calcular o algoritmo PageRank.  
+<p>Represents a directed graph used to compute the PageRank algorithm.  
  <a href="classpage__rank_1_1Graph.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="page__rank_8h_source.html">page_rank.h</a>&gt;</code></p>
@@ -106,22 +106,31 @@ $(document).ready(function(){initNavTree('classpage__rank_1_1Graph.html',''); in
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a83683b548468555d24ddfc58c268bab0" id="r_a83683b548468555d24ddfc58c268bab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpage__rank_1_1Graph.html#a83683b548468555d24ddfc58c268bab0">add_edge</a> (int u, int v)</td></tr>
-<tr class="memdesc:a83683b548468555d24ddfc58c268bab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma aresta direcionada entre dois vértices.  <br /></td></tr>
+<tr class="memdesc:a83683b548468555d24ddfc58c268bab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a directed edge between two vertices.  <br /></td></tr>
 <tr class="separator:a83683b548468555d24ddfc58c268bab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a740d64110326e1e6bf09351b37440460" id="r_a740d64110326e1e6bf09351b37440460"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpage__rank_1_1Graph.html#a740d64110326e1e6bf09351b37440460">compute_page_rank</a> (double damping_factor=0.85, int max_iterations=100, double tol=1e-6, bool on_print=false) -&gt; map&lt; int, double &gt;</td></tr>
-<tr class="memdesc:a740d64110326e1e6bf09351b37440460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula o PageRank de todos os vértices do grafo.  <br /></td></tr>
+<tr class="memdesc:a740d64110326e1e6bf09351b37440460"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the PageRank of all the vertices in the graph.  <br /></td></tr>
 <tr class="separator:a740d64110326e1e6bf09351b37440460"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4902e8e101899f05c2b1920c0b5ea9c0" id="r_a4902e8e101899f05c2b1920c0b5ea9c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpage__rank_1_1Graph.html#a4902e8e101899f05c2b1920c0b5ea9c0">print</a> ()</td></tr>
-<tr class="memdesc:a4902e8e101899f05c2b1920c0b5ea9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime a lista de adjacência do grafo.  <br /></td></tr>
+<tr class="memdesc:a4902e8e101899f05c2b1920c0b5ea9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the adjacency list of the graph.  <br /></td></tr>
 <tr class="separator:a4902e8e101899f05c2b1920c0b5ea9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae87e6a531c87ecf28d4bd8739f69b61a" id="r_ae87e6a531c87ecf28d4bd8739f69b61a"><td class="memItemLeft" align="right" valign="top">const map&lt; int, list&lt; int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpage__rank_1_1Graph.html#ae87e6a531c87ecf28d4bd8739f69b61a">get_adjList</a> () const</td></tr>
-<tr class="memdesc:ae87e6a531c87ecf28d4bd8739f69b61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém a lista de adjacência do grafo.  <br /></td></tr>
+<tr class="memdesc:ae87e6a531c87ecf28d4bd8739f69b61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the adjacency list of the graph.  <br /></td></tr>
 <tr class="separator:ae87e6a531c87ecf28d4bd8739f69b61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Representa um grafo direcionado usado para calcular o algoritmo PageRank. </p>
-<p>A classe <code><a class="el" href="classpage__rank_1_1Graph.html" title="Representa um grafo direcionado usado para calcular o algoritmo PageRank.">Graph</a></code> permite adicionar arestas, calcular o PageRank de cada nó, e imprimir o grafo. Ela utiliza uma lista de adjacência para representar o grafo. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<div class="textblock"><p>Represents a directed graph used to compute the PageRank algorithm. </p>
+<p>The <code><a class="el" href="classpage__rank_1_1Graph.html" title="Represents a directed graph used to compute the PageRank algorithm.">Graph</a></code> class allows adding edges, calculating the PageRank of each node, and printing the graph. It uses an adjacency list to represent the graph.</p>
+<p>Example of usage: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classpage__rank_1_1Graph.html">page_rank::Graph</a> graph;</div>
+<div class="line">graph.<a class="code hl_function" href="classpage__rank_1_1Graph.html#a83683b548468555d24ddfc58c268bab0">add_edge</a>(0, 1);</div>
+<div class="line">graph.<a class="code hl_function" href="classpage__rank_1_1Graph.html#a83683b548468555d24ddfc58c268bab0">add_edge</a>(1, 2);</div>
+<div class="line"><span class="keyword">auto</span> pageRank = graph.<a class="code hl_function" href="classpage__rank_1_1Graph.html#a740d64110326e1e6bf09351b37440460">compute_page_rank</a>();</div>
+<div class="line">graph.<a class="code hl_function" href="classpage__rank_1_1Graph.html#a4902e8e101899f05c2b1920c0b5ea9c0">print</a>();</div>
+<div class="ttc" id="aclasspage__rank_1_1Graph_html"><div class="ttname"><a href="classpage__rank_1_1Graph.html">page_rank::Graph</a></div><div class="ttdoc">Represents a directed graph used to compute the PageRank algorithm.</div><div class="ttdef"><b>Definition</b> page_rank.h:26</div></div>
+<div class="ttc" id="aclasspage__rank_1_1Graph_html_a4902e8e101899f05c2b1920c0b5ea9c0"><div class="ttname"><a href="classpage__rank_1_1Graph.html#a4902e8e101899f05c2b1920c0b5ea9c0">page_rank::Graph::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Prints the adjacency list of the graph.</div><div class="ttdef"><b>Definition</b> page_rank.cpp:7</div></div>
+<div class="ttc" id="aclasspage__rank_1_1Graph_html_a740d64110326e1e6bf09351b37440460"><div class="ttname"><a href="classpage__rank_1_1Graph.html#a740d64110326e1e6bf09351b37440460">page_rank::Graph::compute_page_rank</a></div><div class="ttdeci">auto compute_page_rank(double damping_factor=0.85, int max_iterations=100, double tol=1e-6, bool on_print=false) -&gt; map&lt; int, double &gt;</div><div class="ttdoc">Computes the PageRank of all the vertices in the graph.</div><div class="ttdef"><b>Definition</b> page_rank.cpp:18</div></div>
+<div class="ttc" id="aclasspage__rank_1_1Graph_html_a83683b548468555d24ddfc58c268bab0"><div class="ttname"><a href="classpage__rank_1_1Graph.html#a83683b548468555d24ddfc58c268bab0">page_rank::Graph::add_edge</a></div><div class="ttdeci">void add_edge(int u, int v)</div><div class="ttdoc">Adds a directed edge between two vertices.</div><div class="ttdef"><b>Definition</b> page_rank.cpp:5</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a83683b548468555d24ddfc58c268bab0" name="a83683b548468555d24ddfc58c268bab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83683b548468555d24ddfc58c268bab0">&#9670;&#160;</a></span>add_edge()</h2>
 
@@ -148,12 +157,12 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adiciona uma aresta direcionada entre dois vértices. </p>
-<p>Esta função adiciona uma aresta direcionada de <code>u</code> para <code>v</code> no grafo.</p>
+<p>Adds a directed edge between two vertices. </p>
+<p>This function adds a directed edge from <code>u</code> to <code>v</code> in the graph.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">u</td><td>Vértice de origem da aresta. </td></tr>
-    <tr><td class="paramname">v</td><td>Vértice de destino da aresta. </td></tr>
+    <tr><td class="paramname">u</td><td>Source vertex of the edge. </td></tr>
+    <tr><td class="paramname">v</td><td>Destination vertex of the edge. </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,18 +207,18 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calcula o PageRank de todos os vértices do grafo. </p>
-<p>Esta função utiliza o algoritmo PageRank para calcular a pontuação de cada vértice no grafo, iterando até o número máximo de iterações ou até que a variação seja menor que a tolerância especificada.</p>
+<p>Computes the PageRank of all the vertices in the graph. </p>
+<p>This function uses the PageRank algorithm to calculate the score of each vertex in the graph, iterating until the maximum number of iterations is reached or the variation is smaller than the specified tolerance.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">damping_factor</td><td>Fator de amortecimento utilizado no cálculo do PageRank. Valor padrão é 0.85. </td></tr>
-    <tr><td class="paramname">max_iterations</td><td>Número máximo de iterações para o algoritmo. Valor padrão é 100. </td></tr>
-    <tr><td class="paramname">tol</td><td>Tolerância para a convergência do algoritmo. Valor padrão é 1e-6. </td></tr>
-    <tr><td class="paramname">on_print</td><td>Flag para controlar se as iterações devem ser impressas. Valor padrão é <code>false</code>. </td></tr>
+    <tr><td class="paramname">damping_factor</td><td>Damping factor used in the PageRank calculation. Default value is 0.85. </td></tr>
+    <tr><td class="paramname">max_iterations</td><td>Maximum number of iterations for the algorithm. Default value is 100. </td></tr>
+    <tr><td class="paramname">tol</td><td>Tolerance for the convergence of the algorithm. Default value is 1e-6. </td></tr>
+    <tr><td class="paramname">on_print</td><td>Flag to control if the iterations should be printed. Default value is <code>false</code>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Mapa contendo o PageRank de cada vértice, onde a chave é o vértice e o valor é o PageRank. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A map containing the PageRank of each vertex, where the key is the vertex and the value is the PageRank. </dd></dl>
 
 </div>
 </div>
@@ -236,9 +245,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Obtém a lista de adjacência do grafo. </p>
-<p>Esta função retorna uma referência constante à lista de adjacência do grafo.</p>
-<dl class="section return"><dt>Returns</dt><dd>Referência constante ao mapa da lista de adjacência. </dd></dl>
+<p>Gets the adjacency list of the graph. </p>
+<p>This function returns a constant reference to the adjacency list of the graph.</p>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to the adjacency list map. </dd></dl>
 
 </div>
 </div>
@@ -257,8 +266,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Imprime a lista de adjacência do grafo. </p>
-<p>Esta função imprime as conexões de todos os vértices no grafo. </p>
+<p>Prints the adjacency list of the graph. </p>
+<p>This function prints the connections of all vertices in the graph. </p>
 
 </div>
 </div>
