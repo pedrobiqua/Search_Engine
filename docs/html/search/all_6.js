@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['7_20deployment_20view_0',['7 Deployment View',['../Chap_07_Deployment_view.html',1,'Chap_00_Architecture_documentation']]],
-  ['7_20reusability_1',['8.7 Reusability',['../Chap_08_Concepts.html#Chap_08_07_Reusability',1,'']]]
+  ['6_20internationalization_0',['8.6 Internationalization',['../Chap_08_Concepts.html#Chap_08_06_Internationalization',1,'']]],
+  ['6_20runtime_20view_1',['6 Runtime View',['../Chap_06_Runtime_View.html',1,'Chap_00_Architecture_documentation']]]
 ];

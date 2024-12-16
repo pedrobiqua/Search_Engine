@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['5_201_201_20xxx_0',['5.1.1 XXX',['../Chap_05_Building_block_view.html#Chap_05_01_01',1,'']]],
-  ['5_201_20xxx_1',['5.1 XXX',['../Chap_05_Building_block_view.html#Chap_05_01',1,'']]],
-  ['5_20building_20block_20view_2',['5 Building Block View',['../Chap_05_Building_block_view.html',1,'Chap_00_Architecture_documentation']]],
-  ['5_20configurability_3',['8.5 Configurability',['../Chap_08_Concepts.html#Chap_08_05_Configurability',1,'']]]
+  ['4_20logging_20tracing_0',['8.4 Logging, tracing',['../Chap_08_Concepts.html#Chap_08_04_Logging_tracing',1,'']]],
+  ['4_20solution_20strategy_1',['4 Solution strategy',['../Chap_04_Solution_strategy.html',1,'Chap_00_Architecture_documentation']]],
+  ['4_20stakeholders_2',['1.4 Stakeholders',['../Chap_01_Introduction.html#Chap_01_04_Stakeholders',1,'']]]
 ];

@@ -1,0 +1,82 @@
+\doxysection{lib/include/inverted\+\_\+index.h File Reference}
+\hypertarget{inverted__index_8h}{}\label{inverted__index_8h}\index{lib/include/inverted\_index.h@{lib/include/inverted\_index.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+Include dependency graph for inverted\+\_\+index.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inverted__index_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{inverted__index_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinverted__index_1_1docs}{inverted\+\_\+index\+::docs}}
+\begin{DoxyCompactList}\small\item\em Structure that stores information about a document. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceinverted__index}{inverted\+\_\+index}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{inverted__index_8h_a23195218eef2cf21e2beae685a041783}{DELIMITER}}~"{} "{}
+\begin{DoxyCompactList}\small\item\em Delimiter used to split strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::string \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{inverted\+\_\+index\+::str}}
+\begin{DoxyCompactList}\small\item\em Type used to represent a string. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} $>$ \mbox{\hyperlink{namespaceinverted__index_aa3842a1e5b30ed0ac1f37face1da841e}{inverted\+\_\+index\+::list\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Type used to represent a list of strings. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ \mbox{\hyperlink{structinverted__index_1_1docs}{docs}} $>$ \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{inverted\+\_\+index\+::list\+\_\+docs}}
+\begin{DoxyCompactList}\small\item\em Type used to represent a list of documents. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}}, \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} $>$ \mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{inverted\+\_\+index\+::map\+\_\+str\+\_\+docs}}
+\begin{DoxyCompactList}\small\item\em Type used to represent a map of words to a list of documents. \end{DoxyCompactList}\item 
+typedef std\+::set$<$ \mbox{\hyperlink{structinverted__index_1_1docs}{docs}} $>$ \mbox{\hyperlink{namespaceinverted__index_a173ab89b0eb7a4b54b7b6f7239edc51d}{inverted\+\_\+index\+::set\+\_\+docs}}
+\begin{DoxyCompactList}\small\item\em Type used to represent a set of documents. \end{DoxyCompactList}\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} $>$ \mbox{\hyperlink{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}{inverted\+\_\+index\+::vector\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Type used to represent a vector of strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{namespaceinverted__index_a2caf9e19f6557b6fce93e8a555e55ae4}{inverted\+\_\+index\+::to\+\_\+lowercase}} (unsigned char c)
+\begin{DoxyCompactList}\small\item\em Converts a character to lowercase. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}{vector\+\_\+str}} \mbox{\hyperlink{namespaceinverted__index_a35a9f1cb5d6ae865560f7eabb3def5c9}{inverted\+\_\+index\+::split}} (\mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&s, const \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&delimiter)
+\begin{DoxyCompactList}\small\item\em Splits a string based on a delimiter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \mbox{\hyperlink{namespaceinverted__index_acb018ece565f44fec205e85a42cfd34a}{inverted\+\_\+index\+::add\+\_\+doc}} (\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&mp, const \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&doc\+\_\+name, \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&text)
+\begin{DoxyCompactList}\small\item\em Adds a new document to the document map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} \mbox{\hyperlink{namespaceinverted__index_ab00d739725897ea7ab9e82fcaa7a9326}{inverted\+\_\+index\+::find\+\_\+doc}} (\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&mp, \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&word)
+\begin{DoxyCompactList}\small\item\em Finds documents that contain a given word. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} \mbox{\hyperlink{namespaceinverted__index_ace9195b82649cfae96566f56ea285f86}{inverted\+\_\+index\+::find\+\_\+answer}} (\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&mp, \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&input)
+\begin{DoxyCompactList}\small\item\em Finds documents relevant to a query (input). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceinverted__index_ac0c99343822e08b34bb0f874759b1c56}{inverted\+\_\+index\+::shrink\+\_\+string}} (std\+::string \texorpdfstring{$\ast$}{*}input)
+\begin{DoxyCompactList}\small\item\em Removes unwanted characters from a string, such as extra spaces. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{inverted__index_8h_a23195218eef2cf21e2beae685a041783}\label{inverted__index_8h_a23195218eef2cf21e2beae685a041783} 
+\index{inverted\_index.h@{inverted\_index.h}!DELIMITER@{DELIMITER}}
+\index{DELIMITER@{DELIMITER}!inverted\_index.h@{inverted\_index.h}}
+\doxysubsubsection{\texorpdfstring{DELIMITER}{DELIMITER}}
+{\footnotesize\ttfamily \#define DELIMITER~"{} "{}}
+
+
+
+Delimiter used to split strings. 
+
+@define DELIMITER 

@@ -1,0 +1,117 @@
+\doxysection{page\+\_\+rank\+::Graph Class Reference}
+\hypertarget{classpage__rank_1_1Graph}{}\label{classpage__rank_1_1Graph}\index{page\_rank::Graph@{page\_rank::Graph}}
+
+
+Represents a directed graph used to compute the Page\+Rank algorithm.  
+
+
+
+
+{\ttfamily \#include $<$page\+\_\+rank.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0}{add\+\_\+edge}} (int u, int v)
+\begin{DoxyCompactList}\small\item\em Adds a directed edge between two vertices. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460}{compute\+\_\+page\+\_\+rank}} (double damping\+\_\+factor=0.\+85, int max\+\_\+iterations=100, double tol=1e-\/6, bool on\+\_\+print=false) -\/$>$ map$<$ int, double $>$
+\begin{DoxyCompactList}\small\item\em Computes the Page\+Rank of all the vertices in the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0}{print}} ()
+\begin{DoxyCompactList}\small\item\em Prints the adjacency list of the graph. \end{DoxyCompactList}\item 
+const map$<$ int, list$<$ int $>$ $>$ \& \mbox{\hyperlink{classpage__rank_1_1Graph_ae87e6a531c87ecf28d4bd8739f69b61a}{get\+\_\+adj\+List}} () const
+\begin{DoxyCompactList}\small\item\em Gets the adjacency list of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a directed graph used to compute the Page\+Rank algorithm. 
+
+The {\ttfamily \doxylink{classpage__rank_1_1Graph}{Graph}} class allows adding edges, calculating the Page\+Rank of each node, and printing the graph. It uses an adjacency list to represent the graph.
+
+Example of usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classpage__rank_1_1Graph}{page\_rank::Graph}}\ graph;}
+\DoxyCodeLine{graph.\mbox{\hyperlink{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0}{add\_edge}}(0,\ 1);}
+\DoxyCodeLine{graph.\mbox{\hyperlink{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0}{add\_edge}}(1,\ 2);}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ pageRank\ =\ graph.\mbox{\hyperlink{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460}{compute\_page\_rank}}();}
+\DoxyCodeLine{graph.\mbox{\hyperlink{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0}{print}}();}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0}\label{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0} 
+\index{page\_rank::Graph@{page\_rank::Graph}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily void page\+\_\+rank\+::\+Graph\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+Adds a directed edge between two vertices. 
+
+This function adds a directed edge from {\ttfamily u} to {\ttfamily v} in the graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Source vertex of the edge. \\
+\hline
+{\em v} & Destination vertex of the edge. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460}\label{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460} 
+\index{page\_rank::Graph@{page\_rank::Graph}!compute\_page\_rank@{compute\_page\_rank}}
+\index{compute\_page\_rank@{compute\_page\_rank}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{compute\_page\_rank()}{compute\_page\_rank()}}
+{\footnotesize\ttfamily auto page\+\_\+rank\+::\+Graph\+::compute\+\_\+page\+\_\+rank (\begin{DoxyParamCaption}\item[{double}]{damping\+\_\+factor = {\ttfamily 0.85},  }\item[{int}]{max\+\_\+iterations = {\ttfamily 100},  }\item[{double}]{tol = {\ttfamily 1e-\/6},  }\item[{bool}]{on\+\_\+print = {\ttfamily false} }\end{DoxyParamCaption}) -\/$>$ map$<$int, double$>$}
+
+
+
+Computes the Page\+Rank of all the vertices in the graph. 
+
+This function uses the Page\+Rank algorithm to calculate the score of each vertex in the graph, iterating until the maximum number of iterations is reached or the variation is smaller than the specified tolerance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em damping\+\_\+factor} & Damping factor used in the Page\+Rank calculation. Default value is 0.\+85. \\
+\hline
+{\em max\+\_\+iterations} & Maximum number of iterations for the algorithm. Default value is 100. \\
+\hline
+{\em tol} & Tolerance for the convergence of the algorithm. Default value is 1e-\/6. \\
+\hline
+{\em on\+\_\+print} & Flag to control if the iterations should be printed. Default value is {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map containing the Page\+Rank of each vertex, where the key is the vertex and the value is the Page\+Rank. 
+\end{DoxyReturn}
+\Hypertarget{classpage__rank_1_1Graph_ae87e6a531c87ecf28d4bd8739f69b61a}\label{classpage__rank_1_1Graph_ae87e6a531c87ecf28d4bd8739f69b61a} 
+\index{page\_rank::Graph@{page\_rank::Graph}!get\_adjList@{get\_adjList}}
+\index{get\_adjList@{get\_adjList}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{get\_adjList()}{get\_adjList()}}
+{\footnotesize\ttfamily const map$<$ int, list$<$ int $>$ $>$ \& page\+\_\+rank\+::\+Graph\+::get\+\_\+adj\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the adjacency list of the graph. 
+
+This function returns a constant reference to the adjacency list of the graph.
+
+\begin{DoxyReturn}{Returns}
+Constant reference to the adjacency list map. 
+\end{DoxyReturn}
+\Hypertarget{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0}\label{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0} 
+\index{page\_rank::Graph@{page\_rank::Graph}!print@{print}}
+\index{print@{print}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void page\+\_\+rank\+::\+Graph\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the adjacency list of the graph. 
+
+This function prints the connections of all vertices in the graph. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/include/\mbox{\hyperlink{page__rank_8h}{page\+\_\+rank.\+h}}\item 
+lib/src/\mbox{\hyperlink{page__rank_8cpp}{page\+\_\+rank.\+cpp}}\end{DoxyCompactItemize}
