@@ -13,6 +13,15 @@ using namespace std;
  *
  * The `Graph` class allows adding edges, calculating the PageRank of each node,
  * and printing the graph. It uses an adjacency list to represent the graph.
+ *
+ * Example of usage:
+ * @code
+ * page_rank::Graph graph;
+ * graph.add_edge(0, 1);
+ * graph.add_edge(1, 2);
+ * auto pageRank = graph.compute_page_rank();
+ * graph.print();
+ * @endcode
  */
 class Graph {
 public:
