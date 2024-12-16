@@ -1,0 +1,7 @@
+contact_links:
+  - name: Feature Request/Idea
+    url: https://github.com/your-repo-name/discussions/categories/feature-ideas
+    about: Use this category to brainstorm and discuss feature requests or ideas before creating a formal issue.
+  - name: Bug Discussion
+    url: https://github.com/your-repo-name/discussions/categories/bug-reports
+    about: Use this category to discuss and clarify potential bugs before creating an issue.
