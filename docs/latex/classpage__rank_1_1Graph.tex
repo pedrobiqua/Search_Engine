@@ -1,0 +1,106 @@
+\doxysection{page\+\_\+rank\+::Graph Class Reference}
+\hypertarget{classpage__rank_1_1Graph}{}\label{classpage__rank_1_1Graph}\index{page\_rank::Graph@{page\_rank::Graph}}
+
+
+Representa um grafo direcionado usado para calcular o algoritmo Page\+Rank.  
+
+
+
+
+{\ttfamily \#include $<$page\+\_\+rank.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0}{add\+\_\+edge}} (int u, int v)
+\begin{DoxyCompactList}\small\item\em Adiciona uma aresta direcionada entre dois vértices. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460}{compute\+\_\+page\+\_\+rank}} (double damping\+\_\+factor=0.\+85, int max\+\_\+iterations=100, double tol=1e-\/6, bool on\+\_\+print=false) -\/$>$ map$<$ int, double $>$
+\begin{DoxyCompactList}\small\item\em Calcula o Page\+Rank de todos os vértices do grafo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0}{print}} ()
+\begin{DoxyCompactList}\small\item\em Imprime a lista de adjacência do grafo. \end{DoxyCompactList}\item 
+const map$<$ int, list$<$ int $>$ $>$ \& \mbox{\hyperlink{classpage__rank_1_1Graph_ae87e6a531c87ecf28d4bd8739f69b61a}{get\+\_\+adj\+List}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a lista de adjacência do grafo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa um grafo direcionado usado para calcular o algoritmo Page\+Rank. 
+
+A classe {\ttfamily \doxylink{classpage__rank_1_1Graph}{Graph}} permite adicionar arestas, calcular o Page\+Rank de cada nó, e imprimir o grafo. Ela utiliza uma lista de adjacência para representar o grafo. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0}\label{classpage__rank_1_1Graph_a83683b548468555d24ddfc58c268bab0} 
+\index{page\_rank::Graph@{page\_rank::Graph}!add\_edge@{add\_edge}}
+\index{add\_edge@{add\_edge}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{add\_edge()}{add\_edge()}}
+{\footnotesize\ttfamily void page\+\_\+rank\+::\+Graph\+::add\+\_\+edge (\begin{DoxyParamCaption}\item[{int}]{u,  }\item[{int}]{v }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma aresta direcionada entre dois vértices. 
+
+Esta função adiciona uma aresta direcionada de {\ttfamily u} para {\ttfamily v} no grafo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & Vértice de origem da aresta. \\
+\hline
+{\em v} & Vértice de destino da aresta. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460}\label{classpage__rank_1_1Graph_a740d64110326e1e6bf09351b37440460} 
+\index{page\_rank::Graph@{page\_rank::Graph}!compute\_page\_rank@{compute\_page\_rank}}
+\index{compute\_page\_rank@{compute\_page\_rank}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{compute\_page\_rank()}{compute\_page\_rank()}}
+{\footnotesize\ttfamily auto page\+\_\+rank\+::\+Graph\+::compute\+\_\+page\+\_\+rank (\begin{DoxyParamCaption}\item[{double}]{damping\+\_\+factor = {\ttfamily 0.85},  }\item[{int}]{max\+\_\+iterations = {\ttfamily 100},  }\item[{double}]{tol = {\ttfamily 1e-\/6},  }\item[{bool}]{on\+\_\+print = {\ttfamily false} }\end{DoxyParamCaption}) -\/$>$ map$<$int, double$>$}
+
+
+
+Calcula o Page\+Rank de todos os vértices do grafo. 
+
+Esta função utiliza o algoritmo Page\+Rank para calcular a pontuação de cada vértice no grafo, iterando até o número máximo de iterações ou até que a variação seja menor que a tolerância especificada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em damping\+\_\+factor} & Fator de amortecimento utilizado no cálculo do Page\+Rank. Valor padrão é 0.\+85. \\
+\hline
+{\em max\+\_\+iterations} & Número máximo de iterações para o algoritmo. Valor padrão é 100. \\
+\hline
+{\em tol} & Tolerância para a convergência do algoritmo. Valor padrão é 1e-\/6. \\
+\hline
+{\em on\+\_\+print} & Flag para controlar se as iterações devem ser impressas. Valor padrão é {\ttfamily false}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapa contendo o Page\+Rank de cada vértice, onde a chave é o vértice e o valor é o Page\+Rank. 
+\end{DoxyReturn}
+\Hypertarget{classpage__rank_1_1Graph_ae87e6a531c87ecf28d4bd8739f69b61a}\label{classpage__rank_1_1Graph_ae87e6a531c87ecf28d4bd8739f69b61a} 
+\index{page\_rank::Graph@{page\_rank::Graph}!get\_adjList@{get\_adjList}}
+\index{get\_adjList@{get\_adjList}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{get\_adjList()}{get\_adjList()}}
+{\footnotesize\ttfamily const map$<$ int, list$<$ int $>$ $>$ \& page\+\_\+rank\+::\+Graph\+::get\+\_\+adj\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a lista de adjacência do grafo. 
+
+Esta função retorna uma referência constante à lista de adjacência do grafo.
+
+\begin{DoxyReturn}{Returns}
+Referência constante ao mapa da lista de adjacência. 
+\end{DoxyReturn}
+\Hypertarget{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0}\label{classpage__rank_1_1Graph_a4902e8e101899f05c2b1920c0b5ea9c0} 
+\index{page\_rank::Graph@{page\_rank::Graph}!print@{print}}
+\index{print@{print}!page\_rank::Graph@{page\_rank::Graph}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void page\+\_\+rank\+::\+Graph\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime a lista de adjacência do grafo. 
+
+Esta função imprime as conexões de todos os vértices no grafo. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/include/\mbox{\hyperlink{page__rank_8h}{page\+\_\+rank.\+h}}\item 
+lib/src/\mbox{\hyperlink{page__rank_8cpp}{page\+\_\+rank.\+cpp}}\end{DoxyCompactItemize}

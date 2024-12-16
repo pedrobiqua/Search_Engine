@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['interface_0',['interface',['../Chap_08_Concepts.html#Chap_08_02_User_interface',1,'8.2 User Interface'],['../Chap_05_Building_block_view.html#Chap_05_01_01_02',1,'Interface']]],
-  ['internationalization_1',['8.6 Internationalization',['../Chap_08_Concepts.html#Chap_08_06_Internationalization',1,'']]],
-  ['introduction_2',['1 Introduction',['../Chap_01_Introduction.html',1,'Chap_00_Architecture_documentation']]]
+  ['get_5fadjlist_0',['get_adjList',['../classpage__rank_1_1Graph.html#ae87e6a531c87ecf28d4bd8739f69b61a',1,'page_rank::Graph']]],
+  ['glossary_1',['12 Glossary',['../Chap_12_Glossary.html',1,'Chap_00_Architecture_documentation']]],
+  ['goals_2',['1.3 Quality goals',['../Chap_01_Introduction.html#Chap_01_03_Quality_goals',1,'']]],
+  ['graph_3',['Graph',['../classpage__rank_1_1Graph.html',1,'page_rank']]],
+  ['greet_4',['greet',['../classHello.html#a935f8ae8833c9cac314fce1a87907a08',1,'Hello']]]
 ];

@@ -1,0 +1,218 @@
+\doxysection{inverted\+\_\+index Namespace Reference}
+\hypertarget{namespaceinverted__index}{}\label{namespaceinverted__index}\index{inverted\_index@{inverted\_index}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinverted__index_1_1docs}{docs}}
+\begin{DoxyCompactList}\small\item\em Estrutura que armazena informações sobre um documento. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::string \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}}
+\begin{DoxyCompactList}\small\item\em Tipo utilizado para representar uma string. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} $>$ \mbox{\hyperlink{namespaceinverted__index_aa3842a1e5b30ed0ac1f37face1da841e}{list\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Tipo utilizado para representar uma lista de strings. \end{DoxyCompactList}\item 
+typedef std\+::list$<$ \mbox{\hyperlink{structinverted__index_1_1docs}{docs}} $>$ \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}}
+\begin{DoxyCompactList}\small\item\em Tipo utilizado para representar uma lista de documentos. \end{DoxyCompactList}\item 
+typedef std\+::map$<$ \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}}, \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} $>$ \mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}}
+\begin{DoxyCompactList}\small\item\em Tipo utilizado para representar um mapa de palavras para uma lista de documentos. \end{DoxyCompactList}\item 
+typedef std\+::set$<$ \mbox{\hyperlink{structinverted__index_1_1docs}{docs}} $>$ \mbox{\hyperlink{namespaceinverted__index_a173ab89b0eb7a4b54b7b6f7239edc51d}{set\+\_\+docs}}
+\begin{DoxyCompactList}\small\item\em Tipo utilizado para representar um conjunto de documentos. \end{DoxyCompactList}\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} $>$ \mbox{\hyperlink{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}{vector\+\_\+str}}
+\begin{DoxyCompactList}\small\item\em Tipo utilizado para representar um vetor de strings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{namespaceinverted__index_a2caf9e19f6557b6fce93e8a555e55ae4}{to\+\_\+lowercase}} (unsigned char c)
+\begin{DoxyCompactList}\small\item\em Converte um caractere para minúsculo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}{vector\+\_\+str}} \mbox{\hyperlink{namespaceinverted__index_a35a9f1cb5d6ae865560f7eabb3def5c9}{split}} (\mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&s, const \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&delimiter)
+\begin{DoxyCompactList}\small\item\em Divide uma string com base em um delimitador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \mbox{\hyperlink{namespaceinverted__index_acb018ece565f44fec205e85a42cfd34a}{add\+\_\+doc}} (\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&mp, const \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&doc\+\_\+name, \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&text)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo documento ao mapa de documentos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} \mbox{\hyperlink{namespaceinverted__index_ab00d739725897ea7ab9e82fcaa7a9326}{find\+\_\+doc}} (\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&mp, \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&word)
+\begin{DoxyCompactList}\small\item\em Encontra os documentos que contêm uma determinada palavra. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} \mbox{\hyperlink{namespaceinverted__index_ace9195b82649cfae96566f56ea285f86}{find\+\_\+answer}} (\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&mp, \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&input)
+\begin{DoxyCompactList}\small\item\em Encontra os documentos relevantes para uma consulta (entrada). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespaceinverted__index_ac0c99343822e08b34bb0f874759b1c56}{shrink\+\_\+string}} (std\+::string \texorpdfstring{$\ast$}{*}input)
+\begin{DoxyCompactList}\small\item\em Remove caracteres indesejados de uma string, como espaços extras. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}\label{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48} 
+\index{inverted\_index@{inverted\_index}!list\_docs@{list\_docs}}
+\index{list\_docs@{list\_docs}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{list\_docs}{list\_docs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{inverted\+\_\+index\+::list\+\_\+docs}}}
+
+
+
+Tipo utilizado para representar uma lista de documentos. 
+
+\Hypertarget{namespaceinverted__index_aa3842a1e5b30ed0ac1f37face1da841e}\label{namespaceinverted__index_aa3842a1e5b30ed0ac1f37face1da841e} 
+\index{inverted\_index@{inverted\_index}!list\_str@{list\_str}}
+\index{list\_str@{list\_str}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{list\_str}{list\_str}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_aa3842a1e5b30ed0ac1f37face1da841e}{inverted\+\_\+index\+::list\+\_\+str}}}
+
+
+
+Tipo utilizado para representar uma lista de strings. 
+
+\Hypertarget{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}\label{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1} 
+\index{inverted\_index@{inverted\_index}!map\_str\_docs@{map\_str\_docs}}
+\index{map\_str\_docs@{map\_str\_docs}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{map\_str\_docs}{map\_str\_docs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{inverted\+\_\+index\+::map\+\_\+str\+\_\+docs}}}
+
+
+
+Tipo utilizado para representar um mapa de palavras para uma lista de documentos. 
+
+\Hypertarget{namespaceinverted__index_a173ab89b0eb7a4b54b7b6f7239edc51d}\label{namespaceinverted__index_a173ab89b0eb7a4b54b7b6f7239edc51d} 
+\index{inverted\_index@{inverted\_index}!set\_docs@{set\_docs}}
+\index{set\_docs@{set\_docs}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{set\_docs}{set\_docs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a173ab89b0eb7a4b54b7b6f7239edc51d}{inverted\+\_\+index\+::set\+\_\+docs}}}
+
+
+
+Tipo utilizado para representar um conjunto de documentos. 
+
+\Hypertarget{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}\label{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39} 
+\index{inverted\_index@{inverted\_index}!str@{str}}
+\index{str@{str}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{str}{str}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{inverted\+\_\+index\+::str}}}
+
+
+
+Tipo utilizado para representar uma string. 
+
+\Hypertarget{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}\label{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00} 
+\index{inverted\_index@{inverted\_index}!vector\_str@{vector\_str}}
+\index{vector\_str@{vector\_str}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{vector\_str}{vector\_str}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}{inverted\+\_\+index\+::vector\+\_\+str}}}
+
+
+
+Tipo utilizado para representar um vetor de strings. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceinverted__index_acb018ece565f44fec205e85a42cfd34a}\label{namespaceinverted__index_acb018ece565f44fec205e85a42cfd34a} 
+\index{inverted\_index@{inverted\_index}!add\_doc@{add\_doc}}
+\index{add\_doc@{add\_doc}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{add\_doc()}{add\_doc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} inverted\+\_\+index\+::add\+\_\+doc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&}]{mp,  }\item[{const \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&}]{doc\+\_\+name,  }\item[{\mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Adiciona um novo documento ao mapa de documentos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mp} & Mapa de palavras para listas de documentos. \\
+\hline
+{\em doc\+\_\+name} & Nome do documento a ser adicionado. \\
+\hline
+{\em text} & Texto do documento a ser analisado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mapa atualizado com o novo documento. 
+\end{DoxyReturn}
+\Hypertarget{namespaceinverted__index_ace9195b82649cfae96566f56ea285f86}\label{namespaceinverted__index_ace9195b82649cfae96566f56ea285f86} 
+\index{inverted\_index@{inverted\_index}!find\_answer@{find\_answer}}
+\index{find\_answer@{find\_answer}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{find\_answer()}{find\_answer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} inverted\+\_\+index\+::find\+\_\+answer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&}]{mp,  }\item[{\mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Encontra os documentos relevantes para uma consulta (entrada). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mp} & Mapa de palavras para listas de documentos. \\
+\hline
+{\em input} & Palavra de entrada a ser buscada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de documentos relevantes para a consulta. 
+\end{DoxyReturn}
+\Hypertarget{namespaceinverted__index_ab00d739725897ea7ab9e82fcaa7a9326}\label{namespaceinverted__index_ab00d739725897ea7ab9e82fcaa7a9326} 
+\index{inverted\_index@{inverted\_index}!find\_doc@{find\_doc}}
+\index{find\_doc@{find\_doc}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{find\_doc()}{find\_doc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a13797fc328d8f34927c3f7368966ac48}{list\+\_\+docs}} inverted\+\_\+index\+::find\+\_\+doc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceinverted__index_a12560c3b47a4f48755b32ad63cd8ccd1}{map\+\_\+str\+\_\+docs}} \&}]{mp,  }\item[{\mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&}]{word }\end{DoxyParamCaption})}
+
+
+
+Encontra os documentos que contêm uma determinada palavra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mp} & Mapa de palavras para listas de documentos. \\
+\hline
+{\em word} & Palavra a ser buscada nos documentos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lista de documentos que contêm a palavra. 
+\end{DoxyReturn}
+\Hypertarget{namespaceinverted__index_ac0c99343822e08b34bb0f874759b1c56}\label{namespaceinverted__index_ac0c99343822e08b34bb0f874759b1c56} 
+\index{inverted\_index@{inverted\_index}!shrink\_string@{shrink\_string}}
+\index{shrink\_string@{shrink\_string}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{shrink\_string()}{shrink\_string()}}
+{\footnotesize\ttfamily void inverted\+\_\+index\+::shrink\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{input }\end{DoxyParamCaption})}
+
+
+
+Remove caracteres indesejados de uma string, como espaços extras. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & String a ser processada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceinverted__index_a35a9f1cb5d6ae865560f7eabb3def5c9}\label{namespaceinverted__index_a35a9f1cb5d6ae865560f7eabb3def5c9} 
+\index{inverted\_index@{inverted\_index}!split@{split}}
+\index{split@{split}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceinverted__index_a36a608a2c21f1f0fabd8fc6134107e00}{vector\+\_\+str}} inverted\+\_\+index\+::split (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&}]{s,  }\item[{const \mbox{\hyperlink{namespaceinverted__index_a7a967eb8fcbea5b66739ec4d4f05be39}{str}} \&}]{delimiter }\end{DoxyParamCaption})}
+
+
+
+Divide uma string com base em um delimitador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String a ser dividida. \\
+\hline
+{\em delimiter} & Delimitador para a divisão da string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vetor de strings resultantes da divisão. 
+\end{DoxyReturn}
+\Hypertarget{namespaceinverted__index_a2caf9e19f6557b6fce93e8a555e55ae4}\label{namespaceinverted__index_a2caf9e19f6557b6fce93e8a555e55ae4} 
+\index{inverted\_index@{inverted\_index}!to\_lowercase@{to\_lowercase}}
+\index{to\_lowercase@{to\_lowercase}!inverted\_index@{inverted\_index}}
+\doxysubsubsection{\texorpdfstring{to\_lowercase()}{to\_lowercase()}}
+{\footnotesize\ttfamily char inverted\+\_\+index\+::to\+\_\+lowercase (\begin{DoxyParamCaption}\item[{unsigned char}]{c }\end{DoxyParamCaption})}
+
+
+
+Converte um caractere para minúsculo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Caractere a ser convertido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Caractere convertido para minúsculo. 
+\end{DoxyReturn}
