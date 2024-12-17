@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hello_0',['Hello',['../classHello.html',1,'']]]
+  ['graph_0',['Graph',['../classpage__rank_1_1Graph.html',1,'page_rank']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['compute_5fpage_5frank_0',['compute_page_rank',['../classpage__rank_1_1Graph.html#a740d64110326e1e6bf09351b37440460',1,'page_rank::Graph']]]
+  ['add_5fdoc_0',['add_doc',['../namespaceinverted__index.html#acb018ece565f44fec205e85a42cfd34a',1,'inverted_index']]],
+  ['add_5fedge_1',['add_edge',['../classpage__rank_1_1Graph.html#a83683b548468555d24ddfc58c268bab0',1,'page_rank::Graph']]]
 ];

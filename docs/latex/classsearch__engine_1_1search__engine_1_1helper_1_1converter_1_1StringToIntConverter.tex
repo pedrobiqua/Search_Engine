@@ -1,0 +1,99 @@
+\doxysection{search\+\_\+engine.\+search\+\_\+engine.\+helper.\+converter.\+String\+To\+Int\+Converter Class Reference}
+\hypertarget{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter}{}\label{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter}\index{search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a2d3bad61678c8f6cf075256b6fb411c7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+int \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a562ba6756f1cc804678075a02d28eb9f}{convert}} (self, str word)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a583c2162f4a2a2c6bff496b034e30675}{string\+\_\+to\+\_\+int}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_af796cd59c12eba4822eb8f8b6bcfed8b}{next\+\_\+int}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class that converts strings to integers. If a string has already been converted,
+it returns the previously assigned integer. Otherwise, it assigns a new integer
+to the string and returns it.
+
+Attributes
+----------
+string_to_int : dict
+    A dictionary mapping strings to their corresponding integers.
+next_int : int
+    The next integer to be assigned to a string.
+
+Methods
+-------
+__init__()
+    Initializes the converter with an empty dictionary and sets the next integer to 0.
+convert(word: str) -> int
+    Converts a given string to an integer. If the string has been seen before,
+    it returns the corresponding integer, otherwise it assigns a new integer to the string.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a2d3bad61678c8f6cf075256b6fb411c7}\label{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a2d3bad61678c8f6cf075256b6fb411c7} 
+\index{search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+helper.\+converter.\+String\+To\+Int\+Converter.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes the StringToIntConverter with an empty dictionary and sets the next integer
+to 0 for string-to-integer mapping.
+
+Attributes
+----------
+string_to_int : dict
+    An empty dictionary to store the mapping of strings to integers.
+next_int : int
+    Initialized to 0, it represents the next available integer to be assigned to a string.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a562ba6756f1cc804678075a02d28eb9f}\label{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a562ba6756f1cc804678075a02d28eb9f} 
+\index{search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}!convert@{convert}}
+\index{convert@{convert}!search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily  int search\+\_\+engine.\+search\+\_\+engine.\+helper.\+converter.\+String\+To\+Int\+Converter.\+convert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{word }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert a string to an integer. If the string has already been seen,
+return its corresponding integer. Otherwise, assign a new integer to it.
+
+Parameters
+----------
+word : str
+    The string to be converted.
+
+Returns
+-------
+int
+    The integer corresponding to the string.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_af796cd59c12eba4822eb8f8b6bcfed8b}\label{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_af796cd59c12eba4822eb8f8b6bcfed8b} 
+\index{search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}!next\_int@{next\_int}}
+\index{next\_int@{next\_int}!search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}}
+\doxysubsubsection{\texorpdfstring{next\_int}{next\_int}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+helper.\+converter.\+String\+To\+Int\+Converter.\+next\+\_\+int}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a583c2162f4a2a2c6bff496b034e30675}\label{classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter_a583c2162f4a2a2c6bff496b034e30675} 
+\index{search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}!string\_to\_int@{string\_to\_int}}
+\index{string\_to\_int@{string\_to\_int}!search\_engine.search\_engine.helper.converter.StringToIntConverter@{search\_engine.search\_engine.helper.converter.StringToIntConverter}}
+\doxysubsubsection{\texorpdfstring{string\_to\_int}{string\_to\_int}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+helper.\+converter.\+String\+To\+Int\+Converter.\+string\+\_\+to\+\_\+int}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+search\+\_\+engine/helper/\mbox{\hyperlink{converter_8py}{converter.\+py}}\end{DoxyCompactItemize}

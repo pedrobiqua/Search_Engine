@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hello_0',['Hello',['../classHello.html#aaa8dc2cd664f8a83b9119a06b2f2790c',1,'Hello']]]
+  ['get_5fadjlist_0',['get_adjList',['../classpage__rank_1_1Graph.html#ae87e6a531c87ecf28d4bd8739f69b61a',1,'page_rank::Graph']]],
+  ['greet_1',['greet',['../classHello.html#a935f8ae8833c9cac314fce1a87907a08',1,'Hello']]]
 ];
