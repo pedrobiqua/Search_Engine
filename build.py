@@ -37,7 +37,8 @@ def build(setup_kwargs):
     # Modulos que serão usados no Python
     libs_names = [
         "_hello",
-        "_page_rank"
+        "_page_rank",
+        "_inverted_index"
     ]
 
     extensions = []
