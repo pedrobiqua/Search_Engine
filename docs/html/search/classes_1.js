@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['graph_0',['Graph',['../classpage__rank_1_1Graph.html',1,'page_rank']]]
+  ['docs_0',['docs',['../structinverted__index_1_1docs.html',1,'inverted_index']]]
 ];

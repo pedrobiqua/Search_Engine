@@ -1,0 +1,203 @@
+\doxysection{search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler Class Reference}
+\hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler}{}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler}\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a3749cceadf503febd19be1a13c9a0fe9}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_af2b2d5e8f62ba5661b4c87e15a9bc67e}{url\+\_\+base}}, str \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a2926e956cbfbf24d9c99a1c0e80fae5e}{page\+\_\+name}}, str \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a6e0bc960b9ee2c29b8b75c66a275f570}{initial\+\_\+page}}, list\mbox{[}str\mbox{]} \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a0d917081e91fe9067c457e791efec341}{remove\+\_\+pages}}=\mbox{[}$\,$\mbox{]}, bool \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ab1db7f6a00564e301a65a3560b00450a}{test\+\_\+mode}}=False)
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_aa4018e5dcd1bac621932a2f70ae0d990}{run}} (self, limit=2)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_af2b2d5e8f62ba5661b4c87e15a9bc67e}{url\+\_\+base}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a2926e956cbfbf24d9c99a1c0e80fae5e}{page\+\_\+name}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a6e0bc960b9ee2c29b8b75c66a275f570}{initial\+\_\+page}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a0d917081e91fe9067c457e791efec341}{remove\+\_\+pages}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ab1db7f6a00564e301a65a3560b00450a}{test\+\_\+mode}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_aecc008b6c522f033489506a4bb21bc52}{graph}}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a066cf036bc6b4178858f790e0d2625e7}{converter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a9b7fdc122b15d78d9967e0a6a567cf9f}{REGEX}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ada91bdbc6ff449d14a4b3435189080f9}{\+\_\+get\+\_\+links}} (self, str current\+\_\+page)
+\item 
+list \mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ace884d52406cb35a990f172fe49a40d5}{\+\_\+get\+\_\+paragraphs}} (self, str current\+\_\+page)
+\item 
+\mbox{\hyperlink{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a1f219db9f6b0dcd8c7f5b12afc8a0574}{\+\_\+validate\+\_\+url}} (self, str url)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A web crawler that traverses a network of web pages, extracts links and paragraphs,
+and constructs a graph using the PageRank algorithm.
+
+This crawler starts from a given base URL and an initial page, and follows links within
+the website to collect data such as links and paragraphs. It constructs a graph based on
+the relationships between pages.
+
+@param url_base: The base URL from which the crawler starts.
+@param page_name: The initial page to start crawling.
+@param remove_pages: A list of pages to exclude from the crawl. (Optional, default is [])
+
+Attributes
+----------
+graph : PyGraph
+    A graph representation used for PageRank calculations.
+
+Examples
+--------
+>>> crawler = Crawler('https://example.com', '/home')
+>>> links, paragraphs = crawler.run()
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a3749cceadf503febd19be1a13c9a0fe9}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a3749cceadf503febd19be1a13c9a0fe9} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{url\+\_\+base,  }\item[{str}]{page\+\_\+name,  }\item[{str}]{initial\+\_\+page,  }\item[{list\mbox{[}str\mbox{]} }]{remove\+\_\+pages = {\ttfamily \mbox{[}\mbox{]}},  }\item[{bool }]{test\+\_\+mode = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the Crawler with a base URL, the starting page, and optionally,
+a list of pages to exclude.
+
+@param url_base: The base URL of the website to crawl.
+@param page_name: The starting page to begin crawling.
+@param remove_pages: Pages to exclude from the crawl (optional).
+@param test_mode: Flag to activate the test mode for crawling. (default: False)
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ada91bdbc6ff449d14a4b3435189080f9}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ada91bdbc6ff449d14a4b3435189080f9} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!\_get\_links@{\_get\_links}}
+\index{\_get\_links@{\_get\_links}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{\_get\_links()}{\_get\_links()}}
+{\footnotesize\ttfamily  list search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+\_\+get\+\_\+links (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{current\+\_\+page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Retrieve all links from the specified page.
+
+@param current_page: The current page to fetch links from.
+
+@return: A list of valid links found on the current page.
+
+@raises UrlError: If the current page URL is invalid or inaccessible.
+\end{DoxyVerb}
+ \Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ace884d52406cb35a990f172fe49a40d5}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ace884d52406cb35a990f172fe49a40d5} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!\_get\_paragraphs@{\_get\_paragraphs}}
+\index{\_get\_paragraphs@{\_get\_paragraphs}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{\_get\_paragraphs()}{\_get\_paragraphs()}}
+{\footnotesize\ttfamily  list search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+\_\+get\+\_\+paragraphs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{current\+\_\+page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Retrieve all paragraphs from the specified page.
+
+@param current_page: The current page to fetch paragraphs from.
+
+@return: A list of paragraphs' text found on the current page.
+\end{DoxyVerb}
+ \Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a1f219db9f6b0dcd8c7f5b12afc8a0574}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a1f219db9f6b0dcd8c7f5b12afc8a0574} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!\_validate\_url@{\_validate\_url}}
+\index{\_validate\_url@{\_validate\_url}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{\_validate\_url()}{\_validate\_url()}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+\_\+validate\+\_\+url (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Validate the format of the given URL.
+
+@param url: The URL to validate.
+
+@raises UrlError: If the URL is not valid.
+\end{DoxyVerb}
+ \Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_aa4018e5dcd1bac621932a2f70ae0d990}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_aa4018e5dcd1bac621932a2f70ae0d990} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!run@{run}}
+\index{run@{run}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{limit = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Run the crawler to collect links and paragraphs starting from the base page.
+It uses a queue to traverse the links in a breadth-first manner.
+
+@param limit: The maximum number of pages to crawl in test mode.
+
+@return: A graph representation of the pages and their links.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a066cf036bc6b4178858f790e0d2625e7}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a066cf036bc6b4178858f790e0d2625e7} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!converter@{converter}}
+\index{converter@{converter}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{converter}{converter}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+converter}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_aecc008b6c522f033489506a4bb21bc52}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_aecc008b6c522f033489506a4bb21bc52} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!graph@{graph}}
+\index{graph@{graph}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+graph}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a6e0bc960b9ee2c29b8b75c66a275f570}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a6e0bc960b9ee2c29b8b75c66a275f570} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!initial\_page@{initial\_page}}
+\index{initial\_page@{initial\_page}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{initial\_page}{initial\_page}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+initial\+\_\+page}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a2926e956cbfbf24d9c99a1c0e80fae5e}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a2926e956cbfbf24d9c99a1c0e80fae5e} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!page\_name@{page\_name}}
+\index{page\_name@{page\_name}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{page\_name}{page\_name}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+page\+\_\+name}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a9b7fdc122b15d78d9967e0a6a567cf9f}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a9b7fdc122b15d78d9967e0a6a567cf9f} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!REGEX@{REGEX}}
+\index{REGEX@{REGEX}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{REGEX}{REGEX}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+REGEX\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ re.compile(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'\string^(?:http|https)://'}\ \ \textcolor{comment}{\#\ http\ or\ https\ protocol}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'(?:\(\backslash\)S+(?::\(\backslash\)S*)?@)?'}\ \ \textcolor{comment}{\#\ optional\ authentication}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'(?:[a-\/zA-\/Z0-\/9-\/]+\(\backslash\).)+[a-\/zA-\/Z]\{2,6\}'}\ \ \textcolor{comment}{\#\ domain}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'(?::\(\backslash\)d\{2,5\})?'}\ \ \textcolor{comment}{\#\ optional\ port}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{stringliteral}{r'(?:/\(\backslash\)S*)?\$'},\ \ \textcolor{comment}{\#\ optional\ path}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ re.IGNORECASE}
+\DoxyCodeLine{\ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a0d917081e91fe9067c457e791efec341}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_a0d917081e91fe9067c457e791efec341} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!remove\_pages@{remove\_pages}}
+\index{remove\_pages@{remove\_pages}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{remove\_pages}{remove\_pages}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+remove\+\_\+pages}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ab1db7f6a00564e301a65a3560b00450a}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_ab1db7f6a00564e301a65a3560b00450a} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!test\_mode@{test\_mode}}
+\index{test\_mode@{test\_mode}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{test\_mode}{test\_mode}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+test\+\_\+mode}
+
+\Hypertarget{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_af2b2d5e8f62ba5661b4c87e15a9bc67e}\label{classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler_af2b2d5e8f62ba5661b4c87e15a9bc67e} 
+\index{search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}!url\_base@{url\_base}}
+\index{url\_base@{url\_base}!search\_engine.search\_engine.crawler.Crawler@{search\_engine.search\_engine.crawler.Crawler}}
+\doxysubsubsection{\texorpdfstring{url\_base}{url\_base}}
+{\footnotesize\ttfamily search\+\_\+engine.\+search\+\_\+engine.\+crawler.\+Crawler.\+url\+\_\+base}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+search\+\_\+engine/\mbox{\hyperlink{crawler_8py}{crawler.\+py}}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['links_5fdocs_0',['links_docs',['../structinverted__index_1_1docs.html#a217103c61707d6e219fdac64eb4022c8',1,'inverted_index::docs']]]
+  ['freq_0',['freq',['../structinverted__index_1_1docs.html#ad40a502bb97dced4cd8c7634958df2f5',1,'inverted_index::docs']]]
 ];

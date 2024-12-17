@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['get_5fadjlist_0',['get_adjList',['../classpage__rank_1_1Graph.html#ae87e6a531c87ecf28d4bd8739f69b61a',1,'page_rank::Graph']]],
-  ['greet_1',['greet',['../classHello.html#a935f8ae8833c9cac314fce1a87907a08',1,'Hello']]]
+  ['find_5fanswer_0',['find_answer',['../namespaceinverted__index.html#ace9195b82649cfae96566f56ea285f86',1,'inverted_index']]],
+  ['find_5fdoc_1',['find_doc',['../namespaceinverted__index.html#ab00d739725897ea7ab9e82fcaa7a9326',1,'inverted_index']]]
 ];
