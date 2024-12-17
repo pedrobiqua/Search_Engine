@@ -1,6 +1,6 @@
-# Search Engine  
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)  
-[![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)  
+# Search Engine
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+[![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)
 
 ---
 
@@ -59,6 +59,23 @@ Run unit tests to ensure the correctness of the system.
     ```
 
 This will run the tests covering search engine functionality, reverse indexing, and the PageRank algorithm.
+
+---
+
+## 🚀 Running Examples
+
+The first step is building the project, for this to run:
+
+```bash
+poetry install
+poetry build
+```
+
+After building it, run this command to see the library working:
+
+```bash
+poetry run python Examples/graph_example.py
+```
 
 ---
 
