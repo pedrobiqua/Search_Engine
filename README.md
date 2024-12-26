@@ -3,6 +3,10 @@
 [![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)
 [![Pages Build Deployment](https://github.com/pedrobiqua/Search_Engine/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/pages/pages-build-deployment)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3d2be218-6aa2-45af-a956-f1d0fde5bf7e" alt="Logo da biblioteca" width="300">
+</p>
+
 ---
 
 **Search Engine** is a simple, efficient engine that builds a reverse index for keyword searching and ranks results using the **PageRank** algorithm.
