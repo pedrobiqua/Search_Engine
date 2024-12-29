@@ -98,5 +98,15 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
+## Contributors
+
+Thanks to all [contributors](https://github.com/pedrobiqua/Search_Engine/graphs/contributors)
+
+[![Contributors](https://contrib.rocks/image?repo=pedrobiqua/Search_Engine)](https://github.com/pedrobiqua/Search_Engine/graphs/contributor)
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+---
+
 Keep learning,<br>
 **Pedro;)**
