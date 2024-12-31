@@ -12,6 +12,9 @@ requests = "^2.32.3"
 beautifulsoup4 = "^4.12.3"
 
 
+[tool.poetry.group.dev.dependencies]
+commitizen = "^4.1.0"
+
 [build-system]
 requires = ["poetry-core", "setuptools", "wheel", "cython"]
 build-backend = "poetry.core.masonry.api"
