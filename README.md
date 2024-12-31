@@ -100,6 +100,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## Contributors
 
+We welcome all contributions to this project! Please make sure to follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file.<br>
 Thanks to all [contributors](https://github.com/pedrobiqua/Search_Engine/graphs/contributors)
 
 [![Contributors](https://contrib.rocks/image?repo=pedrobiqua/Search_Engine)](https://github.com/pedrobiqua/Search_Engine/graphs/contributor)
