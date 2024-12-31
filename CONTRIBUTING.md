@@ -44,6 +44,14 @@ git commit -m "Add keyword search functionality
 - Improve indexing performance for large data sets"
 ```
 
+To maintain the commit standard, use Commitizen. To do so, simply install the dependencies using Poetry, where the entire project is built and tested. Follow the steps outlined in the Commitizen Getting Started Guide.
+Example using Commitizen:
+```bash
+git add . # It is not recommended to use git add . This is just an example.
+cz commit # Follow the instructions provided by cz.
+```
+
+
 ### 5. Keep Your Fork Synchronized
 
 Regularly update your fork with changes from the main repository:
@@ -59,7 +67,11 @@ git merge upstream/main
 Ensure that your contribution does not break anything. Run the unit tests before submitting your pull request:
 
 ```bash
-make test
+mkdir build
+cd build
+cmake ..
+make
+./tests/unit-tests/LibUnitTests
 ```
 
 If necessary, add new tests covering your functionality or fix.
