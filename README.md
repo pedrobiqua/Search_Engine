@@ -105,6 +105,8 @@ Thanks to all [contributors](https://github.com/pedrobiqua/Search_Engine/graphs/
 
 [![Contributors](https://contrib.rocks/image?repo=pedrobiqua/Search_Engine)](https://github.com/pedrobiqua/Search_Engine/graphs/contributor)
 
+oi
+
 Made with [contrib.rocks](https://contrib.rocks).
 
 ---
