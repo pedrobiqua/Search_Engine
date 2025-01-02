@@ -25,7 +25,7 @@ jobs:
         with:
           style: file
           files-changed-only: false
-          thread-comments: thread-comments: ${{ github.event_name == 'pull_request'}}
+          thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
 
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed != 0
