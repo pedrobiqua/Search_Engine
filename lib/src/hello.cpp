@@ -2,7 +2,6 @@
 
 Hello::Hello() {}
 
-std::string Hello::greet(const std::string &name) {
-  return "Hello, " + name + "!";
+std::string Hello::greet(const std::string& name) {
+    return "Hello, " + name + "!";
 }
-

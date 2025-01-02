@@ -2,7 +2,7 @@
 #include <string>
 
 class Hello {
-public:
-  Hello();
-  std::string greet(const std::string &name);
+   public:
+    Hello();
+    std::string greet(const std::string& name);
 };
