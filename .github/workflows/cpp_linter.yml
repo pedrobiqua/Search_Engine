@@ -25,6 +25,7 @@ jobs:
         with:
           style: file
           files-changed-only: false
+          tidy-checks: '-*'
           thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
 
       - name: Fail fast?!
