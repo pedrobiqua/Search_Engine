@@ -23,7 +23,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          style: 'llvm'
+          style: 'file'
           files-changed-only: false
           tidy-checks: '-*'
           thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
