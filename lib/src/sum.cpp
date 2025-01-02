@@ -1,5 +1,6 @@
 #include "sum.h"
 
-double Sum(double x, double y) {
-    return x + y + x;
+double Sum(double x, double y)
+{
+    return x + y;
 }
