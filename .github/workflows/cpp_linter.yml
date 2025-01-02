@@ -27,6 +27,7 @@ jobs:
           files-changed-only: false
           tidy-checks: '-*'
           thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
+          format-review: true
 
       - name: Fail fast?!
         if: steps.linter.outputs.checks-failed != 0
