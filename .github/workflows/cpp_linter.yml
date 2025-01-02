@@ -7,20 +7,30 @@ on:
     branches: [main, master, develop]
     paths: ['**.c', '**.cpp', '**.h', '**.hpp', '**.cxx', '**.hxx', '**.cc', '**.hh', '**CMakeLists.txt', 'meson.build', '**.cmake']
 
+permissions:
+  contents: read
+
 jobs:
   cpp-linter:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      # Faz o checkout do código
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      # ... optionally setup build env to create a compilation database
+      # Instala as ferramentas necessárias (clang-format e clang-tidy)
+      - name: Install clang tools
+        run: sudo apt-get update && sudo apt-get install -y clang-format clang-tidy
 
-      - uses: cpp-linter/cpp-linter-action@v2
-        id: linter
-        with:
-          style: 'file'  # Use .clang-format config file. 
-          tidy-checks: '-*' # disable clang-tidy checks. 
+      # Verifica a formatação usando clang-format
+      - name: Run clang-format
+        run: |
+          # Encontra todos os arquivos C++ e verifica o formato
+          find . -regex '.*\.\(cpp\|hpp\|cxx\|hxx\|cc\|hh\|c\|h\)$' -exec clang-format --dry-run --Werror {} +
+        shell: bash
 
-      - name: Fail fast?!
-        if: ${{ steps.linter.outputs.clang-format-checks-failed > 0 }}
+      # Opcional: falha rápido se houver problemas no clang-format
+      - name: Fail if formatting issues
+        if: ${{ failure() }}
         run: exit 1
