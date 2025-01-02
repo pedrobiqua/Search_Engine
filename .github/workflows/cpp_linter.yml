@@ -8,9 +8,9 @@ on:
     paths: ['**.c', '**.cpp', '**.h', '**.hpp', '**.cxx', '**.hxx', '**.cc', '**.hh', '**CMakeLists.txt', 'meson.build', '**.cmake']
 
 permissions:
-  actions: read
-  contents: write
   pull-requests: write
+  contents: write
+  issues: write
 
 jobs:
   cpp-linter:
