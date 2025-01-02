@@ -22,5 +22,5 @@ jobs:
           tidy-checks: '-*' # disable clang-tidy checks. 
 
       - name: Fail fast?!
-        if: steps.linter.outputs.clang-format-checks-failed > 0
+        if: ${{ steps.linter.outputs.clang-format-checks-failed > 0 }}
         run: exit 1
