@@ -8,29 +8,26 @@ on:
     paths: ['**.c', '**.cpp', '**.h', '**.hpp', '**.cxx', '**.hxx', '**.cc', '**.hh', '**CMakeLists.txt', 'meson.build', '**.cmake']
 
 permissions:
-  contents: read
+  actions: read
+  contents: write
+  pull-requests: write
 
 jobs:
   cpp-linter:
     runs-on: ubuntu-latest
-
     steps:
-      # Faz o checkout do código
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      # Instala as ferramentas necessárias (clang-format e clang-tidy)
-      - name: Install clang tools
-        run: sudo apt-get update && sudo apt-get install -y clang-format clang-tidy
+      - uses: cpp-linter/cpp-linter-action@v2
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: 'file'  # Use .clang-format config file. 
+          tidy-checks: '-*' # disable clang-tidy checks. 
+          # only 'update' a single comment in a pull request thread.
+          thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
 
-      # Verifica a formatação usando clang-format
-      - name: Run clang-format
-        run: |
-          # Encontra todos os arquivos C++ e verifica o formato
-          find . -regex '.*\.\(cpp\|hpp\|cxx\|hxx\|cc\|hh\|c\|h\)$' -exec clang-format --dry-run --Werror {} +
-        shell: bash
-
-      # Opcional: falha rápido se houver problemas no clang-format
-      - name: Fail if formatting issues
-        if: ${{ failure() }}
+      - name: Fail fast?!
+        if: steps.linter.outputs.clang-format-checks-failed > 0
         run: exit 1
