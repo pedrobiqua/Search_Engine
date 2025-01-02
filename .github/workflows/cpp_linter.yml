@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Verificar versão do clang-format
+        run: clang-format --version
+
       - uses: cpp-linter/cpp-linter-action@v2
         id: linter
         env:
