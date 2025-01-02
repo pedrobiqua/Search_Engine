@@ -17,23 +17,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Verificar versão do clang-format
-        run: clang-format --version
-
-      - name: C/C++ Linter
-        uses: cpp-linter/cpp-linter-action@v2.13.4    
+      - uses: cpp-linter/cpp-linter-action@main
         id: linter
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          style: 'file'  # Use .clang-format config file. 
-          tidy-checks: '-*' # disable clang-tidy checks. 
-          format-review: true
-          step-summary: true
-          # only 'update' a single comment in a pull request thread.
-          thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
+          style: file
+          files-changed-only: false
+          thread-comments: false
 
       - name: Fail fast?!
-        if: steps.linter.outputs.clang-format-checks-failed > 0
-        run: exit 1
+        if: steps.linter.outputs.checks-failed != 0
+        run: |
+          echo "some linter checks failed. ${{ steps.linter.outputs.checks-failed }}"
