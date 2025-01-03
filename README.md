@@ -2,6 +2,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
 [![CMake Build and Test](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/cmake-multi-platform.yml)
 [![Pages Build Deployment](https://github.com/pedrobiqua/Search_Engine/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/pedrobiqua/Search_Engine/actions/workflows/pages/pages-build-deployment)
+[![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3d2be218-6aa2-45af-a956-f1d0fde5bf7e" alt="Logo da biblioteca" width="300">
