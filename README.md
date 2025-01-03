@@ -13,7 +13,30 @@
 
 **Search Engine** is a simple, efficient engine that builds a reverse index for keyword searching and ranks results using the **PageRank** algorithm.
 
-## 📋 Requirements
+Aqui está o arquivo Markdown corrigido, com os emojis adicionados nos títulos para manter o padrão e com a seção "Requirements" ajustada para contribuições:
+
+## ⚙️ Installation
+
+Please create a virtual environment using `venv`, as the project is still in alpha testing and in its initial implementations.  
+```bash
+python3 -m venv .env
+source .env/bin/activate
+pip install search-engine-cpp
+```
+
+## 🚀 Usage
+```python
+from search_engine.crawler import Crawler
+
+crawler = Crawler("https://en.wikipedia.org", "/wiki/", "Cat", test_mode=True)
+graph = crawler.run(limit=10)
+my_dict = graph.compute_page_rank()
+top = sorted(my_dict.items(), key=lambda item: item[1], reverse=True)[:3]
+
+print(top)
+```
+
+## 📋 Requirements for Contributions
 
 Before compiling the project, ensure your environment meets the following requirements:
 
@@ -55,7 +78,7 @@ To compile the project, follow these steps:
 
 ---
 
-## 🧪 Running Tests
+## 🧪 Running Tests for Contributions
 
 Run unit tests to ensure the correctness of the system.
 
@@ -69,7 +92,7 @@ This will run the tests covering search engine functionality, reverse indexing, 
 
 ---
 
-## 🚀 Running Examples
+## 🏃 Running Examples for Contributions
 
 The first step is building the project, for this to run:
 
@@ -100,7 +123,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## Contributors
+## 👥 Contributors
 
 We welcome all contributions to this project! Please make sure to follow the guidelines outlined in the [CONTRIBUTING.md](CONTRIBUTING.md) file.<br>
 Thanks to all [contributors](https://github.com/pedrobiqua/Search_Engine/graphs/contributors)
