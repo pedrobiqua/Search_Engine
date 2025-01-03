@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "search-engine"
 version = "0.1.0"
-description = ""
+description = "Search Engine is a project that implements a basic search engine using C++, Python, and Cython. It builds a reverse index and ranks pages with the PageRank algorithm based on keyword relevance and page importance."
 authors = ["Pedro Bianchini de Quadros <pedrobiqua@gmail.com>"]
 readme = "README.md"
 include = [
