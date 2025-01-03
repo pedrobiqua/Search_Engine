@@ -4,6 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Pedro Bianchini de Quadros <pedrobiqua@gmail.com>"]
 readme = "README.md"
+include = [
+    "lib/**",  # Inclui o diretório lib com todos os arquivos
+    "tests/**",
+    "CMakeLists.txt",
+    "README.md",  # Inclui o README
+    "LICENSE.md"  # Inclui o arquivo de licença
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
