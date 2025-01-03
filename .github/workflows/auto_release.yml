@@ -1,0 +1,60 @@
+name: Release Python Package
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - '*'
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  build-and-publish:
+    if: contains(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout do código
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Configurar Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11  # Ajuste a versão conforme necessário
+
+      # 3. Criar e ativar ambiente virtual
+      - name: Create Virtual Environment
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+
+      # 4. Instalar Poetry
+      - name: Install Poetry
+        run: pip install poetry
+
+      # 5. Instalar dependências
+      - name: Install Dependencies
+        run: poetry install --no-dev
+
+      # 6. Construir o pacote com Poetry
+      - name: Build Package
+        run: poetry build
+
+      # 7. Publicar no PyPI
+      - name: Publish to PyPI
+        env:
+          POETRY_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}  # Token do PyPI
+        run: poetry publish --username __token__ --password $POETRY_PASSWORD
+
+      - name: GH Release
+        uses: softprops/action-gh-release@v2.2.0
+        with:
+          draft: false
+          prerelease: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          generate_release_notes: true
+            
