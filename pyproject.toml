@@ -11,6 +11,7 @@ include = [
     "README.md",  # Inclui o README
     "LICENSE.md"  # Inclui o arquivo de licença
 ]
+homepage = "https://pedrobiqua.github.io/Search_Engine/html/"
 
 [tool.poetry.dependencies]
 python = "^3.10"
