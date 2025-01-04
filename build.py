@@ -43,6 +43,8 @@ def build(setup_kwargs):
 
     extensions = []
 
+    print("Oi!")
+
     for lib in libs_names:
         ext = Extension(
             f"{lib}",
