@@ -13,8 +13,6 @@
 
 **Search Engine** is a simple, efficient engine that builds a reverse index for keyword searching and ranks results using the **PageRank** algorithm.
 
-Aqui está o arquivo Markdown corrigido, com os emojis adicionados nos títulos para manter o padrão e com a seção "Requirements" ajustada para contribuições:
-
 ## ⚙️ Installation
 
 Please create a virtual environment using `venv`, as the project is still in alpha testing and in its initial implementations.  
