@@ -17,7 +17,7 @@ Aqui está o arquivo Markdown corrigido, com os emojis adicionados nos títulos 
 
 ## ⚙️ Installation
 
-Please create a virtual environment using `venv`, as the project is still in alpha testing and in its initial implementations.  
+Please create a virtual environment using `venv`, as the project is still in alpha testing and in its initial implementations.
 ```bash
 python3 -m venv .env
 source .env/bin/activate
@@ -136,4 +136,5 @@ Made with [contrib.rocks](https://contrib.rocks).
 ---
 
 Keep learning,<br>
+lalalalal
 **Pedro;)**
