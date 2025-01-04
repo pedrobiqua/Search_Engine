@@ -1,7 +1,12 @@
 name: 'Auto assign'
+
 on:
   pull_request_target:
     types: [opened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   add-reviews:
