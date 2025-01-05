@@ -20,3 +20,7 @@ add_executable(
 target_include_directories(LibUnitTests PRIVATE ${CMAKE_SOURCE_DIR}/lib/include/)
 
 target_link_libraries(LibUnitTests PRIVATE gtest_main search_engine)
+
+# Add command cmake test
+include(GoogleTest)
+gtest_discover_tests(LibUnitTests)
