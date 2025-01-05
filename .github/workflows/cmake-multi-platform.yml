@@ -3,9 +3,21 @@ name: CMake Build and Test
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - 'CMakeLists.txt'
+      - '**/*.cpp'
+      - '**/*.hpp'
+      - '**/*.h'
+      - '**/*.c'
   pull_request:
     branches: [ "main" ]
-
+    paths:
+      - 'CMakeLists.txt'
+      - '**/*.cpp'
+      - '**/*.hpp'
+      - '**/*.h'
+      - '**/*.c'
+      
 permissions:
   contents: read
   actions: read
