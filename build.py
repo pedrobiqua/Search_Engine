@@ -25,7 +25,7 @@ def build_lib_cpp(path: str):
         old_path = os.getcwd()
         os.makedirs(path)
         os.chdir(path)
-        subprocess.run(["cmake", ".."])
+        subprocess.run(["cmake", "..", "-DBUILD_TESTS=OFF"])
         subprocess.run(["make"])
         os.chdir(old_path)
 
@@ -42,6 +42,7 @@ def build(setup_kwargs):
     ]
 
     extensions = []
+
 
     for lib in libs_names:
         ext = Extension(

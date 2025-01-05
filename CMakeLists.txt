@@ -7,5 +7,10 @@ project(search_engine VERSION 1.0)
 
 add_subdirectory(lib)
 
-include(FetchContent)
-add_subdirectory(tests/unit-tests)
+option(BUILD_TESTS "Build and enable tests" ON)
+
+if (BUILD_TESTS)
+    enable_testing()
+    include(FetchContent)
+    add_subdirectory(tests/unit-tests)
+endif()
