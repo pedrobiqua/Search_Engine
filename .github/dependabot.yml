@@ -1,0 +1,35 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # 1. Atualizar GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: ".github"               # Pasta onde estão os workflows do GitHub Actions
+    schedule:
+      interval: "weekly"               # Verificar atualizações semanalmente
+    commit-message:
+      prefix: "deps"                   # Prefixo dos commits gerados
+      include: "scope"                 # Incluir escopo no commit (ex: "deps(actions)")
+
+  # 2. Atualizar Submódulos Git
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"                     # Raiz do projeto ou onde estão os submódulos
+    schedule:
+      interval: "daily"                # Verificar atualizações diariamente
+    commit-message:
+      prefix: "deps"                   # Prefixo dos commits gerados
+
+  # 3. Atualizar Dependências Python (Poetry)
+  - package-ecosystem: "poetry"
+    directory: "/"                     # Diretório onde está o pyproject.toml
+    schedule:
+      interval: "daily"               # Verificar atualizações semanalmente
+    commit-message:
+      prefix: "deps"                   # Prefixo dos commits gerados
+      include: "scope"
+    ignore:
+      - dependency-name: "numpy"       # Ignorar atualizações para uma dependência específica
+        versions: ["<1.25.0"]          # Apenas ignorar versões específicas
