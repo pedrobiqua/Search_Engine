@@ -6,7 +6,8 @@ authors = ["Pedro Bianchini de Quadros <pedrobiqua@gmail.com>"]
 readme = "README.md"
 include = [
     "lib/**",  # Inclui o diretório lib com todos os arquivos
-    "tests/**",
+    "search_engine_cpp/lib/*.so",
+    "search_engine_cpp/.*so",
     "CMakeLists.txt",
     "README.md",  # Inclui o README
     "LICENSE.md"  # Inclui o arquivo de licença
