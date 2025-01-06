@@ -38,7 +38,7 @@ jobs:
 
       # 5. Instalar dependências
       - name: Install Dependencies
-        run: poetry install --no-dev
+        run: poetry install
 
       # 6. Construir o pacote com Poetry
       - name: Build Package
