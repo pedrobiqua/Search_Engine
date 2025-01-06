@@ -1,0 +1,2 @@
+include search_engine_cpp/lib/*.so
+recursive-include search_engine_cpp/lib *.so

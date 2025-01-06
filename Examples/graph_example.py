@@ -1,6 +1,6 @@
 # EXEMPLO USANDO A BIBLIOTECA SEARCH_ENGINE
 
-from search_engine.crawler import Crawler
+from search_engine_cpp.crawler import Crawler
 
 # Rodar com o test_mode ativado ajuda a testar a lib e fazer com que o parametro limit seja usado
 
