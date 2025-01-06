@@ -23,13 +23,10 @@ updates:
       prefix: "deps"                   # Prefixo dos commits gerados
 
   # 3. Atualizar Dependências Python (Poetry)
-  - package-ecosystem: "poetry"
+  - package-ecosystem: "pip"
     directory: "/"                     # Diretório onde está o pyproject.toml
     schedule:
       interval: "daily"               # Verificar atualizações semanalmente
     commit-message:
       prefix: "deps"                   # Prefixo dos commits gerados
       include: "scope"
-    ignore:
-      - dependency-name: "numpy"       # Ignorar atualizações para uma dependência específica
-        versions: ["<1.25.0"]          # Apenas ignorar versões específicas
