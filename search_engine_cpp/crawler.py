@@ -1,5 +1,5 @@
 from .exceptions import UrlError
-from ._page_rank import PyGraph
+from .wrapper.page_rank import PyGraph
 from .helper.converter import StringToIntConverter
 
 # Libs

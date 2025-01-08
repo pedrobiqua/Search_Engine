@@ -8,3 +8,4 @@
 compile_commands.json
 /lib/src/_*.cpp
 /search_engine_cpp.egg-info
+**.code-workspace

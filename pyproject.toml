@@ -23,6 +23,7 @@ beautifulsoup4 = "^4.12.3"
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^4.1.0"
+setuptools = "^75.7.0"
 
 [build-system]
 requires = ["poetry-core", "setuptools", "wheel", "cython"]
