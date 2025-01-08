@@ -1,4 +1,5 @@
-from search_engine_cpp._inverted_index import add_document, find_documents
+from search_engine_cpp.wrapper.inverted_index import add_document, find_documents
+
 import pprint
 
 inverted_index = {}

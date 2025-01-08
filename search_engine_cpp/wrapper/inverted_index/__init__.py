@@ -1,0 +1,1 @@
+from ..._inverted_index import add_document, find_documents
