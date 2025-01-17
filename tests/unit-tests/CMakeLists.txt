@@ -15,6 +15,7 @@ add_executable(
     subtraction-test.cpp
     page_rank-test.cpp
     inverted_index-test.cpp
+    stemmer-test.cpp
 )
 
 target_include_directories(LibUnitTests PRIVATE ${CMAKE_SOURCE_DIR}/lib/include/)
