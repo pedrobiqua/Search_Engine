@@ -1,27 +1,29 @@
 #include "preprocessing/stemmer.h"
+#include <codecvt>
+#include <locale>
 
 namespace stemmer {
-rspl::rspl() {
+RSPL::RSPL() {
     // As regras são inicializadas no construtor da classe
-    std::vector<step_rule> plural_reduction_rules = {
+    std::vector<StepRule> plural_reduction_rules = {
         {"ns", 1, "m"},   {"ões", 3, "ão"}, {"ães", 1, "ão"}, {"ais", 1, "al"},
         {"éis", 2, "el"}, {"eis", 2, "el"}, {"óis", 2, "ol"}, {"is", 2, "il"},
         {"is", 1, "l"},   {"res", 1, "r"},  {"s", 2, ""}};
 
-    std::vector<step_rule> feminine_reduction_rules = {
+    std::vector<StepRule> feminine_reduction_rules = {
         {"inha", 4, "inho"}, {"esa", 3, "es"}, {"osa", 3, "oso"},
         {"na", 2, "no"},     {"da", 2, "do"},  {"va", 2, "vo"},
         {"ia", 2, "io"}};
 
-    std::vector<step_rule> augmentative_reduction_rules = {
+    std::vector<StepRule> augmentative_reduction_rules = {
         {"zão", 3, "z"},  {"são", 3, "s"},  {"ão", 2, "o"},
         {"ona", 3, "on"}, {"ões", 3, "ão"}, {"íssimos", 7, "o"}};
 
-    std::vector<step_rule> diminutive_reduction_rules = {
+    std::vector<StepRule> diminutive_reduction_rules = {
         {"zinho", 5, ""},  {"zinha", 6, ""}, {"zinhos", 6, ""},
         {"zinhas", 7, ""}, {"inho", 4, ""},  {"inha", 5, ""}};
 
-    std::vector<step_rule> verb_conjugation_reduction_rules = {
+    std::vector<StepRule> verb_conjugation_reduction_rules = {
         // Infinitive reduction
         {"ar", 2, ""},
         {"er", 2, ""},
@@ -85,20 +87,20 @@ rspl::rspl() {
         {"em", 2, "er"},
         {"em", 2, "ir"}};
 
-    std::vector<step_rule> noun_reduction_rules = {
+    std::vector<StepRule> noun_reduction_rules = {
         {"ezas", 4, "ez"},      {"ezes", 4, "ez"},     {"eza", 3, "ez"},
         {"ez", 2, ""},          {"mentos", 6, "ment"}, {"mento", 5, "ment"},
         {"idades", 7, "idade"}, {"idade", 6, ""},      {"ismos", 5, "ismo"},
         {"ista", 4, ""},        {"istas", 5, ""},      {"ções", 4, "ção"},
         {"ção", 3, ""}};
 
-    std::vector<step_rule> adverb_reduction_rules = {{"mente", 4, ""}};
+    std::vector<StepRule> adverb_reduction_rules = {{"mente", 4, ""}};
 
-    std::vector<step_rule> remove_vowel_rules = {
+    std::vector<StepRule> remove_vowel_rules = {
         {"a", 3, ""}, {"e", 3, ""}, {"o", 3, ""}};
 
     // Conjunto de regras para a aplicação do algoritmo
-    rule_map = {
+    ruleMap_ = {
         {"plural_reduction", plural_reduction_rules},
         {"feminine_reduction", feminine_reduction_rules},
         {"augmentative_reduction", augmentative_reduction_rules},
@@ -109,23 +111,23 @@ rspl::rspl() {
         {"remove_vowel", remove_vowel_rules}};
 }
 
-rspl::~rspl() {}
+RSPL::~RSPL() {}
 
-bool rspl::ends_a(const std::string& word) {
+bool RSPL::endsWithA(const std::string& word) {
     char last_char = word.back();
     if (last_char == 'a')
         return true;
     return false;
 }
 
-bool rspl::ends_s(const std::string& word) {
+bool RSPL::endsWithS(const std::string& word) {
     char last_char = word.back();
     if (last_char == 's')
         return true;
     return false;
 }
 
-std::vector<std::string> rspl::split(std::string& s) {
+std::vector<std::string> RSPL::split(std::string& s) {
     std::vector<std::string> tokens;
     size_t pos = 0;
     std::string token;
@@ -140,23 +142,26 @@ std::vector<std::string> rspl::split(std::string& s) {
     return tokens;
 }
 
-std::string rspl::remove_accents(const std::string& input) {
-    std::string output;
-    output.reserve(input.size());  // Evitar alocações desnecessárias
+std::string RSPL::removeAccents(const std::string& input) {
+    std::wstring winput =
+        std::wstring_convert<std::codecvt_utf8<wchar_t>>().from_bytes(input);
+    std::wstring woutput;
+    woutput.reserve(winput.size());  // Evitar alocações desnecessárias
 
-    for (char ch : input) {
-        // Substituir caractere acentuado, se existir no mapa
-        if (this->accent_map.count(ch)) {
-            output += accent_map.at(ch);
+    // Processar a string como wstring
+    for (wchar_t ch : winput) {
+        if (accentMap_.count(ch)) {
+            woutput.push_back(accentMap_.at(ch));  // Substituir acentuados
         } else {
-            output += ch;  // Mantém o caractere se não for acentuado
+            woutput.push_back(ch);  // Mantém o caractere não acentuado
         }
     }
 
-    return output;
+    // Converter de volta para std::string
+    return std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(woutput);
 }
 
-void rspl::shrink_string(std::string* input) {
+void RSPL::shrinkString(std::string* input) {
     if (!input)
         return;  // Verifica se o ponteiro é válido
 
@@ -167,16 +172,16 @@ void rspl::shrink_string(std::string* input) {
     *input = result;
 }
 
-bool rspl::apply_rules(std::string& word, const std::vector<step_rule>& rules) {
+bool RSPL::applyRules(std::string& word, const std::vector<StepRule>& rules) {
     for (const auto& rule : rules) {
         // Verificar se a palavra termina com o sufixo especificado
-        if (word.size() >= rule.suffix_to_remove.size() &&
-            word.compare(word.size() - rule.suffix_to_remove.size(),
-                         rule.suffix_to_remove.size(),
-                         rule.suffix_to_remove) == 0) {
+        if (word.size() >= rule.suffixToRemove.size() &&
+            word.compare(word.size() - rule.suffixToRemove.size(),
+                         rule.suffixToRemove.size(),
+                         rule.suffixToRemove) == 0) {
             // Calcular o tamanho do radical após a remoção do sufixo
-            size_t stem_size = word.size() - rule.suffix_to_remove.size();
-            if (stem_size >= static_cast<size_t>(rule.minimun_stem_size)) {
+            size_t stem_size = word.size() - rule.suffixToRemove.size();
+            if (stem_size >= static_cast<size_t>(rule.minimumStemSize)) {
                 // Aplicar a regra: remover o sufixo e adicionar o replacement
                 word = word.substr(0, stem_size) + rule.replacement;
                 return true;  // Regra aplicada
@@ -186,44 +191,46 @@ bool rspl::apply_rules(std::string& word, const std::vector<step_rule>& rules) {
     return false;  // Nenhuma regra foi aplicada
 }
 
-void rspl::run(std::string* sentence) {
+void RSPL::run(std::string* sentence) {
     // Separar a sentença em palavras
-    this->shrink_string(sentence);
+    this->shrinkString(sentence);
+    std::cout << *sentence << std::endl;
     std::vector<std::string> words = this->split(*sentence);
 
     for (std::string& word : words) {
         // PLURAL REDUCTION
         bool rule_applied = false;
 
-        if (ends_s(word)) {
-            rule_applied = apply_rules(word, rule_map["plural_reduction"]);
+        if (endsWithS(word)) {
+            rule_applied = applyRules(word, ruleMap_["plural_reduction"]);
         }
 
         // FEMININE REDUCTION
-        if (ends_a(word)) {
-            rule_applied = apply_rules(word, rule_map["feminine_reduction"]);
+        if (endsWithA(word)) {
+            rule_applied = applyRules(word, ruleMap_["feminine_reduction"]);
         }
 
         // AUGMENTATIVE REDUCTION
-        rule_applied = apply_rules(word, rule_map["augmentative_reduction"]);
+        rule_applied = applyRules(word, ruleMap_["augmentative_reduction"]);
 
-        rule_applied = apply_rules(word, rule_map["diminutive_reduction"]);
+        rule_applied = applyRules(word, ruleMap_["diminutive_reduction"]);
 
         // ADVERB REDUCTION
-        rule_applied = apply_rules(word, rule_map["adverb_reduction"]);
+        rule_applied = applyRules(word, ruleMap_["adverb_reduction"]);
 
         // NOUN REDUCTION
-        rule_applied = apply_rules(word, rule_map["noun_reduction"]);
+        rule_applied = applyRules(word, ruleMap_["noun_reduction"]);
 
         if (!rule_applied) {
-            rule_applied = apply_rules(word, rule_map["verb_reduction"]);
+            rule_applied = applyRules(word, ruleMap_["verb_reduction"]);
             if (!rule_applied)
                 // remove vogal
-                rule_applied = apply_rules(word, rule_map["remove_vowel"]);
+                rule_applied = applyRules(word, ruleMap_["remove_vowel"]);
         }
 
         // Função para remover acentos
-        word = remove_accents(word);
+        word = removeAccents(word);
+        std::cout << word << std::endl;
     }
 
     // for (auto& word : words)
