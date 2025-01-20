@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "search-engine-cpp"
-version = "0.1.3"
+version = "0.2.0"
 description = "Search Engine is a project that implements a basic search engine using C++, Python, and Cython. It builds a reverse index and ranks pages with the PageRank algorithm based on keyword relevance and page importance."
 authors = ["Pedro Bianchini de Quadros <pedrobiqua@gmail.com>"]
 readme = "README.md"
@@ -13,6 +13,10 @@ include = [
     "LICENSE.md"  # Inclui o arquivo de licença
 ]
 homepage = "https://pedrobiqua.github.io/Search_Engine/html/"
+documentation = "https://bianchtech.github.io/Search_Engine/html/Chap_00_Architecture_documentation.html"
+repository = "https://github.com/BianchTech/Search_Engine"
+
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
