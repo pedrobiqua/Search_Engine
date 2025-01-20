@@ -51,20 +51,24 @@ def build(setup_kwargs):
 
 
     # Modulos que serão usados no Python
+    # TODO: Lembrar de arrumar o build, poois vou querer que seja feito esse esquema de pasta para o stemmer e todas as ferramentas de preprocessamento
     libs_names = [
         "_hello",
         "_page_rank",
-        "_inverted_index"
+        "_inverted_index",
+        "preprocessing.stemmer_cpp"
     ]
 
     extensions = []
 
     for lib in libs_names:
+        lib_pyx = lib.replace(".", "/")
+
         ext = Extension(
             f"search_engine_cpp.{lib}",
             language="c++",
             sources=[
-                f"lib/src/{lib}.pyx"
+                f"lib/src/{lib_pyx}.pyx"
             ],
             include_dirs=["lib/include"],
             library_dirs=[library_dir],

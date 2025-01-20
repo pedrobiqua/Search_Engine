@@ -39,53 +39,90 @@ RSPL::RSPL() {
         {"ido", 3, ""},
 
         // Future tense reduction
-        {"arei", 4, "ar"},
-        {"erei", 4, "er"},
-        {"irei", 4, "ir"},
-        {"arás", 4, "ar"},
-        {"erás", 4, "er"},
-        {"irás", 4, "ir"},
-        {"ará", 3, "ar"},
-        {"erá", 3, "er"},
-        {"irá", 3, "ir"},
-        {"aremos", 6, "ar"},
-        {"eremos", 6, "er"},
-        {"iremos", 6, "ir"},
-        {"areis", 5, "ar"},
-        {"ereis", 5, "er"},
-        {"ireis", 5, "ir"},
-        {"arão", 4, "ar"},
-        {"erão", 4, "er"},
-        {"irão", 4, "ir"},
+        {"arei", 4, ""},
+        {"erei", 4, ""},
+        {"irei", 4, ""},
+        {"arás", 4, ""},
+        {"erás", 4, ""},
+        {"irás", 4, ""},
+        {"ará", 3, ""},
+        {"erá", 3, ""},
+        {"irá", 3, ""},
+        {"aremos", 6, ""},
+        {"eremos", 6, ""},
+        {"iremos", 6, ""},
+        {"areis", 5, ""},
+        {"ereis", 5, ""},
+        {"ireis", 5, ""},
+        {"arão", 4, ""},
+        {"erão", 4, ""},
+        {"irão", 4, ""},
 
         // Imperfect tense reduction
-        {"ava", 3, "ar"},
-        {"ia", 2, "er"},
-        {"ia", 2, "ir"},
-        {"ávamos", 6, "ar"},
-        {"íamos", 5, "er"},
-        {"íamos", 5, "ir"},
-        {"áveis", 5, "ar"},
-        {"íeis", 5, "er"},
-        {"íeis", 5, "ir"},
+        {"ava", 3, ""},
+        {"ia", 2, ""},
+        {"ávamos", 6, ""},
+        {"íamos", 5, ""},
+        {"áveis", 5, ""},
+        {"íeis", 5, ""},
 
         // Present tense reduction
         {"o", 1, ""},
-        {"as", 2, "ar"},
-        {"es", 2, "er"},
-        {"es", 2, "ir"},
-        {"a", 1, "ar"},
-        {"e", 1, "er"},
-        {"e", 1, "ir"},
-        {"amos", 4, "ar"},
-        {"emos", 4, "er"},
-        {"imos", 4, "ir"},
-        {"ais", 3, "ar"},
-        {"eis", 3, "er"},
-        {"is", 2, "ir"},
-        {"am", 2, "ar"},
-        {"em", 2, "er"},
-        {"em", 2, "ir"}};
+        {"as", 2, ""},
+        {"es", 2, ""},
+        {"a", 1, ""},
+        {"e", 1, ""},
+        {"amos", 4, ""},
+        {"emos", 4, ""},
+        {"imos", 4, ""},
+        {"ais", 3, ""},
+        {"eis", 3, ""},
+        {"is", 2, ""},
+        {"am", 2, ""},
+        {"em", 2, ""},
+
+        // Conditional tense reduction
+        {"aria", 4, ""},
+        {"eria", 4, ""},
+        {"iria", 4, ""},
+        {"aríamos", 7, ""},
+        {"eríamos", 7, ""},
+        {"iríamos", 7, ""},
+        {"aríeis", 6, ""},
+        {"eríeis", 6, ""},
+        {"iríeis", 6, ""},
+
+        // Subjunctive reduction
+        {"asse", 4, ""},
+        {"esse", 4, ""},
+        {"isse", 4, ""},
+        {"áramos", 6, ""},
+        {"éramos", 6, ""},
+        {"íramos", 6, ""},
+        {"ásseis", 6, ""},
+        {"ésseis", 6, ""},
+        {"ísseis", 6, ""},
+
+        // Preterite tense reduction
+        {"ei", 2, ""},
+        {"ou", 2, ""},
+        {"aste", 4, ""},
+        {"este", 4, ""},
+        {"iste", 4, ""},
+        {"aram", 4, ""},
+        {"eram", 4, ""},
+        {"iram", 4, ""},
+        {"amos", 4, ""},
+        {"emos", 4, ""},
+        {"imos", 4, ""},
+
+        // Additional rules for "eu" and other omitted cases
+        {"eu", 3, ""},
+        {"ava", 3, ""},
+        {"ava", 3, ""},
+        {"á", 2, ""},
+        {"ê", 2, ""},
+        {"í", 2, ""}};
 
     std::vector<StepRule> noun_reduction_rules = {
         {"ezas", 4, "ez"},      {"ezes", 4, "ez"},     {"eza", 3, "ez"},
@@ -194,7 +231,7 @@ bool RSPL::applyRules(std::string& word, const std::vector<StepRule>& rules) {
 void RSPL::run(std::string* sentence) {
     // Separar a sentença em palavras
     this->shrinkString(sentence);
-    std::cout << *sentence << std::endl;
+    // std::cout << *sentence << std::endl;
     std::vector<std::string> words = this->split(*sentence);
 
     for (std::string& word : words) {
@@ -222,7 +259,8 @@ void RSPL::run(std::string* sentence) {
         rule_applied = applyRules(word, ruleMap_["noun_reduction"]);
 
         if (!rule_applied) {
-            rule_applied = applyRules(word, ruleMap_["verb_reduction"]);
+            rule_applied =
+                applyRules(word, ruleMap_["verb_conjugation_reduction"]);
             if (!rule_applied)
                 // remove vogal
                 rule_applied = applyRules(word, ruleMap_["remove_vowel"]);
@@ -230,7 +268,7 @@ void RSPL::run(std::string* sentence) {
 
         // Função para remover acentos
         word = removeAccents(word);
-        std::cout << word << std::endl;
+        // std::cout << word << std::endl;
     }
 
     // for (auto& word : words)
