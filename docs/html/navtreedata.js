@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Search Engine", "index.html", [
+    [ "Overview", "index.html", "index" ],
     [ "Architecture documentation", "Chap_00_Architecture_documentation.html", [
       [ "Table of contents", "Chap_00_Architecture_documentation.html#Table_of_contents", null ],
       [ "Template disclosure", "Chap_00_Architecture_documentation.html#Template_disclosure", null ],
@@ -81,6 +82,7 @@ var NAVTREE =
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ],
         [ "Typedefs", "namespacemembers_type.html", null ]
       ] ]
     ] ],

@@ -1,0 +1,68 @@
+\doxysection{stemmer.\+h}
+\hypertarget{stemmer_8h_source}{}\label{stemmer_8h_source}\index{lib/include/preprocessing/stemmer.h@{lib/include/preprocessing/stemmer.h}}
+\mbox{\hyperlink{stemmer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STEMMER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STEMMER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <unicode/locid.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <unicode/unistr.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <unicode/ustream.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacestemmer}{stemmer}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structstemmer_1_1StepRule}{StepRule}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ std::string\ \mbox{\hyperlink{structstemmer_1_1StepRule_ada22f4bfdbb3ba03589315a48d7d39db}{suffixToRemove}};\ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structstemmer_1_1StepRule_abc1f7ed46dbe09e44da926e5de3691ac}{minimumStemSize}};\ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{structstemmer_1_1StepRule_ac2377010b03ed28471e22f5e8b5fa84d}{replacement}};\ \ }
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacestemmer_acdab3b4e016371fe4df51700e9c5aa23}{RuleMap}}\ =\ std::map<std::string,\ std::vector<StepRule>>;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classstemmer_1_1RSPL}{RSPL}}\ \{}
+\DoxyCodeLine{00032\ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classstemmer_1_1RSPL_a86599a83bb1272ac61507408e0292258}{RSPL}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classstemmer_1_1RSPL_acb33c3241c01809e35cb8d44a853cb5d}{\string~RSPL}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classstemmer_1_1RSPL_a7f4a148b302e2385d04ac53b029214b9}{run}}(std::string*\ sentence);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{namespacestemmer_acdab3b4e016371fe4df51700e9c5aa23}{RuleMap}}\ ruleMap\_;\ \ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ std::unordered\_map<wchar\_t,\ wchar\_t>\ accentMap\_\ =\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'á'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'à'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'â'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'ã'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'ä'},\ L\textcolor{charliteral}{'a'}\},}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'é'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'è'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'ê'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'ë'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'í'},\ L\textcolor{charliteral}{'i'}\},}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'ì'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'î'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'ï'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'ó'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ò'},\ L\textcolor{charliteral}{'o'}\},}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'ô'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'õ'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ö'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ú'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ù'},\ L\textcolor{charliteral}{'u'}\},}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'û'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ü'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ç'},\ L\textcolor{charliteral}{'c'}\},\ \{L\textcolor{stringliteral}{'Á'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'À'},\ L\textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'Â'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'Ã'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'Ä'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'É'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'È'},\ L\textcolor{charliteral}{'E'}\},}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'Ê'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'Ë'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'Í'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Ì'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Î'},\ L\textcolor{charliteral}{'I'}\},}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'Ï'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Ó'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ò'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ô'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Õ'},\ L\textcolor{charliteral}{'O'}\},}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'Ö'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ú'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Ù'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Û'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Ü'},\ L\textcolor{charliteral}{'U'}\},}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{L\textcolor{stringliteral}{'Ç'},\ L\textcolor{charliteral}{'C'}\}\};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ applyRules(std::string\&\ word,\ \textcolor{keyword}{const}\ std::vector<StepRule>\&\ rules);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ endsWithS(\textcolor{keyword}{const}\ std::string\&\ word);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{bool}\ endsWithA(\textcolor{keyword}{const}\ std::string\&\ word);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ std::vector<std::string>\ split(std::string\&\ s);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::string\ removeAccents(\textcolor{keyword}{const}\ std::string\&\ input);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ shrinkString(std::string*\ input);}
+\DoxyCodeLine{00110\ \};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \}\ \ \textcolor{comment}{//\ namespace\ stemmer}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ STEMMER\_H}}
+
+\end{DoxyCode}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['string_5fto_5fint_0',['string_to_int',['../classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter.html#a583c2162f4a2a2c6bff496b034e30675',1,'search_engine::search_engine::helper::converter::StringToIntConverter']]]
+  ['string_5fto_5fint_0',['string_to_int',['../classsearch__engine__cpp_1_1helper_1_1converter_1_1StringToIntConverter.html#a6bb3967eee9f16c023e89b6896cec765',1,'search_engine_cpp::helper::converter::StringToIntConverter']]],
+  ['suffixtoremove_1',['suffixToRemove',['../structstemmer_1_1StepRule.html#ada22f4bfdbb3ba03589315a48d7d39db',1,'stemmer::StepRule']]]
 ];

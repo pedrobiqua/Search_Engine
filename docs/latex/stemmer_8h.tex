@@ -1,0 +1,31 @@
+\doxysection{lib/include/preprocessing/stemmer.h File Reference}
+\hypertarget{stemmer_8h}{}\label{stemmer_8h}\index{lib/include/preprocessing/stemmer.h@{lib/include/preprocessing/stemmer.h}}
+{\ttfamily \#include $<$unicode/locid.\+h$>$}\newline
+{\ttfamily \#include $<$unicode/unistr.\+h$>$}\newline
+{\ttfamily \#include $<$unicode/ustream.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for stemmer.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstemmer_1_1StepRule}{stemmer\+::\+Step\+Rule}}
+\begin{DoxyCompactList}\small\item\em Represents a suffix transformation rule. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classstemmer_1_1RSPL}{stemmer\+::\+RSPL}}
+\begin{DoxyCompactList}\small\item\em Implements the \doxylink{classstemmer_1_1RSPL}{RSPL} stemming algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacestemmer}{stemmer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacestemmer_acdab3b4e016371fe4df51700e9c5aa23}{stemmer\+::\+Rule\+Map}} = std\+::map$<$ std\+::string, std\+::vector$<$ \mbox{\hyperlink{structstemmer_1_1StepRule}{Step\+Rule}} $>$ $>$
+\end{DoxyCompactItemize}

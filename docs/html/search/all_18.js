@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['page_5fname_0',['page_name',['../classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler.html#a2926e956cbfbf24d9c99a1c0e80fae5e',1,'search_engine::search_engine::crawler::Crawler']]],
-  ['page_5frank_1',['page_rank',['../namespacepage__rank.html',1,'']]],
-  ['page_5frank_2ecpp_2',['page_rank.cpp',['../page__rank_8cpp.html',1,'']]],
-  ['page_5frank_2eh_3',['page_rank.h',['../page__rank_8h.html',1,'']]],
-  ['persistency_4',['8.1 Persistency',['../Chap_08_Concepts.html#Chap_08_01_Persistency',1,'']]],
-  ['print_5',['print',['../classpage__rank_1_1Graph.html#a4902e8e101899f05c2b1920c0b5ea9c0',1,'page_rank::Graph']]],
-  ['py_5fssize_5ft_5fclean_6',['py_ssize_t_clean',['../__hello_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;_hello.cpp'],['../__inverted__index_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;_inverted_index.cpp'],['../__page__rank_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;_page_rank.cpp']]]
+  ['of_20contents_0',['Table of contents',['../Chap_00_Architecture_documentation.html#Table_of_contents',1,'']]],
+  ['operator_2b_3d_1',['operator+=',['../structinverted__index_1_1docs.html#a8c50490f2708078748f15edd7628f721',1,'inverted_index::docs']]],
+  ['operator_3c_2',['operator&lt;',['../structinverted__index_1_1docs.html#ae1cb30b20b66fae23666b68d45972ec6',1,'inverted_index::docs']]],
+  ['operator_3c_3c_3',['operator&lt;&lt;',['../structinverted__index_1_1docs.html#ad3f6c536dffb2b1a43e386b97ab8603d',1,'inverted_index::docs']]],
+  ['operator_3d_3d_4',['operator==',['../structinverted__index_1_1docs.html#abd578731f060f11c422137f2909d103b',1,'inverted_index::docs']]],
+  ['organisational_20constraints_5',['2.2 Organisational constraints',['../Chap_02_Architectural_constraints.html#Chap_02_02_Organisational_constraints',1,'']]],
+  ['overview_6',['overview',['../Chap_01_Introduction.html#Chap_01_01_Requirements_Overview',1,'1.1 Requirements Overview'],['../index.html',1,'Overview']]]
 ];

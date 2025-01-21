@@ -1,0 +1,19 @@
+\doxysection{lib/src/\+\_\+stemmer.cpp File Reference}
+\hypertarget{__stemmer_8cpp}{}\label{__stemmer_8cpp}\index{lib/src/\_stemmer.cpp@{lib/src/\_stemmer.cpp}}
+{\ttfamily \#include "{}Python.\+h"{}}\newline
+Include dependency graph for \+\_\+stemmer.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{__stemmer_8cpp_ac9efdaac9411d0868b715edccca3269d}{PY\+\_\+\+SSIZE\+\_\+\+T\+\_\+\+CLEAN}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{__stemmer_8cpp_ac9efdaac9411d0868b715edccca3269d}\label{__stemmer_8cpp_ac9efdaac9411d0868b715edccca3269d} 
+\index{\_stemmer.cpp@{\_stemmer.cpp}!PY\_SSIZE\_T\_CLEAN@{PY\_SSIZE\_T\_CLEAN}}
+\index{PY\_SSIZE\_T\_CLEAN@{PY\_SSIZE\_T\_CLEAN}!\_stemmer.cpp@{\_stemmer.cpp}}
+\doxysubsubsection{\texorpdfstring{PY\_SSIZE\_T\_CLEAN}{PY\_SSIZE\_T\_CLEAN}}
+{\footnotesize\ttfamily \#define PY\+\_\+\+SSIZE\+\_\+\+T\+\_\+\+CLEAN}
+

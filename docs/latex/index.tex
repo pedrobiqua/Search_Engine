@@ -1,0 +1,41 @@
+\chapter{Overview}
+\hypertarget{index}{}\label{index}\index{Overview@{Overview}}
+\label{index_md_docs_2index}%
+\Hypertarget{index_md_docs_2index}%
+ The {\bfseries{Search Engine}} library is designed to create custom search systems, combining reverse indexing with the {\bfseries{Page\+Rank}} algorithm to deliver relevant and efficient search results.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Key Features}{Key Features}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Reverse Indexing}}\+: Maps keywords to the documents where they appear.
+\item {\bfseries{Page\+Rank}}\+: Calculates document relevance based on link structure.
+\item {\bfseries{Flexible Integration}}\+: Suitable for a wide range of projects requiring search capabilities.
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{index_autotoc_md2}
+To install the library, use the following {\ttfamily pip} command\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ search-\/engine-\/cpp}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Quick Start Example}{Quick Start Example}}\label{index_autotoc_md3}
+Here’s a basic example of how to use the library\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{from}\ search\_engine.crawler\ \textcolor{keyword}{import}\ Crawler}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{\#\ Initialize\ the\ Crawler}}
+\DoxyCodeLine{crawler\ =\ Crawler(\textcolor{stringliteral}{"{}https://en.wikipedia.org"{}},\ \textcolor{stringliteral}{"{}/wiki/"{}},\ \textcolor{stringliteral}{"{}Cat"{}},\ test\_mode=\textcolor{keyword}{True})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{\#\ Run\ the\ crawler\ with\ a\ limit\ of\ 10\ pages}}
+\DoxyCodeLine{graph\ =\ crawler.run(limit=10)}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{\#\ Compute\ PageRank}}
+\DoxyCodeLine{page\_ranks\ =\ graph.compute\_page\_rank()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{\#\ Display\ the\ top\ 3\ most\ relevant\ pages}}
+\DoxyCodeLine{top\_pages\ =\ sorted(page\_ranks.items(),\ key=\textcolor{keyword}{lambda}\ item:\ item[1],\ reverse=\textcolor{keyword}{True})[:3]}
+\DoxyCodeLine{print(top\_pages)}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md4}
+This project is licensed under the {\bfseries{MIT License}}. 

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vector_5fstr_0',['vector_str',['../namespaceinverted__index.html#a36a608a2c21f1f0fabd8fc6134107e00',1,'inverted_index']]],
-  ['view_1',['view',['../Chap_05_Building_block_view.html',1,'5 Building Block View'],['../Chap_06_Runtime_View.html',1,'6 Runtime View'],['../Chap_07_Deployment_view.html',1,'7 Deployment View']]]
+  ['url_5fbase_0',['url_base',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a6f3f0b97a99fa13517af452896027723',1,'search_engine_cpp::crawler::Crawler']]],
+  ['urlerror_1',['UrlError',['../classsearch__engine__cpp_1_1exceptions_1_1UrlError.html',1,'search_engine_cpp::exceptions']]],
+  ['user_20interface_2',['8.2 User Interface',['../Chap_08_Concepts.html#Chap_08_02_User_interface',1,'']]]
 ];

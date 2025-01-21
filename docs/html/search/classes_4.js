@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stringtointconverter_0',['StringToIntConverter',['../classsearch__engine_1_1search__engine_1_1helper_1_1converter_1_1StringToIntConverter.html',1,'search_engine::search_engine::helper::converter']]]
+  ['rspl_0',['RSPL',['../classstemmer_1_1RSPL.html',1,'stemmer']]]
 ];

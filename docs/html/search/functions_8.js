@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['run_0',['run',['../classsearch__engine_1_1search__engine_1_1crawler_1_1Crawler.html#aa4018e5dcd1bac621932a2f70ae0d990',1,'search_engine::search_engine::crawler::Crawler']]]
+  ['rspl_0',['RSPL',['../classstemmer_1_1RSPL.html#a86599a83bb1272ac61507408e0292258',1,'stemmer::RSPL']]],
+  ['run_1',['run',['../classstemmer_1_1RSPL.html#a7f4a148b302e2385d04ac53b029214b9',1,'stemmer::RSPL::run()'],['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a363411932721b92ff7ba1f75af258d6a',1,'search_engine_cpp.crawler.Crawler.run()']]]
 ];

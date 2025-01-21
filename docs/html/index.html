@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Search Engine: Main Page</title>
+<title>Search Engine: Overview</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,10 +90,43 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Search Engine Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Overview </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_docs_2index"></a> The <b>Search Engine</b> library is designed to create custom search systems, combining reverse indexing with the <b>PageRank</b> algorithm to deliver relevant and efficient search results.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Key Features</h1>
+<ul>
+<li><b>Reverse Indexing</b>: Maps keywords to the documents where they appear.</li>
+<li><b>PageRank</b>: Calculates document relevance based on link structure.</li>
+<li><b>Flexible Integration</b>: Suitable for a wide range of projects requiring search capabilities.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Installation</h1>
+<p>To install the library, use the following <code>pip</code> command:</p>
+<div class="fragment"><div class="line">pip install search-engine-cpp</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md3"></a>
+Quick Start Example</h1>
+<p>Here’s a basic example of how to use the library:</p>
+<div class="fragment"><div class="line"><span class="keyword">from</span> search_engine.crawler <span class="keyword">import</span> Crawler</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># Initialize the Crawler</span></div>
+<div class="line">crawler = Crawler(<span class="stringliteral">&quot;https://en.wikipedia.org&quot;</span>, <span class="stringliteral">&quot;/wiki/&quot;</span>, <span class="stringliteral">&quot;Cat&quot;</span>, test_mode=<span class="keyword">True</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># Run the crawler with a limit of 10 pages</span></div>
+<div class="line">graph = crawler.run(limit=10)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># Compute PageRank</span></div>
+<div class="line">page_ranks = graph.compute_page_rank()</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># Display the top 3 most relevant pages</span></div>
+<div class="line">top_pages = sorted(page_ranks.items(), key=<span class="keyword">lambda</span> item: item[1], reverse=<span class="keyword">True</span>)[:3]</div>
+<div class="line">print(top_pages)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+License</h1>
+<p>This project is licensed under the <b>MIT License</b>. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
