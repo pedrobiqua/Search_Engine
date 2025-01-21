@@ -131,6 +131,12 @@ Thanks to all [contributors](https://github.com/pedrobiqua/Search_Engine/graphs/
 
 Made with [contrib.rocks](https://contrib.rocks).
 
+### **Join the BianchTech Open-Source Community! 🚀**  
+
+Be part of a growing community focused on innovation and collaboration! Contribute to impactful open-source projects, learn, and grow alongside like-minded developers.  
+
+💡 Ready to join? Just drop us a message in the **Discussions** section on GitHub. Let’s build the future together! 🌟  
+
 ---
 
 Keep learning,<br>
