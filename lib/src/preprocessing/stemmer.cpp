@@ -199,14 +199,18 @@ std::string RSPL::removeAccents(const std::string& input) {
 }
 
 void RSPL::shrinkString(std::string* input) {
-    if (!input)
-        return;  // Verifica se o ponteiro é válido
+    try {
+        if (!input)
+            throw exceptions::invalid_pointer_exception();
 
-    icu::UnicodeString ustr(input->c_str(), "UTF-8");
-    ustr.toLower();
-    std::string result;
-    ustr.toUTF8String(result);
-    *input = result;
+        icu::UnicodeString ustr(input->c_str(), "UTF-8");
+        ustr.toLower();
+        std::string result;
+        ustr.toUTF8String(result);
+        *input = result;
+    } catch (const std::exception& e) {
+        std::cerr << e.what() << '\n';
+    }
 }
 
 bool RSPL::applyRules(std::string& word, const std::vector<StepRule>& rules) {
