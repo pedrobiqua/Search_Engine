@@ -11,6 +11,8 @@
 #include <unordered_map>
 #include <vector>
 
+#include "exceptions/invalid_pointer_exception.h"
+
 namespace stemmer {
 
 /**
