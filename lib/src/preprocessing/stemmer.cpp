@@ -164,55 +164,6 @@ bool RSPL::endsWithS(const std::string& word) {
     return false;
 }
 
-std::vector<std::string> RSPL::split(std::string& s) {
-    std::vector<std::string> tokens;
-    size_t pos = 0;
-    std::string token;
-    std::string delimiter = " ";
-    while ((pos = s.find(delimiter)) != std::string::npos) {
-        token = s.substr(0, pos);
-        tokens.push_back(token);
-        s.erase(0, pos + delimiter.length());
-    }
-    tokens.push_back(s);
-
-    return tokens;
-}
-
-std::string RSPL::removeAccents(const std::string& input) {
-    std::wstring winput =
-        std::wstring_convert<std::codecvt_utf8<wchar_t>>().from_bytes(input);
-    std::wstring woutput;
-    woutput.reserve(winput.size());  // Evitar alocações desnecessárias
-
-    // Processar a string como wstring
-    for (wchar_t ch : winput) {
-        if (accentMap_.count(ch)) {
-            woutput.push_back(accentMap_.at(ch));  // Substituir acentuados
-        } else {
-            woutput.push_back(ch);  // Mantém o caractere não acentuado
-        }
-    }
-
-    // Converter de volta para std::string
-    return std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(woutput);
-}
-
-void RSPL::shrinkString(std::string* input) {
-    try {
-        if (!input)
-            throw exceptions::invalid_pointer_exception();
-
-        icu::UnicodeString ustr(input->c_str(), "UTF-8");
-        ustr.toLower();
-        std::string result;
-        ustr.toUTF8String(result);
-        *input = result;
-    } catch (const std::exception& e) {
-        std::cerr << e.what() << '\n';
-    }
-}
-
 bool RSPL::applyRules(std::string& word, const std::vector<StepRule>& rules) {
     for (const auto& rule : rules) {
         // Verificar se a palavra termina com o sufixo especificado
@@ -234,9 +185,9 @@ bool RSPL::applyRules(std::string& word, const std::vector<StepRule>& rules) {
 
 void RSPL::run(std::string* sentence) {
     // Separar a sentença em palavras
-    this->shrinkString(sentence);
+    utils::shrink_string(sentence);
     // std::cout << *sentence << std::endl;
-    std::vector<std::string> words = this->split(*sentence);
+    std::vector<std::string> words = utils::split(*sentence, utils::DELIMITER);
 
     for (std::string& word : words) {
         // PLURAL REDUCTION
@@ -271,7 +222,7 @@ void RSPL::run(std::string* sentence) {
         }
 
         // Função para remover acentos
-        word = removeAccents(word);
+        word = utils::removeAccents(word);
         // std::cout << word << std::endl;
     }
 

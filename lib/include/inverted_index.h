@@ -9,6 +9,8 @@
 #include <string>
 #include <vector>
 
+#include "utils/string_operations.h"
+
 namespace inverted_index {
 /**
  * @typedef str
@@ -21,12 +23,6 @@ typedef std::string str;
  * @brief Type used to represent a list of strings.
  */
 typedef std::list<str> list_str;
-
-/**
- * @define DELIMITER
- * @brief Delimiter used to split strings.
- */
-#define DELIMITER " "
 
 /**
  * @struct docs
@@ -108,23 +104,6 @@ typedef std::set<docs> set_docs;
 typedef std::vector<str> vector_str;
 
 /**
- * @brief Converts a character to lowercase.
- * @param c Character to convert.
- * @return Character converted to lowercase.
- */
-char to_lowercase(unsigned char c) {
-    return std::tolower(c);
-}
-
-/**
- * @brief Splits a string based on a delimiter.
- * @param s String to split.
- * @param delimiter Delimiter to split the string.
- * @return Vector of strings resulting from the split.
- */
-vector_str split(str& s, const str& delimiter);
-
-/**
  * @brief Adds a new document to the document map.
  * @param mp Map of words to lists of documents.
  * @param doc_name Name of the document to add.
@@ -149,11 +128,6 @@ list_docs find_doc(map_str_docs& mp, str& word);
  */
 list_docs find_answer(map_str_docs& mp, str& input);
 
-/**
- * @brief Removes unwanted characters from a string, such as extra spaces.
- * @param input String to process.
- */
-void shrink_string(std::string* input);
 }  // namespace inverted_index
 
 #endif  // INVERTED_INDEX
