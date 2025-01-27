@@ -8,6 +8,7 @@ add_library(
             src/inverted_index.cpp
             src/preprocessing/stemmer.cpp
             src/exceptions/invalid_pointer_exception.cpp
+            src/utils/string_operations.cpp
 )
 
 target_include_directories(search_engine PUBLIC include)

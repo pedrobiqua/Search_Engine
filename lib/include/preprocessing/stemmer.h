@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "exceptions/invalid_pointer_exception.h"
+#include "utils/string_operations.h"
 
 namespace stemmer {
 
@@ -89,26 +90,6 @@ class RSPL {
      * @return `true` if the word ends with 'a', otherwise `false`.
      */
     bool endsWithA(const std::string& word);
-
-    /**
-     * @brief Splits a string into parts based on delimiters.
-     * @param s The string to be split.
-     * @return A vector containing the parts of the string.
-     */
-    std::vector<std::string> split(std::string& s);
-
-    /**
-     * @brief Removes accents from a string.
-     * @param input The input string.
-     * @return The string without accents.
-     */
-    std::string removeAccents(const std::string& input);
-
-    /**
-     * @brief Shrinks the size of a string to normalize it.
-     * @param input Pointer to the input string.
-     */
-    void shrinkString(std::string* input);
 };
 
 }  // namespace stemmer
