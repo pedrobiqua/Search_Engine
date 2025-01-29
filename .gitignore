@@ -10,3 +10,4 @@ compile_commands.json
 /lib/src/*_cpp.cpp
 /search_engine_cpp.egg-info
 **.code-workspace
+**_cpp.cpp
