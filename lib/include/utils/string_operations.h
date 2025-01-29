@@ -13,7 +13,7 @@ namespace utils {
  * @define DELIMITER
  * @brief Delimiter used to split strings.
  */
-constexpr std::string DELIMITER = " ";
+constexpr const char* DELIMITER = " ";
 
 /**
  * @brief Mapping to normalize accented characters to their ASCII
