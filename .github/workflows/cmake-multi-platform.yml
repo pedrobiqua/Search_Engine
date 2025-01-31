@@ -44,7 +44,7 @@ jobs:
           ./tests/unit-tests/LibUnitTests --gtest_output=xml:./test-report.xml
 
       - name: Upload Test Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: gtest-report
           path: build/test-report.xml

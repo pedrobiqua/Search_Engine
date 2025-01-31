@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rspl_0',['RSPL',['../classstemmer_1_1RSPL.html',1,'stemmer']]]
+  ['invalid_5fpointer_5fexception_0',['invalid_pointer_exception',['../classexceptions_1_1invalid__pointer__exception.html',1,'exceptions']]]
 ];

@@ -7,6 +7,5 @@ var searchData=
   ['_5fhello_2ecpp_4',['_hello.cpp',['../__hello_8cpp.html',1,'']]],
   ['_5finverted_5findex_2ecpp_5',['_inverted_index.cpp',['../__inverted__index_8cpp.html',1,'']]],
   ['_5fpage_5frank_2ecpp_6',['_page_rank.cpp',['../__page__rank_8cpp.html',1,'']]],
-  ['_5fstemmer_2ecpp_7',['_stemmer.cpp',['../__stemmer_8cpp.html',1,'']]],
-  ['_5fvalidate_5furl_8',['_validate_url',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a42e7308b33be897caf8ae149ab61c31d',1,'search_engine_cpp::crawler::Crawler']]]
+  ['_5fvalidate_5furl_7',['_validate_url',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a42e7308b33be897caf8ae149ab61c31d',1,'search_engine_cpp::crawler::Crawler']]]
 ];

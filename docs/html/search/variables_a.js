@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['test_5fmode_0',['test_mode',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a1d7cb7dce4e4c00d8f76475fd07596b1',1,'search_engine_cpp::crawler::Crawler']]]
+  ['regex_0',['REGEX',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a594d3960dd6e4518ee19d442ec22ff0a',1,'search_engine_cpp::crawler::Crawler']]],
+  ['remove_5fpages_1',['remove_pages',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a1585f070570e94e2481698f631b07929',1,'search_engine_cpp::crawler::Crawler']]],
+  ['replacement_2',['replacement',['../structstemmer_1_1StepRule.html#ac2377010b03ed28471e22f5e8b5fa84d',1,'stemmer::StepRule']]]
 ];

@@ -1,0 +1,113 @@
+\doxysection{utils Namespace Reference}
+\hypertarget{namespaceutils}{}\label{namespaceutils}\index{utils@{utils}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceutils_a5940753c7a9805aafd3797dfc1d000cf}{shrink\+\_\+string}} (std\+::string \texorpdfstring{$\ast$}{*}input)
+\begin{DoxyCompactList}\small\item\em Removes unwanted characters from a string, such as extra spaces. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespaceutils_a6e3aa2fd44b11fd10cb237113a144035}{split}} (std\+::string \&s, const std\+::string \&delimiter)
+\begin{DoxyCompactList}\small\item\em Splits a string based on a delimiter. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespaceutils_a484992c2e8404ab00b91d94abb77c65a}{remove\+Accents}} (const std\+::string \&input)
+\begin{DoxyCompactList}\small\item\em Removes accents from a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{namespaceutils_a858d7ea53f2fcb50e6654dfe68efcb57}{DELIMITER}} = "{} "{}
+\begin{DoxyCompactList}\small\item\em Delimiter used to split strings. \end{DoxyCompactList}\item 
+const std\+::unordered\+\_\+map$<$ wchar\+\_\+t, wchar\+\_\+t $>$ \mbox{\hyperlink{namespaceutils_a1e2af60a5af1e081f33b5cde65db38c4}{accent\+Map\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Mapping to normalize accented characters to their ASCII equivalents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespaceutils_a484992c2e8404ab00b91d94abb77c65a}\label{namespaceutils_a484992c2e8404ab00b91d94abb77c65a} 
+\index{utils@{utils}!removeAccents@{removeAccents}}
+\index{removeAccents@{removeAccents}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{removeAccents()}{removeAccents()}}
+{\footnotesize\ttfamily std\+::string utils\+::remove\+Accents (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input }\end{DoxyParamCaption})}
+
+
+
+Removes accents from a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string without accents. 
+\end{DoxyReturn}
+\Hypertarget{namespaceutils_a5940753c7a9805aafd3797dfc1d000cf}\label{namespaceutils_a5940753c7a9805aafd3797dfc1d000cf} 
+\index{utils@{utils}!shrink\_string@{shrink\_string}}
+\index{shrink\_string@{shrink\_string}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{shrink\_string()}{shrink\_string()}}
+{\footnotesize\ttfamily void utils\+::shrink\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string \texorpdfstring{$\ast$}{*}}]{input }\end{DoxyParamCaption})}
+
+
+
+Removes unwanted characters from a string, such as extra spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & String to process. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespaceutils_a6e3aa2fd44b11fd10cb237113a144035}\label{namespaceutils_a6e3aa2fd44b11fd10cb237113a144035} 
+\index{utils@{utils}!split@{split}}
+\index{split@{split}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ utils\+::split (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s,  }\item[{const std\+::string \&}]{delimiter }\end{DoxyParamCaption})}
+
+
+
+Splits a string based on a delimiter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to split. \\
+\hline
+{\em delimiter} & Delimiter to split the string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of strings resulting from the split. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespaceutils_a1e2af60a5af1e081f33b5cde65db38c4}\label{namespaceutils_a1e2af60a5af1e081f33b5cde65db38c4} 
+\index{utils@{utils}!accentMap\_@{accentMap\_}}
+\index{accentMap\_@{accentMap\_}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{accentMap\_}{accentMap\_}}
+{\footnotesize\ttfamily const std\+::unordered\+\_\+map$<$wchar\+\_\+t, wchar\+\_\+t$>$ utils\+::accent\+Map\+\_\+}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'á'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'à'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'â'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'ã'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'ä'},\ L\textcolor{charliteral}{'a'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'é'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'è'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'ê'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'ë'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'í'},\ L\textcolor{charliteral}{'i'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'ì'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'î'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'ï'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'ó'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ò'},\ L\textcolor{charliteral}{'o'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'ô'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'õ'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ö'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ú'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ù'},\ L\textcolor{charliteral}{'u'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'û'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ü'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ç'},\ L\textcolor{charliteral}{'c'}\},\ \{L\textcolor{stringliteral}{'Á'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'À'},\ L\textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'Â'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'Ã'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'Ä'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'É'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'È'},\ L\textcolor{charliteral}{'E'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'Ê'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'Ë'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'Í'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Ì'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Î'},\ L\textcolor{charliteral}{'I'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'Ï'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Ó'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ò'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ô'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Õ'},\ L\textcolor{charliteral}{'O'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'Ö'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ú'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Ù'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Û'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Ü'},\ L\textcolor{charliteral}{'U'}\},}
+\DoxyCodeLine{\ \ \ \ \{L\textcolor{stringliteral}{'Ç'},\ L\textcolor{charliteral}{'C'}\}\}}
+
+\end{DoxyCode}
+
+
+Mapping to normalize accented characters to their ASCII equivalents. 
+
+\Hypertarget{namespaceutils_a858d7ea53f2fcb50e6654dfe68efcb57}\label{namespaceutils_a858d7ea53f2fcb50e6654dfe68efcb57} 
+\index{utils@{utils}!DELIMITER@{DELIMITER}}
+\index{DELIMITER@{DELIMITER}!utils@{utils}}
+\doxysubsubsection{\texorpdfstring{DELIMITER}{DELIMITER}}
+{\footnotesize\ttfamily constexpr const char\texorpdfstring{$\ast$}{*} utils\+::\+DELIMITER = "{} "{}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Delimiter used to split strings. 
+
+@define DELIMITER 

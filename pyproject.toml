@@ -5,7 +5,6 @@ description = "Search Engine is a project that implements a basic search engine 
 authors = ["Pedro Bianchini de Quadros <pedrobiqua@gmail.com>"]
 readme = "README.md"
 include = [
-    "lib/**",  # Inclui o diretório lib com todos os arquivos
     "search_engine_cpp/lib/*.so",
     "search_engine_cpp/.*so",
     "CMakeLists.txt",
@@ -28,6 +27,7 @@ beautifulsoup4 = "^4.12.3"
 [tool.poetry.group.dev.dependencies]
 commitizen = "^4.1.0"
 setuptools = "^75.7.0"
+pytest = "^8.3.4"
 
 [build-system]
 requires = ["poetry-core", "setuptools", "wheel", "cython"]

@@ -2,6 +2,9 @@ var hierarchy =
 [
     [ "search_engine_cpp.crawler.Crawler", "classsearch__engine__cpp_1_1crawler_1_1Crawler.html", null ],
     [ "inverted_index::docs", "structinverted__index_1_1docs.html", null ],
+    [ "std::exception", null, [
+      [ "exceptions::invalid_pointer_exception", "classexceptions_1_1invalid__pointer__exception.html", null ]
+    ] ],
     [ "page_rank::Graph", "classpage__rank_1_1Graph.html", null ],
     [ "Hello", "classHello.html", null ],
     [ "stemmer::RSPL", "classstemmer_1_1RSPL.html", null ],

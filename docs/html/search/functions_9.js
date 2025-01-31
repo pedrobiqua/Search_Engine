@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['shrink_5fstring_0',['shrink_string',['../namespaceinverted__index.html#ac0c99343822e08b34bb0f874759b1c56',1,'inverted_index']]],
-  ['split_1',['split',['../namespaceinverted__index.html#a35a9f1cb5d6ae865560f7eabb3def5c9',1,'inverted_index']]],
-  ['subtraction_2',['subtraction',['../subtraction_8cpp.html#a5620e8715eb9f46a17fdd22f9485f2b0',1,'Subtraction(double x, double y):&#160;subtraction.cpp'],['../subtraction_8h.html#a5620e8715eb9f46a17fdd22f9485f2b0',1,'Subtraction(double x, double y):&#160;subtraction.cpp']]],
-  ['sum_3',['sum',['../sum_8cpp.html#aed1f1c5da982a62827227c3c45b5fccb',1,'Sum(double x, double y):&#160;sum.cpp'],['../sum_8h.html#aed1f1c5da982a62827227c3c45b5fccb',1,'Sum(double x, double y):&#160;sum.cpp']]]
+  ['removeaccents_0',['removeAccents',['../namespaceutils.html#a484992c2e8404ab00b91d94abb77c65a',1,'utils']]],
+  ['rspl_1',['RSPL',['../classstemmer_1_1RSPL.html#a86599a83bb1272ac61507408e0292258',1,'stemmer::RSPL']]],
+  ['run_2',['run',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a363411932721b92ff7ba1f75af258d6a',1,'search_engine_cpp.crawler.Crawler.run()'],['../classstemmer_1_1RSPL.html#a7f4a148b302e2385d04ac53b029214b9',1,'stemmer::RSPL::run()']]]
 ];

@@ -1,0 +1,39 @@
+\doxysection{string\+\_\+operations.\+h}
+\hypertarget{string__operations_8h_source}{}\label{string__operations_8h_source}\index{search\_engine\_cpp/lib/include/utils/string\_operations.h@{search\_engine\_cpp/lib/include/utils/string\_operations.h}}
+\mbox{\hyperlink{string__operations_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <unicode/locid.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <unicode/unistr.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <unicode/ustream.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <codecvt>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <locale>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceutils}{utils}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{namespaceutils_a858d7ea53f2fcb50e6654dfe68efcb57}{DELIMITER}}\ =\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{const}\ std::unordered\_map<wchar\_t,\ wchar\_t>\ \mbox{\hyperlink{namespaceutils_a1e2af60a5af1e081f33b5cde65db38c4}{accentMap\_}}\ =\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \{L\textcolor{stringliteral}{'á'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'à'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'â'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'ã'},\ L\textcolor{charliteral}{'a'}\},\ \{L\textcolor{stringliteral}{'ä'},\ L\textcolor{charliteral}{'a'}\},}
+\DoxyCodeLine{00024\ \ \ \ \ \{L\textcolor{stringliteral}{'é'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'è'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'ê'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'ë'},\ L\textcolor{charliteral}{'e'}\},\ \{L\textcolor{stringliteral}{'í'},\ L\textcolor{charliteral}{'i'}\},}
+\DoxyCodeLine{00025\ \ \ \ \ \{L\textcolor{stringliteral}{'ì'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'î'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'ï'},\ L\textcolor{charliteral}{'i'}\},\ \{L\textcolor{stringliteral}{'ó'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ò'},\ L\textcolor{charliteral}{'o'}\},}
+\DoxyCodeLine{00026\ \ \ \ \ \{L\textcolor{stringliteral}{'ô'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'õ'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ö'},\ L\textcolor{charliteral}{'o'}\},\ \{L\textcolor{stringliteral}{'ú'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ù'},\ L\textcolor{charliteral}{'u'}\},}
+\DoxyCodeLine{00027\ \ \ \ \ \{L\textcolor{stringliteral}{'û'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ü'},\ L\textcolor{charliteral}{'u'}\},\ \{L\textcolor{stringliteral}{'ç'},\ L\textcolor{charliteral}{'c'}\},\ \{L\textcolor{stringliteral}{'Á'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'À'},\ L\textcolor{charliteral}{'A'}\},}
+\DoxyCodeLine{00028\ \ \ \ \ \{L\textcolor{stringliteral}{'Â'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'Ã'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'Ä'},\ L\textcolor{charliteral}{'A'}\},\ \{L\textcolor{stringliteral}{'É'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'È'},\ L\textcolor{charliteral}{'E'}\},}
+\DoxyCodeLine{00029\ \ \ \ \ \{L\textcolor{stringliteral}{'Ê'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'Ë'},\ L\textcolor{charliteral}{'E'}\},\ \{L\textcolor{stringliteral}{'Í'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Ì'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Î'},\ L\textcolor{charliteral}{'I'}\},}
+\DoxyCodeLine{00030\ \ \ \ \ \{L\textcolor{stringliteral}{'Ï'},\ L\textcolor{charliteral}{'I'}\},\ \{L\textcolor{stringliteral}{'Ó'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ò'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ô'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Õ'},\ L\textcolor{charliteral}{'O'}\},}
+\DoxyCodeLine{00031\ \ \ \ \ \{L\textcolor{stringliteral}{'Ö'},\ L\textcolor{charliteral}{'O'}\},\ \{L\textcolor{stringliteral}{'Ú'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Ù'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Û'},\ L\textcolor{charliteral}{'U'}\},\ \{L\textcolor{stringliteral}{'Ü'},\ L\textcolor{charliteral}{'U'}\},}
+\DoxyCodeLine{00032\ \ \ \ \ \{L\textcolor{stringliteral}{'Ç'},\ L\textcolor{charliteral}{'C'}\}\};}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ Funções\ para\ manipular\ string}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceutils_a5940753c7a9805aafd3797dfc1d000cf}{shrink\_string}}(std::string*\ input);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ std::vector<std::string>\ \mbox{\hyperlink{namespaceutils_a6e3aa2fd44b11fd10cb237113a144035}{split}}(std::string\&\ s,\ \textcolor{keyword}{const}\ std::string\&\ delimiter);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ std::string\ \mbox{\hyperlink{namespaceutils_a484992c2e8404ab00b91d94abb77c65a}{removeAccents}}(\textcolor{keyword}{const}\ std::string\&\ input);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \}\ \ \textcolor{comment}{//\ namespace\ utils}}
+
+\end{DoxyCode}

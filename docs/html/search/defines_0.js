@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['delimiter_0',['DELIMITER',['../inverted__index_8h.html#a23195218eef2cf21e2beae685a041783',1,'inverted_index.h']]]
+  ['py_5fssize_5ft_5fclean_0',['py_ssize_t_clean',['../__hello_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;_hello.cpp'],['../__inverted__index_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;_inverted_index.cpp'],['../__page__rank_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;_page_rank.cpp'],['../stemmer__cpp_8cpp.html#ac9efdaac9411d0868b715edccca3269d',1,'PY_SSIZE_T_CLEAN:&#160;stemmer_cpp.cpp']]]
 ];

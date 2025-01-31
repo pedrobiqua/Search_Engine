@@ -110,7 +110,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Chap_00_Architecture_documentation.html"
+"Chap_00_Architecture_documentation.html",
+"structstemmer_1_1StepRule.html#ada22f4bfdbb3ba03589315a48d7d39db"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
