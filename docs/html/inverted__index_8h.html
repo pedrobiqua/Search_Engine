@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Search Engine: lib/include/inverted_index.h File Reference</title>
+<title>Search Engine: search_engine_cpp/lib/include/inverted_index.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('inverted__index_8h.html',''); initResi
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">inverted_index.h File Reference</div></div>
@@ -107,11 +106,12 @@ $(document).ready(function(){initNavTree('inverted__index_8h.html',''); initResi
 <code>#include &lt;set&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="string__operations_8h_source.html">utils/string_operations.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for inverted_index.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="inverted__index_8h__incl.png" border="0" usemap="#alib_2include_2inverted__index_8h" alt=""/></div>
-<map name="alib_2include_2inverted__index_8h" id="alib_2include_2inverted__index_8h">
+<div class="center"><img src="inverted__index_8h__incl.png" border="0" usemap="#asearch__engine__cpp_2lib_2include_2inverted__index_8h" alt=""/></div>
+<map name="asearch__engine__cpp_2lib_2include_2inverted__index_8h" id="asearch__engine__cpp_2lib_2include_2inverted__index_8h">
 <area shape="rect" title=" " alt="" coords="205,5,336,45"/>
 <area shape="rect" title=" " alt="" coords="5,93,77,119"/>
 <area shape="poly" title=" " alt="" coords="217,48,89,91,87,86,215,43"/>
@@ -132,8 +132,8 @@ Include dependency graph for inverted_index.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="inverted__index_8h__dep__incl.png" border="0" usemap="#alib_2include_2inverted__index_8hdep" alt=""/></div>
-<map name="alib_2include_2inverted__index_8hdep" id="alib_2include_2inverted__index_8hdep">
+<div class="center"><img src="inverted__index_8h__dep__incl.png" border="0" usemap="#asearch__engine__cpp_2lib_2include_2inverted__index_8hdep" alt=""/></div>
+<map name="asearch__engine__cpp_2lib_2include_2inverted__index_8hdep" id="asearch__engine__cpp_2lib_2include_2inverted__index_8hdep">
 <area shape="rect" title=" " alt="" coords="25,5,156,45"/>
 <area shape="rect" href="inverted__index_8cpp.html" title=" " alt="" coords="5,93,176,119"/>
 <area shape="poly" title=" " alt="" coords="93,59,93,93,88,93,88,59"/>
@@ -152,12 +152,6 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespaceinverted__index" id="r_namespaceinverted__index"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinverted__index.html">inverted_index</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a23195218eef2cf21e2beae685a041783" id="r_a23195218eef2cf21e2beae685a041783"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inverted__index_8h.html#a23195218eef2cf21e2beae685a041783">DELIMITER</a>&#160;&#160;&#160;&quot; &quot;</td></tr>
-<tr class="memdesc:a23195218eef2cf21e2beae685a041783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delimiter used to split strings.  <br /></td></tr>
-<tr class="separator:a23195218eef2cf21e2beae685a041783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -182,12 +176,6 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2caf9e19f6557b6fce93e8a555e55ae4" id="r_a2caf9e19f6557b6fce93e8a555e55ae4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinverted__index.html#a2caf9e19f6557b6fce93e8a555e55ae4">inverted_index::to_lowercase</a> (unsigned char c)</td></tr>
-<tr class="memdesc:a2caf9e19f6557b6fce93e8a555e55ae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a character to lowercase.  <br /></td></tr>
-<tr class="separator:a2caf9e19f6557b6fce93e8a555e55ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a9f1cb5d6ae865560f7eabb3def5c9" id="r_a35a9f1cb5d6ae865560f7eabb3def5c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceinverted__index.html#a36a608a2c21f1f0fabd8fc6134107e00">vector_str</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinverted__index.html#a35a9f1cb5d6ae865560f7eabb3def5c9">inverted_index::split</a> (<a class="el" href="namespaceinverted__index.html#a7a967eb8fcbea5b66739ec4d4f05be39">str</a> &amp;s, const <a class="el" href="namespaceinverted__index.html#a7a967eb8fcbea5b66739ec4d4f05be39">str</a> &amp;delimiter)</td></tr>
-<tr class="memdesc:a35a9f1cb5d6ae865560f7eabb3def5c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Splits a string based on a delimiter.  <br /></td></tr>
-<tr class="separator:a35a9f1cb5d6ae865560f7eabb3def5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb018ece565f44fec205e85a42cfd34a" id="r_acb018ece565f44fec205e85a42cfd34a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceinverted__index.html#a12560c3b47a4f48755b32ad63cd8ccd1">map_str_docs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinverted__index.html#acb018ece565f44fec205e85a42cfd34a">inverted_index::add_doc</a> (<a class="el" href="namespaceinverted__index.html#a12560c3b47a4f48755b32ad63cd8ccd1">map_str_docs</a> &amp;mp, const <a class="el" href="namespaceinverted__index.html#a7a967eb8fcbea5b66739ec4d4f05be39">str</a> &amp;doc_name, <a class="el" href="namespaceinverted__index.html#a7a967eb8fcbea5b66739ec4d4f05be39">str</a> &amp;text)</td></tr>
 <tr class="memdesc:acb018ece565f44fec205e85a42cfd34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new document to the document map.  <br /></td></tr>
 <tr class="separator:acb018ece565f44fec205e85a42cfd34a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,34 +185,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ace9195b82649cfae96566f56ea285f86" id="r_ace9195b82649cfae96566f56ea285f86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceinverted__index.html#a13797fc328d8f34927c3f7368966ac48">list_docs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinverted__index.html#ace9195b82649cfae96566f56ea285f86">inverted_index::find_answer</a> (<a class="el" href="namespaceinverted__index.html#a12560c3b47a4f48755b32ad63cd8ccd1">map_str_docs</a> &amp;mp, <a class="el" href="namespaceinverted__index.html#a7a967eb8fcbea5b66739ec4d4f05be39">str</a> &amp;input)</td></tr>
 <tr class="memdesc:ace9195b82649cfae96566f56ea285f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds documents relevant to a query (input).  <br /></td></tr>
 <tr class="separator:ace9195b82649cfae96566f56ea285f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c99343822e08b34bb0f874759b1c56" id="r_ac0c99343822e08b34bb0f874759b1c56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceinverted__index.html#ac0c99343822e08b34bb0f874759b1c56">inverted_index::shrink_string</a> (std::string *input)</td></tr>
-<tr class="memdesc:ac0c99343822e08b34bb0f874759b1c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes unwanted characters from a string, such as extra spaces.  <br /></td></tr>
-<tr class="separator:ac0c99343822e08b34bb0f874759b1c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a23195218eef2cf21e2beae685a041783" name="a23195218eef2cf21e2beae685a041783"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23195218eef2cf21e2beae685a041783">&#9670;&#160;</a></span>DELIMITER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DELIMITER&#160;&#160;&#160;&quot; &quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Delimiter used to split strings. </p>
-<p>@define DELIMITER </p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="dir_5a30104352ef4255dc24354b02eb2d20.html">include</a></li><li class="navelem"><a class="el" href="inverted__index_8h.html">inverted_index.h</a></li>
+    <li class="navelem"><a class="el" href="dir_b4f24b687d3039d1f6957e629435aa8b.html">search_engine_cpp</a></li><li class="navelem"><a class="el" href="dir_25511d843faa0c1e21bb03403209d707.html">lib</a></li><li class="navelem"><a class="el" href="dir_473c6631354291f83f444b86390eb28c.html">include</a></li><li class="navelem"><a class="el" href="inverted__index_8h.html">inverted_index.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

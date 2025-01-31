@@ -8,6 +8,5 @@ var searchData=
   ['template_20disclosure_5',['Template disclosure',['../Chap_00_Architecture_documentation.html#Template_disclosure',1,'']]],
   ['test_5fmode_6',['test_mode',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a1d7cb7dce4e4c00d8f76475fd07596b1',1,'search_engine_cpp::crawler::Crawler']]],
   ['testability_7',['8.8 Testability',['../Chap_08_Concepts.html#Chap_08_08_Testability',1,'']]],
-  ['to_5flowercase_8',['to_lowercase',['../namespaceinverted__index.html#a2caf9e19f6557b6fce93e8a555e55ae4',1,'inverted_index']]],
-  ['tracing_9',['8.4 Logging, tracing',['../Chap_08_Concepts.html#Chap_08_04_Logging_tracing',1,'']]]
+  ['tracing_8',['8.4 Logging, tracing',['../Chap_08_Concepts.html#Chap_08_04_Logging_tracing',1,'']]]
 ];

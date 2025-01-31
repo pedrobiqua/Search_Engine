@@ -1,5 +1,8 @@
 var annotated_dup =
 [
+    [ "exceptions", "namespaceexceptions.html", [
+      [ "invalid_pointer_exception", "classexceptions_1_1invalid__pointer__exception.html", "classexceptions_1_1invalid__pointer__exception" ]
+    ] ],
     [ "inverted_index", "namespaceinverted__index.html", [
       [ "docs", "structinverted__index_1_1docs.html", "structinverted__index_1_1docs" ]
     ] ],

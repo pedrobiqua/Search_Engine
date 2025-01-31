@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inverted_5findex_0',['inverted_index',['../namespaceinverted__index.html',1,'']]]
+  ['exceptions_0',['exceptions',['../namespaceexceptions.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initial_5fpage_0',['initial_page',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a02abec523375b56e02cbe05663203a52',1,'search_engine_cpp::crawler::Crawler']]]
+  ['freq_0',['freq',['../structinverted__index_1_1docs.html#ad40a502bb97dced4cd8c7634958df2f5',1,'inverted_index::docs']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['regex_0',['REGEX',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a594d3960dd6e4518ee19d442ec22ff0a',1,'search_engine_cpp::crawler::Crawler']]],
-  ['remove_5fpages_1',['remove_pages',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a1585f070570e94e2481698f631b07929',1,'search_engine_cpp::crawler::Crawler']]],
-  ['replacement_2',['replacement',['../structstemmer_1_1StepRule.html#ac2377010b03ed28471e22f5e8b5fa84d',1,'stemmer::StepRule']]]
+  ['name_5fdoc_0',['name_doc',['../structinverted__index_1_1docs.html#a0dee7a56613409b307976525f002f100',1,'inverted_index::docs']]],
+  ['next_5fint_1',['next_int',['../classsearch__engine__cpp_1_1helper_1_1converter_1_1StringToIntConverter.html#a022cbd8c023b81e7539dfebc40fd9c38',1,'search_engine_cpp::helper::converter::StringToIntConverter']]]
 ];

@@ -1,0 +1,66 @@
+\doxysection{exceptions\+::invalid\+\_\+pointer\+\_\+exception Class Reference}
+\hypertarget{classexceptions_1_1invalid__pointer__exception}{}\label{classexceptions_1_1invalid__pointer__exception}\index{exceptions::invalid\_pointer\_exception@{exceptions::invalid\_pointer\_exception}}
+
+
+Exception indicating the use of an invalid pointer.  
+
+
+
+
+{\ttfamily \#include $<$invalid\+\_\+pointer\+\_\+exception.\+h$>$}
+
+
+
+Inheritance diagram for exceptions\+::invalid\+\_\+pointer\+\_\+exception\+:
+% FIG 0
+
+
+Collaboration diagram for exceptions\+::invalid\+\_\+pointer\+\_\+exception\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classexceptions_1_1invalid__pointer__exception_ad04cc327e30b357bf25c7a8c857958eb}{invalid\+\_\+pointer\+\_\+exception}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{classexceptions_1_1invalid__pointer__exception}{invalid\+\_\+pointer\+\_\+exception} class. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classexceptions_1_1invalid__pointer__exception_a0abc04033357490e05fbf04d2249f72f}{what}} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Returns a descriptive error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception indicating the use of an invalid pointer. 
+
+This exception is derived from {\ttfamily std\+::exception} and can be thrown when an invalid pointer is detected. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classexceptions_1_1invalid__pointer__exception_ad04cc327e30b357bf25c7a8c857958eb}\label{classexceptions_1_1invalid__pointer__exception_ad04cc327e30b357bf25c7a8c857958eb} 
+\index{exceptions::invalid\_pointer\_exception@{exceptions::invalid\_pointer\_exception}!invalid\_pointer\_exception@{invalid\_pointer\_exception}}
+\index{invalid\_pointer\_exception@{invalid\_pointer\_exception}!exceptions::invalid\_pointer\_exception@{exceptions::invalid\_pointer\_exception}}
+\doxysubsubsection{\texorpdfstring{invalid\_pointer\_exception()}{invalid\_pointer\_exception()}}
+{\footnotesize\ttfamily exceptions\+::invalid\+\_\+pointer\+\_\+exception\+::invalid\+\_\+pointer\+\_\+exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{classexceptions_1_1invalid__pointer__exception}{invalid\+\_\+pointer\+\_\+exception} class. 
+
+Initializes a new instance of the exception. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classexceptions_1_1invalid__pointer__exception_a0abc04033357490e05fbf04d2249f72f}\label{classexceptions_1_1invalid__pointer__exception_a0abc04033357490e05fbf04d2249f72f} 
+\index{exceptions::invalid\_pointer\_exception@{exceptions::invalid\_pointer\_exception}!what@{what}}
+\index{what@{what}!exceptions::invalid\_pointer\_exception@{exceptions::invalid\_pointer\_exception}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char \texorpdfstring{$\ast$}{*} exceptions\+::invalid\+\_\+pointer\+\_\+exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Returns a descriptive error message. 
+
+\begin{DoxyReturn}{Returns}
+A C-\/style string describing the error. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+search\+\_\+engine\+\_\+cpp/lib/include/exceptions/\mbox{\hyperlink{invalid__pointer__exception_8h}{invalid\+\_\+pointer\+\_\+exception.\+h}}\item 
+search\+\_\+engine\+\_\+cpp/lib/src/exceptions/\mbox{\hyperlink{invalid__pointer__exception_8cpp}{invalid\+\_\+pointer\+\_\+exception.\+cpp}}\end{DoxyCompactItemize}

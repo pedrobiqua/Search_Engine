@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7erspl_0',['~RSPL',['../classstemmer_1_1RSPL.html#acb33c3241c01809e35cb8d44a853cb5d',1,'stemmer::RSPL']]]
+  ['xxx_0',['xxx',['../Chap_05_Building_block_view.html#Chap_05_01',1,'5.1 XXX'],['../Chap_05_Building_block_view.html#Chap_05_01_01',1,'5.1.1 XXX']]]
 ];

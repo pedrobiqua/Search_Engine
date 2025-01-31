@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['freq_0',['freq',['../structinverted__index_1_1docs.html#ad40a502bb97dced4cd8c7634958df2f5',1,'inverted_index::docs']]]
+  ['converter_0',['converter',['../classsearch__engine__cpp_1_1crawler_1_1Crawler.html#a1ab918541dbeba6f159585b195711a32',1,'search_engine_cpp::crawler::Crawler']]]
 ];
