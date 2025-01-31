@@ -33,7 +33,7 @@ def build_lib_cpp(path: str):
 def copy_lib(root_path, path_lib):
     extensions = [".so*", ".dll*", ".dylib*"]
     for ext in extensions:
-        path_so = root_path.glob(f"{BUILD_FOLDER}/lib/*{ext}")
+        path_so = root_path.glob(f"{BUILD_FOLDER}/search_engine_cpp/lib/*{ext}")
         path_lib.mkdir(exist_ok=True, parents=True)
         # Copy each .so file
         for lib in path_so:
@@ -68,9 +68,9 @@ def build(setup_kwargs):
             f"search_engine_cpp.{lib}",
             language="c++",
             sources=[
-                f"lib/src/{lib_pyx}.pyx"
+                f"search_engine_cpp/lib/src/{lib_pyx}.pyx"
             ],
-            include_dirs=["lib/include"],
+            include_dirs=["search_engine_cpp/lib/include"],
             library_dirs=[library_dir],
             runtime_library_dirs=[library_dir],
             libraries=["search_engine"],
